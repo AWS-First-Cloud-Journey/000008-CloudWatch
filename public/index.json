@@ -1,0 +1,57 @@
+[
+{
+	"uri": "/",
+	"title": "Begin with Cloud Watch",
+	"tags": [],
+	"description": "",
+	"content": "Begin with Cloud Watch  Cloud Watch provides you with data and actionable insights to monitor your applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health. Cloud Watch collects monitoring and operational data in the form of logs, metrics, and events, providing you with a unified view of AWS resources, applications, and services that run on AWS and on-premises servers. You can use Cloud Watch to detect anomalous behavior in your environments, set alarms, visualize logs and metrics side by side, take automated actions, troubleshoot issues, and discover insights to keep your applications running smoothly.  "
+},
+{
+	"uri": "/1-create-aws-dashboard/",
+	"title": "CloudWatch Dashboard",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Create AWS CloudWatch Dashboard  Create AWS CloudWatch Dashboard To get started with CloudWatch dashboards, you must first create a dashboard. You can create multiple dashboards. There is no limit on the number of CloudWatch dashboards in your AWS account. All dashboards are global, not Region-specific.\n Go to the AWS Management Console and open the CloudWatch console home page. In the navigation pane, choose Dashboards and then Create dashboard. In the Create new dashboard dialog box, enter a name for the dashboard and choose Create dashboard. Do one of the following in the Add to this dashboard dialog box:   To add a graph to your dashboard, choose Line or Stacked area and choose Configure. In the Add metric graph dialog box, select the metrics to graph and choose Create widget. If a specific metric doesn\u0026rsquo;t appear in the dialog box because it hasn\u0026rsquo;t published data in more than 14 days, you can add it manually. For more information, see Graph Metrics Manually on a CloudWatch Dashboard. To add a number displaying a metric to the dashboard, choose Number and then Configure. In the Add metric graph dialog box, select the metrics to graph and choose Create widget. To add a text block to your dashboard, choose Text and then Configure. In the New text widget dialog box, for **Markdown, add and format your text using Markdown. Choose Create widget.  Optionally, choose Add widget and repeat step 4 to add another widget to the dashboard. You can repeat this step multiple times. Choose Save dashboard.  "
+},
+{
+	"uri": "/2-create-cw-agent/1-install-cw-agent/",
+	"title": "Install CloudWatch Agent",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Install CloudWatch Agent  Install CloudWatch Agent Each server will run the agent. You need to access to the instance that you want to install CloudWatch Agent\n Download the agent package by command:  sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm\rYou can refer another agent package at Agent link download\nInstall package agent by running this command:  sudo rpm -U ./amazon-cloudwatch-agent.rpm\rAdd a script to JSON file config.json for monitoring memory:  sudo vi /opt/aws/amazon-cloudwatch-agent/bin/config.json\r{\r\u0026#34;logs\u0026#34;: {\r\u0026#34;logs_collected\u0026#34;: {\r\u0026#34;files\u0026#34;: {\r\u0026#34;collect_list\u0026#34;: [\r{\r\u0026#34;file_path\u0026#34;: \u0026#34;/var/log/httpd/access_log\u0026#34;,\r\u0026#34;log_group_name\u0026#34;: \u0026#34;access_log\u0026#34;\r}\r]\r}\r}\r},\r\u0026#34;metrics\u0026#34;: {\r\u0026#34;metrics_collected\u0026#34;: {\r\u0026#34;mem\u0026#34;: {\r\u0026#34;measurement\u0026#34;: [\r\u0026#34;mem_used_percent\u0026#34;\r],\r\u0026#34;metrics_collection_interval\u0026#34;: 30\r}\r}\r}\r}\rDeploy this script to AWS CloudWatch Agent by this command:  sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s\r"
+},
+{
+	"uri": "/2-create-cw-agent/",
+	"title": "Cloudwatch Agent",
+	"tags": [],
+	"description": "",
+	"content": "CloudWatch Agent - Monitoring Instance Memory by Custom Metric  You can use the CloudWatch agent to collect both system metrics and log files from Amazon EC2 instances and on-premises servers. The agent supports both Windows Server and Linux, and enables you to select the metrics to be collected, including sub-resource metrics such as per-CPU core.  Contents:\n 2.1. Install CloudWatch Agent 2.2. Create IAM Role 2.3. Attach IAM Role to Instance  "
+},
+{
+	"uri": "/2-create-cw-agent/2-create-iam-role/",
+	"title": "Create IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Create IAM Role  Create IAM Role  You need to create IAM Role on each instance that will make a permission to put custom metric to AWS CloudWatch   Go to the AWS Management Console and open the IAM Console home page. In the navigation pane, choose Roles and then Create role.  In the Create role task, choose use case EC2 then click Next Permission.  Choose Policy name CloudWatchAgentServerPolicy.  Add tags: Key and Value. Add Role Information Role name, Role description then click Create role  "
+},
+{
+	"uri": "/2-create-cw-agent/3-attach-iam-role/",
+	"title": "Attach IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Contents:\n Attach IAM Role to Instance  Attach IAM Role to Instance  Go to the AWS Management Console and open the EC2 Instance Console home page. In the navigation pane, choose Instances, choose Instance that you want to Attach IAM Role, then click to Action -\u0026gt; Instance Setting -\u0026gt; Attach/Replace IAM Role.  Choose IAM Role which you have created, then click Apply.  Go to the AWS Management Console and open the CloudWatch Console In the navigation pane, choose Metrics. After few second, you will see a custom metric that monitor meomory. Click to this custome metric, you can see memory metric which is sent to CloudWatch.  "
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

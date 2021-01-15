@@ -1,0 +1,57 @@
+[
+{
+	"uri": "/vi/",
+	"title": "Bắt đầu với Cloud Watch",
+	"tags": [],
+	"description": "",
+	"content": "Bắt đầu với Cloud Watch  Cloud Watch cung cấp cho bạn dữ liệu và thông tin chuyên sâu có thể biến thành hành động để bạn theo dõi ứng dụng, ứng phó với các thay đổi hiệu suất trên toàn hệ thống, tối ưu hóa việc sử dụng tài nguyên và có cái nhìn thống nhất về tình trạng vận hành. Cloud Watch thu thập dữ liệu giám sát và vận hành dưới dạng các nhật ký, chỉ số và sự kiện, cung cấp cho bạn một chế độ xem hợp nhất về các tài nguyên, ứng dụng và dịch vụ AWS chạy trên AWS cũng như máy chủ. Bạn có thể sử dụng Cloud Watch để phát hiện hành vi bất thường trong môi trường của mình, đặt báo động, hiển thị trực quan nhật ký cùng với chỉ số, thực hiện hành động tự động hóa, khắc phục sự cố và khám phá thông tin chuyên sâu để ứng dụng vận hành mượt mà.  "
+},
+{
+	"uri": "/vi/2-create-cw-agent/1-install-cw-agent/",
+	"title": "Cài đặt CloudWatch Agent",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung:\n Cài đặt CloudWatch Agent  Cài đặt CloudWatch Agent Mỗi server sẽ chạy 1 agent bên trong nó. Bạn cần phải kêt nối đến server đó để cài đặt CloudWatch Agent\n Tải gói agent bằng lệnh sau:  sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm\rBạn có thể chọn các gói agent khác để cài đặt phù hợp với hệ điều hành của bạn tại Agent link download\nCài đặt gói agent vừa tải về bằng lệnh:  sudo rpm -U ./amazon-cloudwatch-agent.rpm\rGán script để gửi memory metric về CloudWatch tại file JSON config.json:  sudo vi /opt/aws/amazon-cloudwatch-agent/bin/config.json\r{\r\u0026#34;logs\u0026#34;: {\r\u0026#34;logs_collected\u0026#34;: {\r\u0026#34;files\u0026#34;: {\r\u0026#34;collect_list\u0026#34;: [\r{\r\u0026#34;file_path\u0026#34;: \u0026#34;/var/log/httpd/access_log\u0026#34;,\r\u0026#34;log_group_name\u0026#34;: \u0026#34;access_log\u0026#34;\r}\r]\r}\r}\r},\r\u0026#34;metrics\u0026#34;: {\r\u0026#34;metrics_collected\u0026#34;: {\r\u0026#34;mem\u0026#34;: {\r\u0026#34;measurement\u0026#34;: [\r\u0026#34;mem_used_percent\u0026#34;\r],\r\u0026#34;metrics_collection_interval\u0026#34;: 30\r}\r}\r}\r}\rVận hành script đó để gửi thông tin lên CloudWatch bằng câu lệnh  sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s\r"
+},
+{
+	"uri": "/vi/1-create-aws-dashboard/",
+	"title": "Tạo CloudWatch Dashboard",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung:\n Khởi tạo AWS CloudWatch Dashboard  Khởi tạo AWS CloudWatch Dashboard Để bắt đầu với CloudWatch Dashboard, trước tiên bạn cần tạo 1 dashboard mới. Bạn có thể tạo nhiều dashboard. Không có giới hạn về số lượng Dashboard trong 1 tài khoản AWS. Tất cả các Dashboard là Global, không nằm riêng trong 1 vùng region nào cả\n Đăng nhập vào trang quản trị AWS Management Console, vào dịch vụ AWS CloudWatch tại CloudWatch console. Chọn Dashboards, Chọn Create dashboard. Tại mục Create new dashboard, đặt tên cho dashboard và chọn Create dashboard. Chọn loại giao diện để đưa vào Dashboard và chọn Configure  Chọn bất kì dịch vụ nào mà bạn muốn thể hiện trên Dashboard và chọn Create widget Chọn Save dashboard.  "
+},
+{
+	"uri": "/vi/2-create-cw-agent/",
+	"title": "CloudWatch Agent",
+	"tags": [],
+	"description": "",
+	"content": "CloudWatch Agent - Theo dõi RAM của Instance bằng cách sử dụng Custome Metric  Bạn có thể sử dụng CloudWatch Agent để thu thập những thông tin liên quan đến Amazon EC2 và kể cả các máy chủ ở dưới on-premise. Agent hỗ trợ cả 2 hệ điều hành là Windows Server và Linux  Nội dung:\n 2.1. Cài đặt CloudWatch Agent 2.2. Khởi tạo IAM Role 2.3. Gán IAM Role vào Instance  "
+},
+{
+	"uri": "/vi/2-create-cw-agent/2-create-iam-role/",
+	"title": "Khởi tạo IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung:\n Khởi tạo IAM Role  Khởi tạo IAM Role  Bạn cần khởi tạo IAM Role để có thể cấp quyền cho EC2 Instance gửi thông tin lên AWS CloudWatch   Vào trang quản trị IAM Console. Tại khung tính năng, chọn Roles và chọn Create role.  Tại Create role, chọn use case EC2 và chọn Next Permission.  Chọn Policy tên là CloudWatchAgentServerPolicy.  Điền tags: Key and Value. Điền Role Information Role name, Role description và chọn Create role  "
+},
+{
+	"uri": "/vi/2-create-cw-agent/3-attach-iam-role/",
+	"title": "Gán IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Nội dung:\n Gán IAM Role vào Instance  Gán IAM Role vào Instance  Vào trang quản trị EC2 Instance Console. Tại khung tính năng, chọn Instances, chọn Instance mà bạn muốn gán IAM Role, và chọn Action -\u0026gt; Instance Setting -\u0026gt; Attach/Replace IAM Role.  Chọn IAM Role mà bạn vừa tạo, và chọn Apply.  Vào trang quản trị CloudWatch Console Tại khung tính năng, chọn Metrics. Sau vài giây, bạn có thể thấy được custom metric xuất hiện, Vào trong đó bạn có thể thấy được memory metric đã được gửi tới CloudWatch  "
+},
+{
+	"uri": "/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

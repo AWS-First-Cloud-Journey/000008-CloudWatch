@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/vi/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-create-cw-agent/1-install-cw-agent/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-create-cw-agent/1-install-cw-agent/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-create-cw-agent/1-install-cw-agent/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-create-aws-dashboard/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-create-aws-dashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-create-aws-dashboard/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-create-cw-agent/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-create-cw-agent/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-create-cw-agent/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-create-cw-agent/2-create-iam-role/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-create-cw-agent/2-create-iam-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-create-cw-agent/2-create-iam-role/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/2-create-cw-agent/3-attach-iam-role/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-create-cw-agent/3-attach-iam-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-create-cw-agent/3-attach-iam-role/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/tags/"
+                />
+  </url>
+  
+</urlset>
