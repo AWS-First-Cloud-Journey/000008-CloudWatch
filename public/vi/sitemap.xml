@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/vi/1-create-cw-agent/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-create-cw-agent/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-create-cw-agent/"
+                />
+  </url>
+  
+  <url>
+    <loc>/vi/1-create-cw-agent/1-create-iam-role/</loc>
+    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-create-cw-agent/1-create-iam-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-create-cw-agent/1-create-iam-role/"
+                />
+  </url>
+  
+  <url>
     <loc>/vi/</loc>
     <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
@@ -18,77 +48,62 @@
   </url>
   
   <url>
-    <loc>/vi/2-create-cw-agent/1-install-cw-agent/</loc>
+    <loc>/vi/1-create-cw-agent/2-attach-iam-role/</loc>
     <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-create-cw-agent/1-install-cw-agent/"
+                href="/1-create-cw-agent/2-attach-iam-role/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-create-cw-agent/1-install-cw-agent/"
+                href="/vi/1-create-cw-agent/2-attach-iam-role/"
                 />
   </url>
   
   <url>
-    <loc>/vi/1-create-aws-dashboard/</loc>
+    <loc>/vi/2-create-aws-dashboard/</loc>
     <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-aws-dashboard/"
+                href="/2-create-aws-dashboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-aws-dashboard/"
+                href="/vi/2-create-aws-dashboard/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-create-cw-agent/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <loc>/vi/3-clean-up/</loc>
+    <lastmod>2021-06-10T22:28:55+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-create-cw-agent/"
+                href="/3-clean-up/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-create-cw-agent/"
+                href="/vi/3-clean-up/"
                 />
   </url>
   
   <url>
-    <loc>/vi/2-create-cw-agent/2-create-iam-role/</loc>
+    <loc>/vi/1-create-cw-agent/3-install-cw-agent/</loc>
     <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-create-cw-agent/2-create-iam-role/"
+                href="/1-create-cw-agent/3-install-cw-agent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-create-cw-agent/2-create-iam-role/"
-                />
-  </url>
-  
-  <url>
-    <loc>/vi/2-create-cw-agent/3-attach-iam-role/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-create-cw-agent/3-attach-iam-role/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-create-cw-agent/3-attach-iam-role/"
+                href="/vi/1-create-cw-agent/3-install-cw-agent/"
                 />
   </url>
   

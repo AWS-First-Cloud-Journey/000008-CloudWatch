@@ -1,11 +1,24 @@
 +++
-title = "Bắt đầu với Cloud Watch"
+title = "Quản lý tài nguyên với Cloud Watch"
 date = 2020-04-18T00:38:32+07:00
 weight = 1
 chapter = false
 +++
 
-# Bắt đầu với Cloud Watch
+# Quản lý tài nguyên với Cloud Watch
 
-+ Cloud Watch cung cấp cho bạn dữ liệu và thông tin chuyên sâu có thể biến thành hành động để bạn theo dõi ứng dụng, ứng phó với các thay đổi hiệu suất trên toàn hệ thống, tối ưu hóa việc sử dụng tài nguyên và có cái nhìn thống nhất về tình trạng vận hành. Cloud Watch thu thập dữ liệu giám sát và vận hành dưới dạng các nhật ký, chỉ số và sự kiện, cung cấp cho bạn một chế độ xem hợp nhất về các tài nguyên, ứng dụng và dịch vụ AWS chạy trên AWS cũng như máy chủ.  
-+ Bạn có thể sử dụng Cloud Watch để phát hiện hành vi bất thường trong môi trường của mình, đặt báo động, hiển thị trực quan nhật ký cùng với chỉ số, thực hiện hành động tự động hóa, khắc phục sự cố và khám phá thông tin chuyên sâu để ứng dụng vận hành mượt mà.
+#### Tổng quan
+
+Ở bài lab này, bạn sẽ thiết lập **CloudWatch Agent** trên EC2 Instance để thu thập dữ liệu hoạt động của instance và gửi về cho **CloudWatch**. Sau đó, bạn sẽ thể hiện dữ liệu thu thập được lên CloudWatch Dashboard.
+
+#### AWS CloudWatch
+**AWS CloudWatch** là một công cụ cho phép bạn thu thập dữ liệu về hoạt động của các tài nguyên, ứng dụng, và dịch vụ đang vận hành trên AWS Cloud hoặc máy chủ của bạn. Dữ liệu thu thập được sẽ được lưu dưới dạng các nhật ký, chỉ số, và sự kiện. Cloudwatch cũng có thể thể hiện dữ liệu dưới dạng biểu đồ để bạn dễ dàng hình dung và chắt lọc thông tin từ dữ liệu.
+
+#### CloudWatch Agent
+**CloudWatch Agent** là một ứng dụng thuộc dịch vụ CloudWatch. Bạn cần tải về và khởi chạy CloudWatch Agent trên máy chủ on-premise hoặc EC2 Instance để CloudWatch có thể thu thập dữ liệu hoạt động của từng máy.
+
+
+#### Nội dung:
+1. [CloudWatch Agent](1-create-cw-agent)
+2. [Tạo CloudWatch Dashboard](2-create-aws-dashboard)
+3. [Dọn Dẹp Tài Nguyên](3-clean-up)
