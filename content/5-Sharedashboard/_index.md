@@ -1,10 +1,12 @@
 ---
-title : "Share CloudWatch Dashboard"
+title : "Share  Dashboard"
 date :  "`r Sys.Date()`" 
 weight : 5
 chapter : false
 pre : " <b> 5. </b> "
 ---
+
+#### Share CloudWatch Dashboard
 
 1. In the **CloudWatch Dashboard** interface
 

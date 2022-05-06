@@ -1,5 +1,5 @@
 ---
-title : "Chia sẻ CloudWatch Dashboard"
+title : "Chia sẻ Dashboard"
 date :  "`r Sys.Date()`" 
 weight : 5
 chapter : false

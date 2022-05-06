@@ -64,7 +64,7 @@
 },
 {
 	"uri": "/vi/5-sharedashboard/",
-	"title": "Chia sẻ CloudWatch Dashboard",
+	"title": "Chia sẻ Dashboard",
 	"tags": [],
 	"description": "",
 	"content": "Chia sẻ CloudWatch Dashboard Trong phần này, chúng ta sử dụng các tính năng của CloudWatch metric, share dashboard và quản lý tài nguyên với Automatic dashboard\n Trong giao diện CloudWatch Dashboard   Chọn Actions Chọn Light/dark mode Chọn Dark mode để thay đổi mode giao diện  Giao diện đã thay đổi mode  Trong giao diện CloudWatch Dashboard   Chọn Actions Chọn Share dashboard  Chọn Share với Public access dashboard, mọi người đều có thể truy cập vào để xem dashboard thông qua 1 đường dẫn   Chọn Start sharing  Trong giao diện Share dashboard MyFirstDashboard   Nhập Share Chọn Confirm and preview policy  Sau đó, chọn Accecpt policy and generate shareable link  Hoàn thành xác thực share dashboard   Chọn Copy link, sử dụng link này để chia sẻ mọi người truy cập vào dashboard  Dùng link vừa copy dán vào trình duyệt  Thành công truy cập vào giao diện dashboard được chia sẻ qua đường dẫn  Chúng ta có thể tùy chỉnh theo thời gian và mode của giao diện  Quay trở lại giao diện CloudWatch dashboard   Chọn Dashboards Chọn Automatic dashboards Chọn EC2  Quan sát biểu đồ thống kê thông qua Automatic dashboard  "

@@ -64,10 +64,10 @@
 },
 {
 	"uri": "/5-sharedashboard/",
-	"title": "Share CloudWatch Dashboard",
+	"title": "Share  Dashboard",
 	"tags": [],
 	"description": "",
-	"content": " In the CloudWatch Dashboard interface   Select Actions Select Light/dark mode Select Dark mode to change the interface mode  The interface has changed mode  In the CloudWatch Dashboard interface   Select Actions Select Share dashboard  Select Share with Public access dashboard, everyone can access to view the dashboard through 1 link   Select Start sharing  In the Share dashboard MyFirstDashboard interface   Enter Share Select Confirm and preview policy  Then select Accept policy and generate shareable link  Complete dashboard share authentication   Select Copy link, use this link to share everyone accessing the dashboard  Use the link you just copied and pasted into your browser  Successfully accessing the shared dashboard interface via the link  We can customize according to the time and mode of the interface  Return to CloudWatch dashboard interface   Select Dashboards Select Automatic dashboards Select EC2  Observing statistical charts through Automatic dashboard  "
+	"content": "Share CloudWatch Dashboard  In the CloudWatch Dashboard interface   Select Actions Select Light/dark mode Select Dark mode to change the interface mode  The interface has changed mode  In the CloudWatch Dashboard interface   Select Actions Select Share dashboard  Select Share with Public access dashboard, everyone can access to view the dashboard through 1 link   Select Start sharing  In the Share dashboard MyFirstDashboard interface   Enter Share Select Confirm and preview policy  Then select Accept policy and generate shareable link  Complete dashboard share authentication   Select Copy link, use this link to share everyone accessing the dashboard  Use the link you just copied and pasted into your browser  Successfully accessing the shared dashboard interface via the link  We can customize according to the time and mode of the interface  Return to CloudWatch dashboard interface   Select Dashboards Select Automatic dashboards Select EC2  Observing statistical charts through Automatic dashboard  "
 },
 {
 	"uri": "/6-cleanup/",
