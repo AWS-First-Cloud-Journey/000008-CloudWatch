@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quản lý tài nguyên với Cloud Watch on Begin with Cloud Watch</title>
+    <title>Monitor Resources with Amazon CloudWatch on Manager Resources With AWS CloudWatch</title>
     <link>/</link>
-    <description>Recent content in Quản lý tài nguyên với Cloud Watch on Begin with Cloud Watch</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 18 Apr 2020 00:38:32 +0700</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <description>Recent content in Monitor Resources with Amazon CloudWatch on Manager Resources With AWS CloudWatch</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

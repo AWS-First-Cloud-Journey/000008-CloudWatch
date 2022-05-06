@@ -1,52 +1,80 @@
 [
 {
-	"uri": "/1-create-cw-agent/",
-	"title": "CloudWatch Agent",
+	"uri": "/2-prerequiste/2.1-createvpcandsecuritygroup/",
+	"title": "Create VPC and Security Group",
 	"tags": [],
 	"description": "",
-	"content": "Tổng quan Trong phần này, bạn sẽ thực hành cài đặt CloudWatch Agent để theo dõi RAM của EC2 Instance và gửi dữ liệu về cho CloudWatch. Để EC2 Instance có quyền truy cập vào CloudWatch, bạn cần gán cho nó một IAM Role phù hợp.\nNội dung:  1.1. Khởi tạo IAM Role 1.2. Gán IAM Role vào Instance 1.3. Cài đặt CloudWatch Agent  "
+	"content": "Prepare VPC, Security Group for EC2 instance  Access the interface AWS Management Console   Find VPC Select VPC  In the VPC interface   Select Your VPCs Select Create VPC  In the Create VPC interface   In VPC settings, select VPC, subents, etc. Name tag auto-generation, enter cloudwatch IPv4 CIDR block, enter 10.0.0.0/16 IPv6 CIDR block, select No IPv6 CIDR block  Select Create VPC  Select View VPC  Complete VPC . Creation  In the VPC interface   Select Subnets Select Public subnet Check Auto-assign public IPv4 address Then select Actions Select Edit subnet settings  In the Edit subnet settings interface   Step Auto-assign IP settings, select Enable auto-assign public IPv4 address* Select Save  Enable auto-assign public IPv4 address successfully   Check Auto-assign public IPv4 address  Go to the AWS Management Console   Find VPC Select VPC  In the VPC interface   Select Security Group Select Create security group  In the Create security group interface   Security group name, enter cloudwatch-subnet Description, enter Subnet for CloudWatch instance VPC, select the newly created VPC  Configure Inbound rules   Select Add rule and proceed with configuration SSH All ICMP-IPv4 All ICMP-IPv6 HTTP HTTPS  Select Create security group*  Complete initialization Security group  "
 },
 {
-	"uri": "/1-create-cw-agent/1-create-iam-role/",
-	"title": "Khởi tạo IAM Role",
+	"uri": "/1-introduce/",
+	"title": "Introduction",
 	"tags": [],
 	"description": "",
-	"content": "Ở bước này, bạn sẽ khởi tạo IAM Role để cho phép EC2 Instance có quyền truy cập vào CloudWatch trong tài khoản của bạn.\nNội dung:\n Khởi tạo IAM Role  Khởi tạo IAM Role  Vào trang IAM Management Console. Tại thanh bên trái, chọn Roles và chọn Create role.  Tại trang Create role, chọn AWS service, chọn use case EC2, rồi chọn Next Permission.\n Chọn Policy tên là CloudWatchAgentServerPolicy và chọn Next: Tags  Chọn Next: Review Điền Role Information Role name, Role description và chọn Create role. Hãy nhớ RoleName của mình để sử dụng trong bước tiếp theo   "
+	"content": "Amazon CloudWatch Amazon CloudWatch is a tool that allows you to collect data about the performance of the resources, applications, and services running on the AWS Cloud or your servers. Collected data will be saved as logs, metrics, and events. Cloudwatch can also present data in the form of graphs for you to easily visualize and distill information from the data.\nCloudWatch Agent CloudWatch Agent is an application of the CloudWatch service. You need to download and launch the CloudWatch Agent on your on-premises server or EC2 Instance so that CloudWatch can collect activity data for each machine.\nIn this section, you will practice setting up CloudWatch Agent to monitor EC2 Instance\u0026rsquo;s RAM and send data back to CloudWatch. In order for EC2 Instance to have access to CloudWatch, you need to assign it an appropriate IAM Role.\n"
 },
 {
 	"uri": "/",
-	"title": "Quản lý tài nguyên với Cloud Watch",
+	"title": "Monitor Resources with Amazon CloudWatch",
 	"tags": [],
 	"description": "",
-	"content": "Quản lý tài nguyên với Cloud Watch Tổng quan Ở bài lab này, bạn sẽ thiết lập CloudWatch Agent trên EC2 Instance để thu thập dữ liệu hoạt động của instance và gửi về cho CloudWatch. Sau đó, bạn sẽ thể hiện dữ liệu thu thập được lên CloudWatch Dashboard.\nAWS CloudWatch AWS CloudWatch là một công cụ cho phép bạn thu thập dữ liệu về hoạt động của các tài nguyên, ứng dụng, và dịch vụ đang vận hành trên AWS Cloud hoặc máy chủ của bạn. Dữ liệu thu thập được sẽ được lưu dưới dạng các nhật ký, chỉ số, và sự kiện. Cloudwatch cũng có thể thể hiện dữ liệu dưới dạng biểu đồ để bạn dễ dàng hình dung và chắt lọc thông tin từ dữ liệu.\nCloudWatch Agent CloudWatch Agent là một ứng dụng thuộc dịch vụ CloudWatch. Bạn cần tải về và khởi chạy CloudWatch Agent trên máy chủ on-premise hoặc EC2 Instance để CloudWatch có thể thu thập dữ liệu hoạt động của từng máy.\nNội dung:  CloudWatch Agent Tạo CloudWatch Dashboard Dọn Dẹp Tài Nguyên  "
+	"content": "Monitor resources with Amazon CloudWatch Overview In this lab, you will set up CloudWatch Agent on EC2 Instance to collect instance activity data and send it back to CloudWatch. You will then present the collected data to the CloudWatch Dashboard.\nContents  Introduction Preparation steps Install CloudWatch Agent Create CloudWatch Dashboard Share CloudWatch Dashboard Resource Cleanup  "
 },
 {
-	"uri": "/1-create-cw-agent/2-attach-iam-role/",
-	"title": "Gán IAM Role vào Instance",
+	"uri": "/2-prerequiste/2.2-createec2instance/",
+	"title": "Create EC2 instance",
 	"tags": [],
 	"description": "",
-	"content": "Ở bước này, bạn sẽ gán IAM Role vừa được tạo vào EC2 Instance.\nNội dung:\n Gán IAM Role vào Instance Kiếm tra dữ liệu được gửi về CloudWatch  Gán IAM Role vào Instance  Vào trang quản trị EC2 Instance Console. Tại thanh bên trái, chọn Instances, Tiến hành khởi tạo EC2 Instance sử dụng Amazon Linux 2 AMI (HVM). Nếu bạn chưa biết cách khởi tạo EC2 Instance, mời bạn tham khảo bài Sử dụng Máy ảo Linux\n\r Chọn EC2 Instance vừa được tạo, và chọn Action -\u0026gt; Security -\u0026gt; Modify IAM Role.  Chọn IAM Role mà bạn vừa tạo, và chọn Save.\n  "
+	"content": " Go to the AWS Management Console   Find EC2 Select EC2  In the EC2 interface   Select Instances Select Launch instances  In the Launch instances interface   Name and tags, enter CloudWatch-instance  In the Launch instances interface   Select Quick Start Select Amazon Linux Select type AMI  Continue in Launch instances interface   Select Instance type Select Create new key pair  In the Create key pair interface   Key pair name, enter CloudWatchKey Key pair type, select RSA Private key file format, select .pem Select Create key pair Store the key pair to make EC instance connection in the following steps  In the Launch instances interface   In the Network settings section, select Edit  In the Network settings interface   VPC, select the newly created VPC Subnet, select Public subnet already enabled auto-assign IPv4 address Auto-assign public IP, select Enable Firewall (security group), Select Select existing security group Select Security group just created  Double check and select Launch instances  Select View all instances  View the details of the newly created instance  "
 },
 {
-	"uri": "/2-create-aws-dashboard/",
-	"title": "Tạo CloudWatch Dashboard",
+	"uri": "/2-prerequiste/",
+	"title": "Preparation steps",
 	"tags": [],
 	"description": "",
-	"content": "Ở phần này, bạn sẽ thực hành tạo CloudWatch Dasboard để thể hiện dữ liệu vừa thu thập được từ CloudWatch Agent ở EC2 Instance bạn tạo ở phần 1.\nNội dung:\n Khởi tạo AWS CloudWatch Dashboard  Khởi tạo AWS CloudWatch Dashboard Để bắt đầu với CloudWatch Dashboard, trước tiên bạn cần tạo 1 dashboard mới. Bạn có thể tạo nhiều dashboard. Không có giới hạn về số lượng dashboard trong 1 tài khoản AWS. Tất cả các dashboard là Global, không nằm riêng trong 1 vùng region nào cả\n  Đăng nhập vào trang quản trị AWS Management Console và vào dịch vụ AWS CloudWatch tại CloudWatch console.\n  Chọn Dashboards ở thanh bên trái và Chọn Create dashboard.   Tại prompt Create new dashboard, đặt tên cho dashboard và chọn Create dashboard.\n  Tại prompt Add Widget, chọn loại giao diện Line.   Chọn nguồn cung cấp dữ liệu Metrics và chọn Configure.\n  Trong bảng Add metric graph, chọn dịch vụ CWAgent   Chọn host, tick vào EC2 Instance mà bạn đã tạo cho bài lab này, và chọn Create widget. Tên của EC2 Instance được thể hiện ở trong CloudWatch là sự kết hợp của Private IP và Region của EC2 Instance đó. Cụ thể ở hình trên, EC2 Instance có private IP là 172.31.37.188 và nằm ở region ap-southeast-1, tức Singapore.\n\r  Chọn Save dashboard để lưu lại Dashboard.   "
+	"content": "Overview In this section, you will practice setting up CloudWatch Agent to monitor EC2 Instance\u0026rsquo;s RAM and send data back to CloudWatch. In order for EC2 Instance to have access to CloudWatch, you need to assign it an appropriate IAM Role.\nContent  Create VPC and Security Group Initialize EC2 instance Create IAM Role Assign IAM Role to EC2 instance  "
 },
 {
-	"uri": "/3-clean-up/",
-	"title": "Dọn Dẹp Tài Nguyên",
+	"uri": "/2-prerequiste/2.3-createiamrole/",
+	"title": "Create IAM role",
 	"tags": [],
 	"description": "",
-	"content": "Chúng ta sẽ dọn dẹp tài nguyên theo thứ tự như sau:\n  Xóa Dashboard\n Truy cập CloudWatch Management Console Trên thanh điều hướng bên trái, chọn Dashboards Chọn tất cả CloudWatch Dasboards liên quan tới bài lab. Click Delete Trong prompt, click Delete    Xóa IAM Role\n Truy cập IAM Management Console Trên thanh điều hướng bên trái, chọn Roles Trong hộp tìm kiếm, tìm và chọn tất cả Roles liên quan tới bài lab. Click Delete Role Trong prompt, click Yes, Delete     Terminate EC2 instance\n Truy cập EC2 Management Console Trên thanh điều hướng bên trái, chọn Intances Chọn tất cả EC2 Instance liên quan tới bài lab. Click Actions. Click Manage Instance State. Chọn Terminate. Click Change State    "
+	"content": "Create IAM role In this section, you will practice setting up CloudWatch Agent to monitor EC2 Instance\u0026rsquo;s RAM and send data back to CloudWatch. In order for EC2 Instance to have access to CloudWatch, you need to assign it an appropriate IAM Role.\n Go to AWS Management Console   Find IAM Select IAM  In the IAM interface   Select Roles Select Create role  In the Select trusted entity interface   Select AWS service Use case, select EC2  In the Add permissions interface   Search CloudWatchAgentServer policy Select CloudWatchAgentServer policy Select Next  In the Role details section   Select CloudWatchAgentRole  Select Create role  Complete role creation  "
 },
 {
-	"uri": "/1-create-cw-agent/3-install-cw-agent/",
-	"title": "Cài đặt CloudWatch Agent",
+	"uri": "/3-cloudwatchagent/",
+	"title": "Install CloudWatch Agent",
 	"tags": [],
 	"description": "",
-	"content": "Ở bước này, bạn sẽ cài đặt CloudWatch Agent cho một EC2 Instance để instance ấy có thể gửi dữ liệu về cho CloudWatch.\nNội dung:\n Cài đặt CloudWatch Agent Kiếm tra kết nối tới CloudWatch  Cài đặt CloudWatch Agent  Kết nối tới EC2 Instance mà bạn vừa tạo và tải gói CloudWatch Agent bằng lệnh sau: sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm\r Cài đặt gói agent vừa tải về bằng lệnh: sudo rpm -U ./amazon-cloudwatch-agent.rpm\r   Tạo script để gửi memory metric về CloudWatch:\nsudo vi /opt/aws/amazon-cloudwatch-agent/bin/config.json\r  Nhấn phím i và copy file JSON dưới đây vào script\n{\r\u0026#34;logs\u0026#34;: {\r\u0026#34;logs_collected\u0026#34;: {\r\u0026#34;files\u0026#34;: {\r\u0026#34;collect_list\u0026#34;: [\r{\r\u0026#34;file_path\u0026#34;: \u0026#34;/var/log/httpd/access_log\u0026#34;,\r\u0026#34;log_group_name\u0026#34;: \u0026#34;access_log\u0026#34;\r}\r]\r}\r}\r},\r\u0026#34;metrics\u0026#34;: {\r\u0026#34;metrics_collected\u0026#34;: {\r\u0026#34;mem\u0026#34;: {\r\u0026#34;measurement\u0026#34;: [\r\u0026#34;mem_used_percent\u0026#34;\r],\r\u0026#34;metrics_collection_interval\u0026#34;: 30\r}\r}\r}\r}\r  Nhấn phím ESC rồi gõ :wq để lưu lại script.\n  Vận hành script đó để gửi thông tin lên CloudWatch bằng câu lệnh\nsudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json -s\r  Sau khi thiết lập xong, bạn sẽ có màn hình kết quả tương tự với hình dươi đây   Kiếm tra kết nối tới CloudWatch Bạn sẽ truy cập vào log file của CloudWatch Agent để kiểm tra xem bạn đã thiết lập IAM Role và CloudWatch Agent đúng chưa\n Kết nối tới EC2 Instance mà bạn vừa tạo Nhập lệnh sau để di chuyển tới thư mục chứa log file của CloudWatch Agent cd /opt/aws/amazon-cloudwatch-agent/logs/\r Nhập lệnh sau để xem nội dung của log file. cat amazon-cloudwatch-agent.log\r Nếu nội dung log file của bạn là tương tự như hình dưới thì bạn đã thành công.   "
+	"content": "Install CloudWatch Agent  Initiate EC2 instance connection   Select Instances Select the newly created instance Copy Public IPv4 address Use PuTTY to connect via port 22 For detailed information about EC2 connection, please refer to Connecting Linux virtual machine  PuTTY interface to connect EC2 instance   Enter ec2-user  Since this is our first time accessing EC2 Instance we need to install the latest updates.  sudo yum update -y Connect to the EC2 Instance you just created and load the CloudWatch Agent package with the following command:  sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/amazon_linux/amd64/latest/amazon-cloudwatch-agent.rpm Install the downloaded agent package with the command:  sudo rpm -U ./amazon-cloudwatch-agent.rpm Create a script to send memory metrics to CloudWatch:  sudo vi /opt/aws/amazon-cloudwatch-agent/bin/config.json  Press the i key and copy the following JSON file into the script:  {\r\u0026#34;logs\u0026#34;: {\r\u0026#34;logs_collected\u0026#34;: {\r\u0026#34;files\u0026#34;: {\r\u0026#34;collect_list\u0026#34;: [\r{\r\u0026#34;file_path\u0026#34;: \u0026#34;/var/log/httpd/access_log\u0026#34;,\r\u0026#34;log_group_name\u0026#34;: \u0026#34;access_log\u0026#34;\r}\r]\r}\r}\r},\r\u0026#34;metrics\u0026#34;: {\r\u0026#34;metrics_collected\u0026#34;: {\r\u0026#34;mem\u0026#34;: {\r\u0026#34;measurement\u0026#34;: [\r\u0026#34;mem_used_percent\u0026#34;\r],\r\u0026#34;metrics_collection_interval\u0026#34;: 30\r}\r}\r}\r}  Press the ESC key and then type :wq to save the script.  Run that script to send information to CloudWatch with the command:  sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json - S Check the connection to CloudWatch, enter the following command to move to the directory containing the CloudWatch Agent log file:  cd /opt/aws/amazon-cloudwatch-agent/logs/ Enter the following command to view the contents of the log file  cat amazon-cloudwatch-agent.log "
+},
+{
+	"uri": "/2-prerequiste/2.4-attachiamrole/",
+	"title": "Assign IAM role",
+	"tags": [],
+	"description": "",
+	"content": "Assign IAM role  Go to AWS Management Console   Find EC2 Select EC2  In the EC2 interface   Select Instances Select the newly created instance  In EC2 interface   Select Actions Select Security Select Modify IAM role  In the Modify IAM role interface   Select CloudWatchAgentRole Select Save  Completed role assignment successfully   Check that the instance has been assigned the IAM role  "
+},
+{
+	"uri": "/4-createcloudwatchdashboard/",
+	"title": "CloudWatch Dashboard",
+	"tags": [],
+	"description": "",
+	"content": "Create CloudWatch Dashboard To get started with CloudWatch Dashboard, you first need to create a new dashboard. You can create multiple dashboards. There is no limit to the number of dashboards in an AWS account. All dashboards are Global, not located in a specific region\n Access the interface AWS Management Console   Find CloudWatch Select CloudWatch  In the CloudWatch interface   Select Dashboard Select Custom dashboard Select Create dashboard  In the Create new dashboard interface   Dashboard name, enter MyFirstDashboard Select Create dashboard  At the Add Widget prompt, select the Line interface type. In the Add to this dashboard interface   Select Metrics  In Add metric graph interface   Select Browse Custom namespaces, select CWAgent  Next, select host  Select the host according to Hostname type of the newly created instance   Select Create widget  Finish creating the CloudWatch dashboard  Zoom in on the dashboard for easy viewing and select View in metrics  In the CloudWatch metrics interface   Observe the interface and features  In the CloudWatch metrics interface   Select Add query Select EC2 Select Average Active CPU for an application (CloudWatch Agent)  Query results are displayed  Continue, in CloudWatch metrics view   Select Add math Select Search Select EC2 CPU utilization  The results are displayed, select CWgent hostname type of the instance and observe the graph  Return to CloudWatch Dashboard interface   Select Save dashboard  "
+},
+{
+	"uri": "/5-sharedashboard/",
+	"title": "Share CloudWatch Dashboard",
+	"tags": [],
+	"description": "",
+	"content": " In the CloudWatch Dashboard interface   Select Actions Select Light/dark mode Select Dark mode to change the interface mode  The interface has changed mode  In the CloudWatch Dashboard interface   Select Actions Select Share dashboard  Select Share with Public access dashboard, everyone can access to view the dashboard through 1 link   Select Start sharing  In the Share dashboard MyFirstDashboard interface   Enter Share Select Confirm and preview policy  Then select Accept policy and generate shareable link  Complete dashboard share authentication   Select Copy link, use this link to share everyone accessing the dashboard  Use the link you just copied and pasted into your browser  Successfully accessing the shared dashboard interface via the link  We can customize according to the time and mode of the interface  Return to CloudWatch dashboard interface   Select Dashboards Select Automatic dashboards Select EC2  Observing statistical charts through Automatic dashboard  "
+},
+{
+	"uri": "/6-cleanup/",
+	"title": "Clean up resources",
+	"tags": [],
+	"description": "",
+	"content": "We will clean up resources in the following order:\nDelete Dashboard  Go to CloudWatch Management Console On the left navigation bar, select Dashboards Select all CloudWatch Dasboards related to the lab. Click Delete In the prompt, click Delete  Delete IAM Role  Go to IAM Management Console On the left navigation bar, select Roles In the search box, find and select all Roles related to the lab. Click Delete Role In the prompt, click Yes, Delete  Terminate EC2 instance  Go to EC2 Management Console On the left navigation bar, select Intances Select all EC2 Instance related to the lab. Click Actions. Click Manage Instance State. Select Terminate. Click Change State  "
 },
 {
 	"uri": "/categories/",

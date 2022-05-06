@@ -1,40 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>/vi/1-create-cw-agent/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+    <loc>/vi/1-introduce/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-cw-agent/"
+                href="/1-introduce/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-cw-agent/"
+                href="/vi/1-introduce/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-cw-agent/1-create-iam-role/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+  </url><url>
+    <loc>/vi/2-prerequiste/2.1-createvpcandsecuritygroup/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-cw-agent/1-create-iam-role/"
+                href="/2-prerequiste/2.1-createvpcandsecuritygroup/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-cw-agent/1-create-iam-role/"
+                href="/vi/2-prerequiste/2.1-createvpcandsecuritygroup/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -45,69 +37,103 @@
                 hreflang="vi"
                 href="/vi/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-cw-agent/2-attach-iam-role/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+  </url><url>
+    <loc>/vi/2-prerequiste/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-cw-agent/2-attach-iam-role/"
+                href="/2-prerequiste/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-cw-agent/2-attach-iam-role/"
+                href="/vi/2-prerequiste/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/2-create-aws-dashboard/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+  </url><url>
+    <loc>/vi/2-prerequiste/2.2-createec2instance/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-create-aws-dashboard/"
+                href="/2-prerequiste/2.2-createec2instance/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-create-aws-dashboard/"
+                href="/vi/2-prerequiste/2.2-createec2instance/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/3-clean-up/</loc>
-    <lastmod>2021-06-10T22:28:55+07:00</lastmod>
+  </url><url>
+    <loc>/vi/3-cloudwatchagent/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-clean-up/"
+                href="/3-cloudwatchagent/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-clean-up/"
+                href="/vi/3-cloudwatchagent/"
                 />
-  </url>
-  
-  <url>
-    <loc>/vi/1-create-cw-agent/3-install-cw-agent/</loc>
-    <lastmod>2020-04-18T00:38:32+07:00</lastmod>
+  </url><url>
+    <loc>/vi/2-prerequiste/2.3-createiamrole/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-create-cw-agent/3-install-cw-agent/"
+                href="/2-prerequiste/2.3-createiamrole/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-create-cw-agent/3-install-cw-agent/"
+                href="/vi/2-prerequiste/2.3-createiamrole/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/vi/2-prerequiste/2.4-attachiamrole/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-prerequiste/2.4-attachiamrole/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-prerequiste/2.4-attachiamrole/"
+                />
+  </url><url>
+    <loc>/vi/4-createcloudwatchdashboard/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-createcloudwatchdashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-createcloudwatchdashboard/"
+                />
+  </url><url>
+    <loc>/vi/5-sharedashboard/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-sharedashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-sharedashboard/"
+                />
+  </url><url>
+    <loc>/vi/6-cleanup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-cleanup/"
+                />
+  </url><url>
     <loc>/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -119,9 +145,7 @@
                 hreflang="vi"
                 href="/vi/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
@@ -134,5 +158,4 @@
                 href="/vi/tags/"
                 />
   </url>
-  
 </urlset>
