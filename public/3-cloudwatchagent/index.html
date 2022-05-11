@@ -12,21 +12,21 @@
     <title>Install CloudWatch Agent :: Manager Resources With AWS CloudWatch</title>
 
     
-    <link href="/css/nucleus.css?1651898465" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1651898465" rel="stylesheet">
-    <link href="/css/hybrid.css?1651898465" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1651898465" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1651898465" rel="stylesheet">
-    <link href="/css/auto-complete.css?1651898465" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1651898465" rel="stylesheet">
-    <link href="/css/theme.css?1651898465" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1651898465" rel="stylesheet">
+    <link href="/css/nucleus.css?1652278913" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1652278913" rel="stylesheet">
+    <link href="/css/hybrid.css?1652278913" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1652278913" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1652278913" rel="stylesheet">
+    <link href="/css/auto-complete.css?1652278913" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1652278913" rel="stylesheet">
+    <link href="/css/theme.css?1652278913" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1652278913" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1651898465" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1652278913" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1651898465"></script>
+    <script src="/js/jquery-3.3.1.min.js?1652278913"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1651898465"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1651898465"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1652278913"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1652278913"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1651898465"></script>
+<script type="text/javascript" src="/js/search.js?1652278913"></script>
 
     
   </div>
@@ -607,11 +607,20 @@
 <pre tabindex="0"><code>sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json - S
 </code></pre><p><img src="/images/3-Cloudwatchagent/0006-cloudwatchagent.png" alt="CloudWatchAgent"></p>
 <ol start="8">
-<li>Check the connection to CloudWatch, enter the following command to move to the directory containing the CloudWatch Agent log file:</li>
+<li>Check Connection to CloudWatch</li>
+</ol>
+<pre tabindex="0"><code>sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+</code></pre><ul>
+<li>If the status is <strong>running</strong>, then proceed to the next step</li>
+<li>If status <strong>stopped</strong>, need to start Cloudwatch agent with the following command:</li>
+</ul>
+<pre tabindex="0"><code>sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json
+</code></pre><ol start="9">
+<li>Enter the following command to move to the directory containing the CloudWatch Agent log file:</li>
 </ol>
 <pre tabindex="0"><code>cd /opt/aws/amazon-cloudwatch-agent/logs/
 </code></pre><p><img src="/images/3-Cloudwatchagent/0007-cloudwatchagent.png" alt="CloudWatchAgent"></p>
-<ol start="9">
+<ol start="10">
 <li>Enter the following command to view the contents of the log file</li>
 </ol>
 <pre tabindex="0"><code>cat amazon-cloudwatch-agent.log
@@ -842,19 +851,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1651898465"></script>
-    <script src="/js/perfect-scrollbar.min.js?1651898465"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1651898465"></script>
-    <script src="/js/jquery.sticky.js?1651898465"></script>
-    <script src="/js/featherlight.min.js?1651898465"></script>
-    <script src="/js/highlight.pack.js?1651898465"></script>
+    <script src="/js/clipboard.min.js?1652278913"></script>
+    <script src="/js/perfect-scrollbar.min.js?1652278913"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1652278913"></script>
+    <script src="/js/jquery.sticky.js?1652278913"></script>
+    <script src="/js/featherlight.min.js?1652278913"></script>
+    <script src="/js/highlight.pack.js?1652278913"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1651898465"></script>
-    <script src="/js/learn.js?1651898465"></script>
-    <script src="/js/hugo-learn.js?1651898465"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1652278913"></script>
+    <script src="/js/learn.js?1652278913"></script>
+    <script src="/js/hugo-learn.js?1652278913"></script>
 
-    <link href="/mermaid/mermaid.css?1651898465" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1651898465"></script>
+    <link href="/mermaid/mermaid.css?1652278913" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1652278913"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -94,7 +94,20 @@ sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-c
 
 ![CloudWatchAgent](/images/3-Cloudwatchagent/0006-cloudwatchagent.png)
 
-8. Check the connection to CloudWatch, enter the following command to move to the directory containing the CloudWatch Agent log file:
+8. Check Connection to CloudWatch
+
+```
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+```
+- If the status is **running**, then proceed to the next step
+- If status **stopped**, need to start Cloudwatch agent with the following command:
+
+```
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json
+```
+
+
+9. Enter the following command to move to the directory containing the CloudWatch Agent log file:
 
 ```
 cd /opt/aws/amazon-cloudwatch-agent/logs/
@@ -102,7 +115,8 @@ cd /opt/aws/amazon-cloudwatch-agent/logs/
 
 ![CloudWatchAgent](/images/3-Cloudwatchagent/0007-cloudwatchagent.png)
 
-9. Enter the following command to view the contents of the log file
+
+10. Enter the following command to view the contents of the log file
 
 ```
 cat amazon-cloudwatch-agent.log

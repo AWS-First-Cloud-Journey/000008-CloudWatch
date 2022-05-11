@@ -94,7 +94,19 @@ sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-c
 
 ![CloudWatchAgent](/images/3-Cloudwatchagent/0006-cloudwatchagent.png)
 
-8. Kiểm tra kết nối tới CloudWatch, nhập lệnh sau để di chuyển tới thư mục chứa log file của CloudWatch Agent:
+8. Kiểm tra kết nối tới CloudWatch
+
+```
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -m ec2 -a status
+```
+- Nếu trạng thái **running** thì thực hiện bước tiếp theo
+- Nếu trạng thái **stopped** thì cần start Cloudwatch agent bằng câu lệnh sau:
+
+```
+sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -s -c file:/opt/aws/amazon-cloudwatch-agent/bin/config.json
+```
+
+9. Nhập lệnh sau để di chuyển tới thư mục chứa log file của CloudWatch Agent:
 
 ```
 cd /opt/aws/amazon-cloudwatch-agent/logs/
@@ -102,7 +114,8 @@ cd /opt/aws/amazon-cloudwatch-agent/logs/
 
 ![CloudWatchAgent](/images/3-Cloudwatchagent/0007-cloudwatchagent.png)
 
-9. Nhập lệnh sau để xem nội dung của log file
+
+10. Nhập lệnh sau để xem nội dung của log file
 
 ```
 cat amazon-cloudwatch-agent.log
