@@ -14,21 +14,21 @@ Trong phần này, bạn sẽ thực hành cài đặt CloudWatch Agent để th
 - Tìm **IAM**
 - Chọn **IAM**
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0001-createiamrole.png)
+![CreateIAMrole](/images/3/0001.png?featherlight=false&width=90pc)
 
 2. Trong giao diện **IAM**
 
 - Chọn **Roles**
 - Chọn **Create role**
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0002-createiamrole.png)
+![CreateIAMrole](/images/3/0002.png?featherlight=false&width=90pc)
 
 3. Trong giao diện **Select trusted entity**
 
 - Chọn **AWS service**
 - **Use case**, chọn **EC2**
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0003-createiamrole.png)
+![CreateIAMrole](/images/3/0003.png?featherlight=false&width=90pc)
 
 4. Trong giao diện **Add permissions**
 
@@ -36,18 +36,18 @@ Trong phần này, bạn sẽ thực hành cài đặt CloudWatch Agent để th
 - Chọn **CloudWatchAgentServer** policy
 - Chọn **Next**
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0004-createiamrole.png)
+![CreateIAMrole](/images/3/0004.png?featherlight=false&width=90pc)
 
 5. Trong phần **Role details**
 
 - Chọn **CloudWatchAgentRole**
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0005-createiamrole.png)
+![CreateIAMrole](/images/3/0005.png?featherlight=false&width=90pc)
 
 6. Chọn **Create role**
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0006-createiamrole.png)
+![CreateIAMrole](/images/3/0006.png?featherlight=false&width=90pc)
 
 7. Hoàn thành tạo role
 
-![CreateIAMrole](/images/2-Prerequiste/2.2-Createiamrole/0007-createiamrole.png)
+![CreateIAMrole](/images/3/0007.png?featherlight=false&width=90pc)

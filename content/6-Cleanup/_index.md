@@ -28,7 +28,7 @@ We will clean up resources in the following order:
 #### Terminate EC2 instance
 
 1. Go to [EC2 Management Console](https://aws.amazon.com/console/)
-2. On the left navigation bar, select **Intances**
+2. On the left navigation bar, select **Instances**
 3. Select all **EC2 Instance** related to the lab.
 4. Click **Actions**.
 5. Click **Manage Instance State**.

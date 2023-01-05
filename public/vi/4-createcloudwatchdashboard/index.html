@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo CloudWatch Dashboard :: Manager Resources With AWS CloudWatch</title>
 
     
-    <link href="/css/nucleus.css?1652278913" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652278913" rel="stylesheet">
-    <link href="/css/hybrid.css?1652278913" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652278913" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652278913" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652278913" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652278913" rel="stylesheet">
-    <link href="/css/theme.css?1652278913" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652278913" rel="stylesheet">
+    <link href="/css/nucleus.css?1672924596" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672924596" rel="stylesheet">
+    <link href="/css/hybrid.css?1672924596" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672924596" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672924596" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672924596" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672924596" rel="stylesheet">
+    <link href="/css/theme.css?1672924596" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672924596" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1652278913" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672924596" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652278913"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672924596"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652278913"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652278913"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672924596"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672924596"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652278913"></script>
+<script type="text/javascript" src="/js/search.js?1672924596"></script>
 
     
   </div>
@@ -441,7 +441,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-05-2022</font></i>
+        <i><font color=orange>05-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -535,104 +535,121 @@
 	<h4 id="tạo-cloudwatch-dashboard">Tạo CloudWatch Dashboard</h4>
 <p>Để bắt đầu với CloudWatch Dashboard, trước tiên bạn cần tạo 1 dashboard mới. Bạn có thể tạo nhiều dashboard. Không có giới hạn về số lượng dashboard trong 1 tài khoản AWS. Tất cả các dashboard là Global, không nằm riêng trong 1 vùng region nào cả</p>
 <ol>
-<li>Truy cập giao diện <a href="https://aws.amazon.com/console/">AWS Management Console</a></li>
-</ol>
+<li>
+<p>Truy cập giao diện <a href="https://aws.amazon.com/console/">AWS Management Console</a></p>
 <ul>
 <li>Tìm <strong>CloudWatch</strong></li>
 <li>Chọn <strong>CloudWatch</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/0001-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="2">
-<li>Trong giao diện <strong>CloudWatch</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/0001.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
+<ol start="2">
+<li>
+<p>Trong giao diện <strong>CloudWatch</strong></p>
 <ul>
 <li>Chọn <strong>Dashboard</strong></li>
 <li>Chọn <strong>Custom dashboard</strong></li>
 <li>Chọn <strong>Create dashboard</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/0002-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="3">
-<li>Trong giao diện <strong>Create new dashboard</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/0002.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
+<ol start="3">
+<li>
+<p>Trong giao diện <strong>Create new dashboard</strong></p>
 <ul>
 <li><strong>Dashboard name</strong>, nhập <code>MyFirstDashboard</code></li>
 <li>Chọn <strong>Create dashboard</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/0003-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="4">
-<li>Tại prompt <strong>Add Widget</strong>, chọn loại giao diện <strong>Line</strong>. Trong giao diện <strong>Add to this dashboard</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/0003.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
+<ol start="4">
+<li>
+<p>Tại prompt <strong>Add Widget</strong>, chọn loại giao diện <strong>Line</strong>. Trong giao diện <strong>Add to this dashboard</strong></p>
 <ul>
 <li>Chọn <strong>Metrics</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/0004-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="5">
-<li>Trong giao diện <strong>Add metric graph</strong></li>
+</li>
 </ol>
+<p><img src="/images/6/0004.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
+<ol start="5">
+<li>
+<p>Trong giao diện <strong>Add metric graph</strong></p>
 <ul>
 <li>Chọn <strong>Browse</strong></li>
 <li><strong>Custom namespaces</strong>, chọn <strong>CWAgent</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/0005-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/0005.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="6">
 <li>Tiếp theo, chọn <strong>host</strong></li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/0006-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/0006.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="7">
-<li>Chọn host theo <strong>Hostname type</strong> của instance vừa tạo</li>
-</ol>
+<li>
+<p>Chọn host theo <strong>Hostname type</strong> của instance vừa tạo</p>
 <ul>
 <li>Chọn <strong>Create widget</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/0007-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/0007.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="8">
 <li>Hoàn thành tạo dashboard CloudWatch</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/0008-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/0009.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="9">
 <li>Phóng to dashboard để xem dễ dàng và chọn <strong>View in metrics</strong></li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/0009-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00010.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="10">
-<li>Trong giao diện <strong>CloudWatch metrics</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>CloudWatch metrics</strong></p>
 <ul>
 <li>Quan sát giao diện và các tính năng</li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00010-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/00011.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="11">
 <li>Trong giao diện <strong>CloudWatch metrics</strong></li>
 </ol>
-<ul>
-<li>Chọn <strong>Add query</strong></li>
-<li>Chọn <strong>EC2</strong></li>
-<li>Chọn <strong>Average Active CPU for an application (CloudWatch Agent)</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00011-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<pre><code>- Chọn **Add query**
+- Chọn **EC2**
+- Chọn **Average Active CPU for an application (CloudWatch Agent)**
+</code></pre>
+<p><img src="/images/6/00012.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="12">
 <li>Kết quả query được hiển thị</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00012-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00013.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="13">
-<li>Tiếp tục, trong giao diện <strong>CloudWatch metrics</strong></li>
-</ol>
+<li>
+<p>Tiếp tục, trong giao diện <strong>CloudWatch metrics</strong></p>
 <ul>
 <li>Chọn <strong>Add math</strong></li>
 <li>Chọn <strong>Search</strong></li>
 <li>Chọn <strong>EC2 CPU utilization</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00013-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/00014.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="14">
 <li>Kết quả hiện thị, chọn <strong>CWgent hostname type</strong> của instance và quan sát biểu đồ</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00014-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00015.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="15">
-<li>Quay trở lại giao diện <strong>CloudWatch Dashboard</strong></li>
-</ol>
+<li>
+<p>Quay trở lại giao diện <strong>CloudWatch Dashboard</strong></p>
 <ul>
 <li>Chọn <strong>Save dashboard</strong></li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00015-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/00016.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 
 
 
@@ -859,19 +876,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652278913"></script>
-    <script src="/js/jquery.sticky.js?1652278913"></script>
-    <script src="/js/featherlight.min.js?1652278913"></script>
-    <script src="/js/highlight.pack.js?1652278913"></script>
+    <script src="/js/clipboard.min.js?1672924596"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672924596"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672924596"></script>
+    <script src="/js/jquery.sticky.js?1672924596"></script>
+    <script src="/js/featherlight.min.js?1672924596"></script>
+    <script src="/js/highlight.pack.js?1672924596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652278913"></script>
-    <script src="/js/learn.js?1652278913"></script>
-    <script src="/js/hugo-learn.js?1652278913"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672924596"></script>
+    <script src="/js/learn.js?1672924596"></script>
+    <script src="/js/hugo-learn.js?1672924596"></script>
 
-    <link href="/mermaid/mermaid.css?1652278913" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652278913"></script>
+    <link href="/mermaid/mermaid.css?1672924596" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672924596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

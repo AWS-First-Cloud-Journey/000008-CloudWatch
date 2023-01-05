@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create VPC and Security Group :: Manager Resources With AWS CloudWatch</title>
 
     
-    <link href="/css/nucleus.css?1652278913" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652278913" rel="stylesheet">
-    <link href="/css/hybrid.css?1652278913" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652278913" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652278913" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652278913" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652278913" rel="stylesheet">
-    <link href="/css/theme.css?1652278913" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652278913" rel="stylesheet">
+    <link href="/css/nucleus.css?1672924595" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672924595" rel="stylesheet">
+    <link href="/css/hybrid.css?1672924595" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672924595" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672924595" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672924595" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672924595" rel="stylesheet">
+    <link href="/css/theme.css?1672924595" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672924595" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1652278913" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672924595" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652278913"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672924595"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652278913"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652278913"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672924595"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672924595"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652278913"></script>
+<script type="text/javascript" src="/js/search.js?1672924595"></script>
 
     
   </div>
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createec2instance/" title="Create EC2 instance" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.2-createec2instance/" title="Launch EC2 instance" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.2-createec2instance/">
-           <b> 2.2 </b> Create EC2 instance
+           <b> 2.2 </b> Launch EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -258,13 +258,13 @@
  
   
     
-    <li data-nav-id="/3-cloudwatchagent/" title="Install CloudWatch Agent" class="dd-item 
+    <li data-nav-id="/3-cloudwatchagent/" title="Installing CloudWatch Agent" class="dd-item 
         
         
         
         ">
       <a href="/3-cloudwatchagent/">
-           <b> 3. </b> Install CloudWatch Agent
+           <b> 3. </b> Installing CloudWatch Agent
           
             <i class="fas fa-check read-icon"></i>
           
@@ -284,13 +284,13 @@
  
   
     
-    <li data-nav-id="/4-createcloudwatchdashboard/" title="CloudWatch Dashboard" class="dd-item 
+    <li data-nav-id="/4-createcloudwatchdashboard/" title="Create CloudWatch Dashboard" class="dd-item 
         
         
         
         ">
       <a href="/4-createcloudwatchdashboard/">
-           <b> 4. </b> CloudWatch Dashboard
+           <b> 4. </b> Create CloudWatch Dashboard
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,13 +310,13 @@
  
   
     
-    <li data-nav-id="/5-sharedashboard/" title="Share  Dashboard" class="dd-item 
+    <li data-nav-id="/5-sharedashboard/" title="Share Dashboard" class="dd-item 
         
         
         
         ">
       <a href="/5-sharedashboard/">
-           <b> 5. </b> Share  Dashboard
+           <b> 5. </b> Share Dashboard
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,7 +441,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-05-2022</font></i>
+        <i><font color=orange>05-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -540,46 +540,52 @@
 
 	<h4 id="prepare-vpc-security-group-for-ec2-instance">Prepare VPC, Security Group for EC2 instance</h4>
 <ol>
-<li>Access the interface <a href="https://aws.amazon.com/console/">AWS Management Console</a></li>
-</ol>
+<li>
+<p>Access the <a href="https://aws.amazon.com/console/">AWS Management Console</a></p>
 <ul>
 <li>Find <strong>VPC</strong></li>
 <li>Select <strong>VPC</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0001-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="2">
-<li>In the <strong>VPC</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/1/0001.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="2">
+<li>
+<p>In the <strong>VPC</strong> interface</p>
 <ul>
 <li>Select <strong>Your VPCs</strong></li>
 <li>Select <strong>Create VPC</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0002-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="3">
-<li>In the <strong>Create VPC</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/1/0002.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="3">
+<li>
+<p>In the <strong>Create VPC</strong> interface</p>
 <ul>
-<li>In <strong>VPC settings</strong>, select <strong>VPC, subents, etc.</strong></li>
+<li>In <strong>VPC settings</strong>, select <strong>VPC, subnets, etc.</strong></li>
 <li><strong>Name tag auto-generation</strong>, enter <code>cloudwatch</code></li>
 <li><strong>IPv4 CIDR block</strong>, enter <code>10.0.0.0/16</code></li>
 <li><strong>IPv6 CIDR block</strong>, select <strong>No IPv6 CIDR block</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0003-createec2instance.png" alt="CreateEC2instance"></p>
+</li>
+</ol>
+<p><img src="/images/1/0003.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
 <ol start="4">
 <li>Select <strong>Create VPC</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0004-createec2instance.png" alt="CreateEC2instance"></p>
+<p><img src="/images/1/0004.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
 <ol start="5">
 <li>Select <strong>View VPC</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0005-createec2instance.png" alt="CreateEC2instance"></p>
+<p><img src="/images/1/0005.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
 <ol start="6">
-<li>Complete VPC . Creation</li>
+<li>Complete VPC creation.</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0006-createec2instance.png" alt="CreateEC2instance"></p>
+<p><img src="/images/1/0006.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
 <ol start="7">
-<li>In the <strong>VPC</strong> interface</li>
-</ol>
+<li>
+<p>In the <strong>VPC</strong> interface</p>
 <ul>
 <li>Select <strong>Subnets</strong></li>
 <li>Select <strong>Public subnet</strong></li>
@@ -587,50 +593,62 @@
 <li>Then select <strong>Actions</strong></li>
 <li>Select <strong>Edit subnet settings</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0007-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="8">
-<li>In the <strong>Edit subnet settings</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/1/0007.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="8">
+<li>
+<p>In the <strong>Edit subnet settings</strong> interface</p>
 <ul>
 <li>Step <strong>Auto-assign IP settings</strong>, select <em>Enable auto-assign public IPv4 address</em>*</li>
 <li>Select <strong>Save</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0008-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="9">
-<li><strong>Enable auto-assign public IPv4 address</strong> successfully</li>
+</li>
 </ol>
+<p><img src="/images/1/0008.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="9">
+<li>
+<p><strong>Enable auto-assign public IPv4 address</strong> successfully</p>
 <ul>
 <li>Check <strong>Auto-assign public IPv4 address</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0009-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="10">
-<li>Go to the <a href="https://aws.amazon.com/console/">AWS Management Console</a></li>
+</li>
 </ol>
+<p><img src="/images/1/0009.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="10">
+<li>
+<p>Go to the <a href="https://aws.amazon.com/console/">AWS Management Console</a></p>
 <ul>
 <li>Find <strong>VPC</strong></li>
 <li>Select <strong>VPC</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/0001-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="11">
-<li>In the <strong>VPC</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/1/00010.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="11">
+<li>
+<p>In the <strong>VPC</strong> interface</p>
 <ul>
 <li>Select <strong>Security Group</strong></li>
 <li>Select <strong>Create security group</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/00010-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="12">
-<li>In the <strong>Create security group</strong> interface</li>
+</li>
 </ol>
+<p><img src="/images/1/00011.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="12">
+<li>
+<p>In the <strong>Create security group</strong> interface</p>
 <ul>
 <li><strong>Security group name</strong>, enter <code>cloudwatch-subnet</code></li>
 <li><strong>Description</strong>, enter <code>Subnet for CloudWatch instance</code></li>
 <li><strong>VPC</strong>, select the newly created VPC</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/00011-createec2instance.png" alt="CreateEC2instance"></p>
-<ol start="13">
-<li>Configure <strong>Inbound rules</strong></li>
+</li>
 </ol>
+<p><img src="/images/1/00012.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
+<ol start="13">
+<li>
+<p>Configure <strong>Inbound rules</strong></p>
 <ul>
 <li>Select <strong>Add rule</strong> and proceed with configuration</li>
 <li><strong>SSH</strong></li>
@@ -639,15 +657,16 @@
 <li><strong>HTTP</strong></li>
 <li><strong>HTTPS</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/00012-createec2instance.png" alt="CreateEC2instance"></p>
+</li>
+</ol>
+<p><img src="/images/1/00013.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
 <ol start="14">
 <li>Select <em>Create security group</em>*</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/00013-createec2instance.png" alt="CreateEC2instance"></p>
+<p><img src="/images/1/00014.png?featherlight=false&amp;width=90pc" alt="CreateEC2instance"></p>
 <ol start="15">
 <li>Complete initialization <strong>Security group</strong></li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.1-Createec2instance/00014-createec2instance.png" alt="CreateEC2instance"></p>
 
 
 
@@ -865,7 +884,7 @@
 			<a class="nav nav-prev" href="/2-prerequiste/" title="Preparation steps"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/2.2-createec2instance/" title="Create EC2 instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-prerequiste/2.2-createec2instance/" title="Launch EC2 instance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -875,19 +894,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652278913"></script>
-    <script src="/js/jquery.sticky.js?1652278913"></script>
-    <script src="/js/featherlight.min.js?1652278913"></script>
-    <script src="/js/highlight.pack.js?1652278913"></script>
+    <script src="/js/clipboard.min.js?1672924595"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672924595"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672924595"></script>
+    <script src="/js/jquery.sticky.js?1672924595"></script>
+    <script src="/js/featherlight.min.js?1672924595"></script>
+    <script src="/js/highlight.pack.js?1672924595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652278913"></script>
-    <script src="/js/learn.js?1652278913"></script>
-    <script src="/js/hugo-learn.js?1652278913"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672924595"></script>
+    <script src="/js/learn.js?1672924595"></script>
+    <script src="/js/hugo-learn.js?1672924595"></script>
 
-    <link href="/mermaid/mermaid.css?1652278913" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652278913"></script>
+    <link href="/mermaid/mermaid.css?1672924595" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672924595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

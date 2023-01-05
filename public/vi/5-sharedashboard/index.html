@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Chia sẻ Dashboard :: Manager Resources With AWS CloudWatch</title>
 
     
-    <link href="/css/nucleus.css?1652278913" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652278913" rel="stylesheet">
-    <link href="/css/hybrid.css?1652278913" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652278913" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652278913" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652278913" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652278913" rel="stylesheet">
-    <link href="/css/theme.css?1652278913" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652278913" rel="stylesheet">
+    <link href="/css/nucleus.css?1672924596" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672924596" rel="stylesheet">
+    <link href="/css/hybrid.css?1672924596" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672924596" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672924596" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672924596" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672924596" rel="stylesheet">
+    <link href="/css/theme.css?1672924596" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672924596" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1652278913" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672924596" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652278913"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672924596"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652278913"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652278913"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672924596"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672924596"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652278913"></script>
+<script type="text/javascript" src="/js/search.js?1672924596"></script>
 
     
   </div>
@@ -441,7 +441,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-05-2022</font></i>
+        <i><font color=orange>05-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -535,77 +535,46 @@
 	<h4 id="chia-sẻ-cloudwatch-dashboard">Chia sẻ CloudWatch Dashboard</h4>
 <p>Trong phần này, chúng ta sử dụng các tính năng của CloudWatch metric, share dashboard và quản lý tài nguyên với <strong>Automatic dashboard</strong></p>
 <ol>
-<li>Trong giao diện <strong>CloudWatch Dashboard</strong></li>
-</ol>
+<li>
+<p>Trong giao diện <strong>CloudWatch Dashboard</strong></p>
 <ul>
-<li>Chọn <strong>Actions</strong></li>
-<li>Chọn <strong>Light/dark mode</strong></li>
-<li>Chọn <strong>Dark mode</strong> để thay đổi mode giao diện</li>
+<li>Share dashboard.</li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00016-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/00017.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="2">
-<li>Giao diện đã thay đổi mode</li>
+<li>Đối với <strong>Share your dashboard publicly</strong>, chọn <strong>Start sharing</strong></li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00017-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00018.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="3">
-<li>Trong giao diện <strong>CloudWatch Dashboard</strong></li>
+<li>Xác nhận <strong>Share</strong> và chọn <strong>Confirm and preview policy</strong></li>
 </ol>
-<ul>
-<li>Chọn <strong>Actions</strong></li>
-<li>Chọn <strong>Share dashboard</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00018-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00019.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="4">
-<li>Chọn <strong>Share với Public access dashboard</strong>, mọi người đều có thể truy cập vào để xem dashboard thông qua 1 đường dẫn</li>
+<li>Chọn <strong>Accept policy and generate shareable link</strong></li>
 </ol>
-<ul>
-<li>Chọn <strong>Start sharing</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00019-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00020.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="5">
-<li>Trong giao diện <strong>Share dashboard MyFirstDashboard</strong></li>
+<li>Copy link để chia sẻ.</li>
 </ol>
-<ul>
-<li>Nhập <code>Share</code></li>
-<li>Chọn <strong>Confirm and preview policy</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00020-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00021.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="6">
-<li>Sau đó, chọn <strong>Accecpt policy and generate shareable link</strong></li>
+<li>Truy cập vào link bằng trình duyệt.</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00021-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00022.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="7">
-<li>Hoàn thành xác thực share dashboard</li>
+<li>Đổi mode của dashboard.</li>
 </ol>
-<ul>
-<li>Chọn <strong>Copy link</strong>, sử dụng link này để chia sẻ mọi người truy cập vào dashboard</li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00022-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00023.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="8">
-<li>Dùng link vừa copy dán vào trình duyệt</li>
+<li>Bạn có thể xem <strong>Automatic dashboard</strong>, chọn <strong>EC2</strong></li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00023-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00024.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="9">
-<li>Thành công truy cập vào giao diện dashboard được chia sẻ qua đường dẫn</li>
+<li>Xem thông tin chi tiết được trực quan.</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00024-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="10">
-<li>Chúng ta có thể tùy chỉnh theo thời gian và mode của giao diện</li>
-</ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00025-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="11">
-<li>Quay trở lại giao diện <strong>CloudWatch dashboard</strong></li>
-</ol>
-<ul>
-<li>Chọn <strong>Dashboards</strong></li>
-<li>Chọn <strong>Automatic dashboards</strong></li>
-<li>Chọn <strong>EC2</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00026-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="12">
-<li>Quan sát biểu đồ thống kê thông qua <strong>Automatic dashboard</strong></li>
-</ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00027-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00025.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 
 
 
@@ -832,19 +801,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652278913"></script>
-    <script src="/js/jquery.sticky.js?1652278913"></script>
-    <script src="/js/featherlight.min.js?1652278913"></script>
-    <script src="/js/highlight.pack.js?1652278913"></script>
+    <script src="/js/clipboard.min.js?1672924596"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672924596"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672924596"></script>
+    <script src="/js/jquery.sticky.js?1672924596"></script>
+    <script src="/js/featherlight.min.js?1672924596"></script>
+    <script src="/js/highlight.pack.js?1672924596"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652278913"></script>
-    <script src="/js/learn.js?1652278913"></script>
-    <script src="/js/hugo-learn.js?1652278913"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672924596"></script>
+    <script src="/js/learn.js?1672924596"></script>
+    <script src="/js/hugo-learn.js?1672924596"></script>
 
-    <link href="/mermaid/mermaid.css?1652278913" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652278913"></script>
+    <link href="/mermaid/mermaid.css?1672924596" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672924596"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

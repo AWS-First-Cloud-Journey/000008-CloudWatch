@@ -1,6 +1,6 @@
 ---
-title : "Share  Dashboard"
-date :  "`r Sys.Date()`" 
+title : "Share Dashboard"
+date : "`r Sys.Date()`"
 weight : 5
 chapter : false
 pre : " <b> 5. </b> "
@@ -8,68 +8,42 @@ pre : " <b> 5. </b> "
 
 #### Share CloudWatch Dashboard
 
+In this section, we use CloudWatch metric features, share dashboards, and manage resources with **Automatic dashboard**
+
 1. In the **CloudWatch Dashboard** interface
 
-- Select **Actions**
-- Select **Light/dark mode**
-- Select **Dark mode** to change the interface mode
+   - Share dashboard.
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00016-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00017.png?featherlight=false&width=90pc)
 
-2. The interface has changed mode
+2. For **Share your dashboard publicly**, select **Start sharing**
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00017-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00018.png?featherlight=false&width=90pc)
 
-3. In the **CloudWatch Dashboard** interface
+3. Confirm **Share** and select **Confirm and preview policy**
 
-- Select **Actions**
-- Select **Share dashboard**
+![CreateCloudWatchDashboard](/images/6/00019.png?featherlight=false&width=90pc)
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00018-createcloudwatchdashboard.png)
+4. Select **Accept policy and generate shareable link**
 
-4. Select **Share with Public access dashboard**, everyone can access to view the dashboard through 1 link
+![CreateCloudWatchDashboard](/images/6/00020.png?featherlight=false&width=90pc)
 
-- Select **Start sharing**
+5. Copy the link to share.
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00019-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00021.png?featherlight=false&width=90pc)
 
-5. In the **Share dashboard MyFirstDashboard** interface
+6. Access the link with a browser.
 
-- Enter ```Share```
-- Select **Confirm and preview policy**
+![CreateCloudWatchDashboard](/images/6/00022.png?featherlight=false&width=90pc)
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00020-createcloudwatchdashboard.png)
+7. Change the dashboard mode.
 
-6. Then select **Accept policy and generate shareable link**
+![CreateCloudWatchDashboard](/images/6/00023.png?featherlight=false&width=90pc)
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00021-createcloudwatchdashboard.png)
+8. You can view **Automatic dashboard**, select **EC2**
 
-7. Complete dashboard share authentication
+![CreateCloudWatchDashboard](/images/6/00024.png?featherlight=false&width=90pc)
 
-- Select **Copy link**, use this link to share everyone accessing the dashboard
+9. View detailed information is intuitive.
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00022-createcloudwatchdashboard.png)
-
-8. Use the link you just copied and pasted into your browser
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00023-createcloudwatchdashboard.png)
-
-9. Successfully accessing the shared dashboard interface via the link
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00024-createcloudwatchdashboard.png)
-
-10. We can customize according to the time and mode of the interface
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00025-createcloudwatchdashboard.png)
-
-11. Return to **CloudWatch dashboard** interface
-
-- Select **Dashboards**
-- Select **Automatic dashboards**
-- Select **EC2**
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00026-createcloudwatchdashboard.png)
-
-12. Observing statistical charts through **Automatic dashboard**
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00027-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00025.png?featherlight=false&width=90pc)

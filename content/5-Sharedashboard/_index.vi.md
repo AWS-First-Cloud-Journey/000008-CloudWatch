@@ -12,66 +12,38 @@ Trong phần này, chúng ta sử dụng các tính năng của CloudWatch metri
 
 1. Trong giao diện **CloudWatch Dashboard**
 
-- Chọn **Actions**
-- Chọn **Light/dark mode**
-- Chọn **Dark mode** để thay đổi mode giao diện
+   - Share dashboard.
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00016-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00017.png?featherlight=false&width=90pc)
 
-2. Giao diện đã thay đổi mode
+2. Đối với **Share your dashboard publicly**, chọn **Start sharing**
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00017-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00018.png?featherlight=false&width=90pc)
 
-3. Trong giao diện **CloudWatch Dashboard**
+3. Xác nhận **Share** và chọn **Confirm and preview policy**
 
-- Chọn **Actions**
-- Chọn **Share dashboard**
+![CreateCloudWatchDashboard](/images/6/00019.png?featherlight=false&width=90pc)
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00018-createcloudwatchdashboard.png)
+4. Chọn **Accept policy and generate shareable link**
 
-4. Chọn **Share với Public access dashboard**, mọi người đều có thể truy cập vào để xem dashboard thông qua 1 đường dẫn
+![CreateCloudWatchDashboard](/images/6/00020.png?featherlight=false&width=90pc)
 
-- Chọn **Start sharing**
+5. Copy link để chia sẻ.
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00019-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00021.png?featherlight=false&width=90pc)
 
-5. Trong giao diện **Share dashboard MyFirstDashboard**
+6. Truy cập vào link bằng trình duyệt.
 
-- Nhập ```Share```
-- Chọn **Confirm and preview policy**
+![CreateCloudWatchDashboard](/images/6/00022.png?featherlight=false&width=90pc)
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00020-createcloudwatchdashboard.png)
+7. Đổi mode của dashboard.
 
-6. Sau đó, chọn **Accecpt policy and generate shareable link**
+![CreateCloudWatchDashboard](/images/6/00023.png?featherlight=false&width=90pc)
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00021-createcloudwatchdashboard.png)
+8. Bạn có thể xem **Automatic dashboard**, chọn **EC2**
 
-7. Hoàn thành xác thực share dashboard
+![CreateCloudWatchDashboard](/images/6/00024.png?featherlight=false&width=90pc)
 
-- Chọn **Copy link**, sử dụng link này để chia sẻ mọi người truy cập vào dashboard
+9. Xem thông tin chi tiết được trực quan.
 
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00022-createcloudwatchdashboard.png)
-
-8. Dùng link vừa copy dán vào trình duyệt
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00023-createcloudwatchdashboard.png)
-
-9. Thành công truy cập vào giao diện dashboard được chia sẻ qua đường dẫn 
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00024-createcloudwatchdashboard.png)
-
-10. Chúng ta có thể tùy chỉnh theo thời gian và mode của giao diện
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00025-createcloudwatchdashboard.png)
-
-11. Quay trở lại giao diện **CloudWatch dashboard**
-
-- Chọn **Dashboards**
-- Chọn **Automatic dashboards**
-- Chọn **EC2**
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00026-createcloudwatchdashboard.png)
-
-12. Quan sát biểu đồ thống kê thông qua **Automatic dashboard**
-
-![CreateCloudWatchDashboard](/images/4-Createcloudwatchdashboard/00027-createcloudwatchdashboard.png)
+![CreateCloudWatchDashboard](/images/6/00025.png?featherlight=false&width=90pc)

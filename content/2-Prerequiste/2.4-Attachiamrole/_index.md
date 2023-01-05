@@ -12,32 +12,32 @@ pre : " <b> 2.4 </b> "
 - Find **EC2**
 - Select **EC2**
 
-![Attach IAM Role](/images/2-Prerequiste/2.3-Attachiamrole/0001-attachiamrole.png)
+![Attach IAM Role](/images/4/0001.png?featherlight=false&width=90pc)
 
-2. In the **EC2** interface
+1. In the **EC2** interface
 
 - Select **Instances**
 - Select the newly created instance
 
-![Attach IAM Role](/images/2-Prerequiste/2.3-Attachiamrole/0002-attachiamrole.png)
+![Attach IAM Role](/images/4/0002.png?featherlight=false&width=90pc)
 
-3. In **EC2** interface
+3. In the **EC2** interface
 
 - Select **Actions**
 - Select **Security**
 - Select **Modify IAM role**
 
-![Attach IAM Role](/images/2-Prerequiste/2.3-Attachiamrole/0003-attachiamrole.png)
+![Attach IAM Role](/images/4/0003.png?featherlight=false&width=90pc)
 
 4. In the **Modify IAM role** interface
 
 - Select **CloudWatchAgentRole**
 - Select **Save**
 
-![Attach IAM Role](/images/2-Prerequiste/2.3-Attachiamrole/0004-attachiamrole.png)
+![Attach IAM Role](/images/4/0004.png?featherlight=false&width=90pc)
 
 5. Completed role assignment successfully
 
-- Check that the instance has been assigned the IAM role
+- Check the instance that has been assigned the IAM role
 
-![Attach IAM Role](/images/2-Prerequiste/2.3-Attachiamrole/0005-attachiamrole.png)
+![Attach IAM Role](/images/4/0005.png?featherlight=false&width=90pc)

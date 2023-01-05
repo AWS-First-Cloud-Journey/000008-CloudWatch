@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.97.3" />
+    <meta name="generator" content="Hugo 0.99.1" />
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Share  Dashboard :: Manager Resources With AWS CloudWatch</title>
+    <title>Share Dashboard :: Manager Resources With AWS CloudWatch</title>
 
     
-    <link href="/css/nucleus.css?1652278913" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1652278913" rel="stylesheet">
-    <link href="/css/hybrid.css?1652278913" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1652278913" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1652278913" rel="stylesheet">
-    <link href="/css/auto-complete.css?1652278913" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1652278913" rel="stylesheet">
-    <link href="/css/theme.css?1652278913" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1652278913" rel="stylesheet">
+    <link href="/css/nucleus.css?1672924595" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1672924595" rel="stylesheet">
+    <link href="/css/hybrid.css?1672924595" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1672924595" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1672924595" rel="stylesheet">
+    <link href="/css/auto-complete.css?1672924595" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1672924595" rel="stylesheet">
+    <link href="/css/theme.css?1672924595" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1672924595" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1652278913" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1672924595" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1652278913"></script>
+    <script src="/js/jquery-3.3.1.min.js?1672924595"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1652278913"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1652278913"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1672924595"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1672924595"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1652278913"></script>
+<script type="text/javascript" src="/js/search.js?1672924595"></script>
 
     
   </div>
@@ -167,13 +167,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createec2instance/" title="Create EC2 instance" class="dd-item 
+    <li data-nav-id="/2-prerequiste/2.2-createec2instance/" title="Launch EC2 instance" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/2.2-createec2instance/">
-           <b> 2.2 </b> Create EC2 instance
+           <b> 2.2 </b> Launch EC2 instance
           
             <i class="fas fa-check read-icon"></i>
           
@@ -258,13 +258,13 @@
  
   
     
-    <li data-nav-id="/3-cloudwatchagent/" title="Install CloudWatch Agent" class="dd-item 
+    <li data-nav-id="/3-cloudwatchagent/" title="Installing CloudWatch Agent" class="dd-item 
         
         
         
         ">
       <a href="/3-cloudwatchagent/">
-           <b> 3. </b> Install CloudWatch Agent
+           <b> 3. </b> Installing CloudWatch Agent
           
             <i class="fas fa-check read-icon"></i>
           
@@ -284,13 +284,13 @@
  
   
     
-    <li data-nav-id="/4-createcloudwatchdashboard/" title="CloudWatch Dashboard" class="dd-item 
+    <li data-nav-id="/4-createcloudwatchdashboard/" title="Create CloudWatch Dashboard" class="dd-item 
         
         
         
         ">
       <a href="/4-createcloudwatchdashboard/">
-           <b> 4. </b> CloudWatch Dashboard
+           <b> 4. </b> Create CloudWatch Dashboard
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,13 +310,13 @@
  
   
     
-    <li data-nav-id="/5-sharedashboard/" title="Share  Dashboard" class="dd-item 
+    <li data-nav-id="/5-sharedashboard/" title="Share Dashboard" class="dd-item 
         parent
         active
         
         ">
       <a href="/5-sharedashboard/">
-           <b> 5. </b> Share  Dashboard
+           <b> 5. </b> Share Dashboard
           
             <i class="fas fa-check read-icon"></i>
           
@@ -441,7 +441,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-05-2022</font></i>
+        <i><font color=orange>05-01-2023</font></i>
     </left>
     <left>
         <br>
@@ -489,7 +489,7 @@
             
           
           
-            <a href='/'>Monitor Resources with Amazon CloudWatch</a> > Share  Dashboard
+            <a href='/'>Monitor Resources with Amazon CloudWatch</a> > Share Dashboard
           
         
           
@@ -524,7 +524,7 @@
           
             <h1>
               
-              Share  Dashboard
+              Share Dashboard
             </h1>
           
 
@@ -533,78 +533,48 @@
 
 
 	<h4 id="share-cloudwatch-dashboard">Share CloudWatch Dashboard</h4>
+<p>In this section, we use CloudWatch metric features, share dashboards, and manage resources with <strong>Automatic dashboard</strong></p>
 <ol>
-<li>In the <strong>CloudWatch Dashboard</strong> interface</li>
-</ol>
+<li>
+<p>In the <strong>CloudWatch Dashboard</strong> interface</p>
 <ul>
-<li>Select <strong>Actions</strong></li>
-<li>Select <strong>Light/dark mode</strong></li>
-<li>Select <strong>Dark mode</strong> to change the interface mode</li>
+<li>Share dashboard.</li>
 </ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00016-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+</li>
+</ol>
+<p><img src="/images/6/00017.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="2">
-<li>The interface has changed mode</li>
+<li>For <strong>Share your dashboard publicly</strong>, select <strong>Start sharing</strong></li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00017-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00018.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="3">
-<li>In the <strong>CloudWatch Dashboard</strong> interface</li>
+<li>Confirm <strong>Share</strong> and select <strong>Confirm and preview policy</strong></li>
 </ol>
-<ul>
-<li>Select <strong>Actions</strong></li>
-<li>Select <strong>Share dashboard</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00018-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00019.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="4">
-<li>Select <strong>Share with Public access dashboard</strong>, everyone can access to view the dashboard through 1 link</li>
+<li>Select <strong>Accept policy and generate shareable link</strong></li>
 </ol>
-<ul>
-<li>Select <strong>Start sharing</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00019-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00020.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="5">
-<li>In the <strong>Share dashboard MyFirstDashboard</strong> interface</li>
+<li>Copy the link to share.</li>
 </ol>
-<ul>
-<li>Enter <code>Share</code></li>
-<li>Select <strong>Confirm and preview policy</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00020-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00021.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="6">
-<li>Then select <strong>Accept policy and generate shareable link</strong></li>
+<li>Access the link with a browser.</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00021-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00022.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="7">
-<li>Complete dashboard share authentication</li>
+<li>Change the dashboard mode.</li>
 </ol>
-<ul>
-<li>Select <strong>Copy link</strong>, use this link to share everyone accessing the dashboard</li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00022-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00023.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="8">
-<li>Use the link you just copied and pasted into your browser</li>
+<li>You can view <strong>Automatic dashboard</strong>, select <strong>EC2</strong></li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00023-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00024.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 <ol start="9">
-<li>Successfully accessing the shared dashboard interface via the link</li>
+<li>View detailed information is intuitive.</li>
 </ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00024-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="10">
-<li>We can customize according to the time and mode of the interface</li>
-</ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00025-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="11">
-<li>Return to <strong>CloudWatch dashboard</strong> interface</li>
-</ol>
-<ul>
-<li>Select <strong>Dashboards</strong></li>
-<li>Select <strong>Automatic dashboards</strong></li>
-<li>Select <strong>EC2</strong></li>
-</ul>
-<p><img src="/images/4-Createcloudwatchdashboard/00026-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
-<ol start="12">
-<li>Observing statistical charts through <strong>Automatic dashboard</strong></li>
-</ol>
-<p><img src="/images/4-Createcloudwatchdashboard/00027-createcloudwatchdashboard.png" alt="CreateCloudWatchDashboard"></p>
+<p><img src="/images/6/00025.png?featherlight=false&amp;width=90pc" alt="CreateCloudWatchDashboard"></p>
 
 
 
@@ -818,7 +788,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/4-createcloudwatchdashboard/" title="CloudWatch Dashboard"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/4-createcloudwatchdashboard/" title="Create CloudWatch Dashboard"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/6-cleanup/" title="Clean up resources" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -831,19 +801,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.min.js?1652278913"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1652278913"></script>
-    <script src="/js/jquery.sticky.js?1652278913"></script>
-    <script src="/js/featherlight.min.js?1652278913"></script>
-    <script src="/js/highlight.pack.js?1652278913"></script>
+    <script src="/js/clipboard.min.js?1672924595"></script>
+    <script src="/js/perfect-scrollbar.min.js?1672924595"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1672924595"></script>
+    <script src="/js/jquery.sticky.js?1672924595"></script>
+    <script src="/js/featherlight.min.js?1672924595"></script>
+    <script src="/js/highlight.pack.js?1672924595"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1652278913"></script>
-    <script src="/js/learn.js?1652278913"></script>
-    <script src="/js/hugo-learn.js?1652278913"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1672924595"></script>
+    <script src="/js/learn.js?1672924595"></script>
+    <script src="/js/hugo-learn.js?1672924595"></script>
 
-    <link href="/mermaid/mermaid.css?1652278913" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1652278913"></script>
+    <link href="/mermaid/mermaid.css?1672924595" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1672924595"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
