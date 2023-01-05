@@ -11,7 +11,7 @@ pre : " <b> 4. </b> "
 To get started with CloudWatch Dashboard, you first need to create a new dashboard. You can create multiple dashboards. There is no limit to the number of dashboards in an AWS account. All dashboards are Global, not located in a specific region
 
 
-1. Access the [AWS Management Console] interface(https://aws.amazon.com/console/)
+1. Access the [AWS Management Console](https://aws.amazon.com/console/)
 
    - Find **CloudWatch**
    - Select **CloudWatch**
