@@ -1,18 +1,49 @@
 ---
-title : "Preparation steps"
+title : "Preparatory steps"
 date : "`r Sys.Date()`"
 weight : 2
 chapter : false
 pre : " <b> 2. </b> "
 ---
 
-#### Overview
+#### Preparation steps
 
-In this section, you will practice setting up CloudWatch Agent to monitor EC2 Instance's RAM and send data back to CloudWatch. In order for EC2 Instance to have access to CloudWatch, you need to assign it an appropriate IAM Role.
+1. Go to **AWS Management Console**
 
-#### Content
+   - Find **CloudFormation**
+   - Select **CloudFormation**
 
-1. [Create VPC and Security Group](2.1-createvpcandsecuritygroup)
-2. [Initialize EC2 instance](2.2-createec2instance)
-3. [Create IAM Role](2.3-createiamrole)
-4. [Assign IAM Role to EC2 instance](2.4-attachiamrole)
+![CloudWatch](/images/1/0001.png?featherlight=false&width=90pc)
+
+2. In the **CloudFormation** interface
+
+   - Select **Create stack**
+   - Select **With new resources**
+
+![CloudWatch](/images/1/0002.png?featherlight=false&width=90pc)
+
+3. In the **Create stack** interface. You download the configuration file [template](https://raw.githubusercontent.com/AWS-First-Cloud-Journey/CloudWatchWorkshop/main/template.yml)
+
+   - Select **Template is ready**
+   - Select **Upload a template file**
+   - Select **Choose file**
+   - Select **template.yml**
+   - Select **Next**
+
+![CloudWatch](/images/1/0003.png?featherlight=false&width=90pc)
+
+4. Enter the stack name **```AwsWorkshopStack```** and select **Next**
+
+![CloudWatch](/images/1/0004.png?featherlight=false&width=90pc)
+
+5. Select **Next**
+
+![CloudWatch](/images/1/0005.png?featherlight=false&width=90pc)
+
+6. Select **Create stack**
+
+![CloudWatch](/images/1/0006.png?featherlight=false&width=90pc)
+
+7. Complete CloudFormation stack creation. Successful infrastructure preparation.
+
+![CloudWatch](/images/1/0007.png?featherlight=false&width=90pc)

@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Tạo IAM role :: Manager Resources With AWS CloudWatch</title>
+    <title>Tạo IAM Role :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1651854653" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1651854653" rel="stylesheet">
-    <link href="/css/hybrid.css?1651854653" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1651854653" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1651854653" rel="stylesheet">
-    <link href="/css/auto-complete.css?1651854653" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1651854653" rel="stylesheet">
-    <link href="/css/theme.css?1651854653" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1651854653" rel="stylesheet">
+    <link href="/css/nucleus.css?1652623982" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1652623982" rel="stylesheet">
+    <link href="/css/hybrid.css?1652623982" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1652623982" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1652623982" rel="stylesheet">
+    <link href="/css/auto-complete.css?1652623982" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1652623982" rel="stylesheet">
+    <link href="/css/theme.css?1652623982" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1652623982" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1651854653" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1652623982" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1651854653"></script>
+    <script src="/js/jquery-3.3.1.min.js?1652623982"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1651854653"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1651854653"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1652623982"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1652623982"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1651854653"></script>
+<script type="text/javascript" src="/js/search.js?1652623982"></script>
 
     
   </div>
@@ -139,13 +139,44 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.1-createec2instance/" title="Khởi tạo EC2 instance" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/" title="Chuẩn bị VPC và EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-prerequiste/2.1-createec2instance/">
-           <b> 2.1 </b> Khởi tạo EC2 instance
+      <a href="/vi/2-prerequiste/2.1-createec2/">
+           <b> 2.1 </b> Chuẩn bị VPC và EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/" title="Tạo VPC " class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.1-createvpc/">
+           <b> 2.1.1 </b> Tạo VPC 
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,41 +198,162 @@
  
   
     
-    <li data-nav-id="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM role" class="dd-item 
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/" title="Tạo Public subnet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.2-createpublicsubnet/">
+           <b> 2.1.2 </b> Tạo Public subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/" title="Tạo Private subnet" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.3-createprivatesubnet/">
+           <b> 2.1.3 </b> Tạo Private subnet
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/" title="Tạo các security group" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.4-createsecgroup/">
+           <b> 2.1.4 </b> Tạo các security group
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/" title="Tạo Public Linux EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.5-createec2linux/">
+           <b> 2.1.5 </b> Tạo Public Linux EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/">
+           <b> 2.1.6 </b> Tạo Private Windows EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/2-prerequiste/2.2-createiamrole/" title="Tạo IAM Role" class="dd-item 
         parent
         active
         
         ">
       <a href="/vi/2-prerequiste/2.2-createiamrole/">
-           <b> 2.2 </b> Tạo IAM role
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-prerequiste/2.3-attachiamrole/" title="Gán IAM role" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-prerequiste/2.3-attachiamrole/">
-           <b> 2.3 </b> Gán IAM role
+           <b> 2.2 </b> Tạo IAM Role
           
             <i class="fas fa-check read-icon"></i>
           
@@ -230,13 +382,449 @@
  
   
     
-    <li data-nav-id="/vi/3-cloudwatchagent/" title="Cài đặt CloudWatch Agent" class="dd-item 
+    <li data-nav-id="/vi/3-accessibilitytoinstances/" title="Tạo kết nối đến máy chủ EC2" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-cloudwatchagent/">
-           <b> 3. </b> Cài đặt CloudWatch Agent
+      <a href="/vi/3-accessibilitytoinstances/">
+           <b> 3. </b> Tạo kết nối đến máy chủ EC2
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.1-public-instance/" title="Kết nối đến máy chủ Public" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.1-public-instance/">
+           <b> 3.1. </b> Kết nối đến máy chủ Public
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/" title="Tạo kết nối đến máy chủ EC2 Private" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/">
+           <b> 3.2. </b> Tạo kết nối đến máy chủ EC2 Private
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/" title="Kích hoạt DNS hostnames" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.1-enablevpcdns/">
+           <b> 3.2.1 </b> Kích hoạt DNS hostnames
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/" title="Tạo VPC Endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/">
+           <b> 3.2.2 </b> Tạo VPC Endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/" title="Tạo Endpoint ssm" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.1-endpointssm/">
+           <b> 3.2.2.1 </b> Tạo Endpoint ssm
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/" title="Tạo Endpoint ssmmessages" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.2-endpointssmmessages/">
+           <b> 3.2.2.2 </b> Tạo Endpoint ssmmessages
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/" title="Tạo Endpoint ec2messages" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.2-createvpcendpoint/3.2.2.3-endpointec2messages/">
+           <b> 3.2.2.3 </b> Tạo Endpoint ec2messages
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/" title="Kết nối EC2 Private" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/3-accessibilitytoinstances/3.2-private-instance/3.2.3-connectec2/">
+           <b> 3.2.3 </b> Kết nối EC2 Private
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/" title="Quản lý session logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/">
+           <b> 4. </b> Quản lý session logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.1-updateiamrole/" title="Cập nhật IAM Role" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.1-updateiamrole/">
+           <b> 4.1 </b> Cập nhật IAM Role
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.2-creates3bucket/" title="Tạo S3 Bucket" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.2-creates3bucket/">
+           <b> 4.2 </b> Tạo S3 Bucket
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.3-creategwes3/" title="Tạo S3 Gateway endpoint" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.3-creategwes3/">
+           <b> 4.3 </b> Tạo S3 Gateway endpoint
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/4-s3log/4.4-configsessionlogs/" title="Theo dõi session logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/4-s3log/4.4-configsessionlogs/">
+           <b> 4.4 </b> Theo dõi session logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/5-portfwd/" title="Port Forwarding" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/5-portfwd/">
+           <b> 5. </b> Port Forwarding
           
             <i class="fas fa-check read-icon"></i>
           
@@ -256,65 +844,13 @@
  
   
     
-    <li data-nav-id="/vi/4-createcloudwatchdashboard/" title="Tạo CloudWatch Dashboard" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/4-createcloudwatchdashboard/">
-           <b> 4. </b> Tạo CloudWatch Dashboard
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/5-sharedashboard/" title="Chia sẻ CloudWatch Dashboard" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/5-sharedashboard/">
-           <b> 5. </b> Chia sẻ CloudWatch Dashboard
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/vi/6-cleanup/" title="Dọn dẹp tài nguyên  " class="dd-item 
         
         
         
         ">
       <a href="/vi/6-cleanup/">
-           <b> 6. </b> Dọn dẹp tài nguyên
+          <b>6. </b>Dọn dẹp tài nguyên  
           
             <i class="fas fa-check read-icon"></i>
           
@@ -404,7 +940,7 @@
       <left>
     
      <b> Workshop</b> <br>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=7831447&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
      <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
     <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
      
@@ -413,15 +949,17 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>06-05-2022</font></i>
+        <i><font color=orange>30-01-2022</font></i>
     </left>
     <left>
         <br>
         <br>
             <b> Team </b> <br>
            
-            <i>
+            <i> <a href="https://www.linkedin.com/in/sutrinh/"  style="color:orange">Sử Trịnh  </a> <br>
                 <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+                <a href="https://www.linkedin.com/in/hiepnguyendt"  style="color:orange">Thanh Hiệp </a>
+               
         </i>
         </left>
 
@@ -465,7 +1003,7 @@
             
           
           
-            <a href='/vi/'>Theo dõi tài nguyên với AWS CloudWatch</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Tạo IAM role
+            <a href='/vi/'>Session Management</a> > <a href='/vi/2-prerequiste/'>Các bước chuẩn bị</a> > Tạo IAM Role
           
         
           
@@ -482,7 +1020,7 @@
   <ul>
     <li>
       <ul>
-        <li></li>
+        <li><a href="#tao-iam-role">Tạo IAM Role</a></li>
       </ul>
     </li>
   </ul>
@@ -502,7 +1040,7 @@
           
             <h1>
               
-              Tạo IAM role
+              Tạo IAM Role
             </h1>
           
 
@@ -510,56 +1048,41 @@
 
 
 
-	<h4 id="tạo-iam-role">Tạo IAM role</h4>
-<p>Trong phần này, bạn sẽ thực hành cài đặt CloudWatch Agent để theo dõi RAM của EC2 Instance và gửi dữ liệu về cho CloudWatch. Để EC2 Instance có quyền truy cập vào CloudWatch, bạn cần gán cho nó một IAM Role phù hợp.</p>
+	<h3 id="tao-iam-role">Tạo IAM Role</h3>
+<p>Trong bước này chúng ta sẽ tiến hành tạo IAM Role. Trong IAM Role này sẽ được gán policy <strong>AmazonSSMManagedInstanceCore</strong>, đây là policy cho phép máy chủ EC2 có thể giao tiếp với Session Manager.</p>
 <ol>
-<li>Truy cập <a href="https://aws.amazon.com/console/">AWS Management Console</a></li>
+<li>Truy cập vào <a href="https://console.aws.amazon.com/iamv2/">giao diện quản trị dịch vụ IAM</a></li>
+<li>Ở thanh điều hướng bên trái, click  <strong>Roles</strong>.</li>
 </ol>
-<ul>
-<li>Tìm <strong>IAM</strong></li>
-<li>Chọn <strong>IAM</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0001-createiamrole.png" alt="CreateIAMrole"></p>
-<ol start="2">
-<li>Trong giao diện <strong>IAM</strong></li>
-</ol>
-<ul>
-<li>Chọn <strong>Roles</strong></li>
-<li>Chọn <strong>Create role</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0002-createiamrole.png" alt="CreateIAMrole"></p>
+<p><img src="/images/2.prerequisite/038-iamrole.png" alt="role"></p>
 <ol start="3">
-<li>Trong giao diện <strong>Select trusted entity</strong></li>
+<li>Click <strong>Create role</strong>.</li>
 </ol>
-<ul>
-<li>Chọn <strong>AWS service</strong></li>
-<li><strong>Use case</strong>, chọn <strong>EC2</strong></li>
-</ul>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0003-createiamrole.png" alt="CreateIAMrole"></p>
+<p><img src="/images/2.prerequisite/039-iamrole.png" alt="role1"></p>
 <ol start="4">
-<li>Trong giao diện <strong>Add permissions</strong></li>
+<li>Click <strong>AWS service</strong> và click <strong>EC2</strong>.</li>
 </ol>
 <ul>
-<li>Tìm kiếm <strong>CloudWatchAgentServer</strong> policy</li>
-<li>Chọn <strong>CloudWatchAgentServer</strong> policy</li>
-<li>Chọn <strong>Next</strong></li>
+<li>Click <strong>Next: Permissions</strong>.</li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0004-createiamrole.png" alt="CreateIAMrole"></p>
+<p><img src="/images/2.prerequisite/040-iamrole.png" alt="role1"></p>
 <ol start="5">
-<li>Trong phần <strong>Role details</strong></li>
+<li>Trong ô Search, điền <strong>AmazonSSMManagedInstanceCore</strong> và ấn phím Enter để tìm kiếm policy này.</li>
 </ol>
 <ul>
-<li>Chọn <strong>CloudWatchAgentRole</strong></li>
+<li>Click chọn policy <strong>AmazonSSMManagedInstanceCore</strong>.</li>
+<li>Click <strong>Next: Tags.</strong></li>
 </ul>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0005-createiamrole.png" alt="CreateIAMrole"></p>
+<p><img src="/images/2.prerequisite/041-iamrole.png" alt="createpolicy"></p>
 <ol start="6">
-<li>Chọn <strong>Create role</strong></li>
+<li>Click <strong>Next: Review</strong>.</li>
+<li>Đặt tên cho Role là <strong>SSM-Role</strong> ở Role Name</li>
 </ol>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0006-createiamrole.png" alt="CreateIAMrole"></p>
-<ol start="7">
-<li>Hoàn thành tạo role</li>
-</ol>
-<p><img src="/images/2-Prerequiste/2.2-Createiamrole/0007-createiamrole.png" alt="CreateIAMrole"></p>
+<ul>
+<li>Click <strong>Create Role</strong> .</li>
+</ul>
+<p><img src="/images/2.prerequisite/042-iamrole.png" alt="namerole"></p>
+<p>Tiếp theo chúng ta sẽ thực hiện kết nối đến các máy chủ EC2 chúng ta đã tạo bằng <strong>Session Manager</strong>.</p>
 
 
 
@@ -643,6 +1166,21 @@
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -654,7 +1192,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -662,28 +1199,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
             
         
@@ -716,6 +1231,296 @@
                     
                     
 
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -761,10 +1566,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/2-prerequiste/2.1-createec2instance/" title="Khởi tạo EC2 instance"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/2-prerequiste/2.1-createec2/2.1.6-createec2windows/" title="Tạo Private Windows EC2"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/2-prerequiste/2.3-attachiamrole/" title="Gán IAM role" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-accessibilitytoinstances/" title="Tạo kết nối đến máy chủ EC2" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -774,19 +1579,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1651854653"></script>
-    <script src="/js/perfect-scrollbar.min.js?1651854653"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1651854653"></script>
-    <script src="/js/jquery.sticky.js?1651854653"></script>
-    <script src="/js/featherlight.min.js?1651854653"></script>
-    <script src="/js/highlight.pack.js?1651854653"></script>
+    <script src="/js/clipboard.min.js?1652623982"></script>
+    <script src="/js/perfect-scrollbar.min.js?1652623982"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1652623982"></script>
+    <script src="/js/jquery.sticky.js?1652623982"></script>
+    <script src="/js/featherlight.min.js?1652623982"></script>
+    <script src="/js/highlight.pack.js?1652623982"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1651854653"></script>
-    <script src="/js/learn.js?1651854653"></script>
-    <script src="/js/hugo-learn.js?1651854653"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1652623982"></script>
+    <script src="/js/learn.js?1652623982"></script>
+    <script src="/js/hugo-learn.js?1652623982"></script>
 
-    <link href="/mermaid/mermaid.css?1651854653" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1651854653"></script>
+    <link href="/mermaid/mermaid.css?1652623982" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1652623982"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

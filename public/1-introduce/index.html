@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Introduction :: MONITOR RESOURCES WITH AMAZON CLOUDWATCH</title>
+    <title>Introduction :: Working with SNS</title>
 
     
-    <link href="/css/nucleus.css?1680246793" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680246793" rel="stylesheet">
-    <link href="/css/hybrid.css?1680246793" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680246793" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680246793" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680246793" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680246793" rel="stylesheet">
-    <link href="/css/theme.css?1680246793" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680246793" rel="stylesheet">
+    <link href="/css/nucleus.css?1694365641" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1694365641" rel="stylesheet">
+    <link href="/css/hybrid.css?1694365641" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1694365641" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1694365641" rel="stylesheet">
+    <link href="/css/auto-complete.css?1694365641" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1694365641" rel="stylesheet">
+    <link href="/css/theme.css?1694365641" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1694365641" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680246793" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1694365641" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680246793"></script>
+    <script src="/js/jquery-3.3.1.min.js?1694365641"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680246793"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680246793"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1694365641"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1694365641"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680246793"></script>
+<script type="text/javascript" src="/js/search.js?1694365641"></script>
 
     
   </div>
@@ -108,13 +108,39 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/" title="Preparation steps" class="dd-item 
+    <li data-nav-id="/2-prerequiste/" title="Preparatory steps" class="dd-item 
         
         
         
         ">
       <a href="/2-prerequiste/">
-           <b> 2. </b> Preparation steps
+           <b> 2. </b> Preparatory steps
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-cloudwatchmetric/" title="CloudWatch Metric" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-cloudwatchmetric/">
+           <b> 3. </b> CloudWatch Metric
           
             <i class="fas fa-check read-icon"></i>
           
@@ -139,13 +165,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.1-createvpcandsecuritygroup/" title="Create VPC and Security Group" class="dd-item 
+    <li data-nav-id="/3-cloudwatchmetric/3.1-view/" title="Viewing Metrics" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.1-createvpcandsecuritygroup/">
-           <b> 2.1 </b> Create VPC and Security Group
+      <a href="/3-cloudwatchmetric/3.1-view/">
+           <b> 3.1 </b> Viewing Metrics
           
             <i class="fas fa-check read-icon"></i>
           
@@ -167,13 +193,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.2-createec2instance/" title="Launch EC2 instance" class="dd-item 
+    <li data-nav-id="/3-cloudwatchmetric/3.2-search/" title="Search expressions" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.2-createec2instance/">
-           <b> 2.2 </b> Launch EC2 instance
+      <a href="/3-cloudwatchmetric/3.2-search/">
+           <b> 3.2 </b> Search expressions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -195,13 +221,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.3-createiamrole/" title="Create IAM role" class="dd-item 
+    <li data-nav-id="/3-cloudwatchmetric/3.3-math/" title="Math expressions" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.3-createiamrole/">
-           <b> 2.3 </b> Create IAM role
+      <a href="/3-cloudwatchmetric/3.3-math/">
+           <b> 3.3 </b> Math expressions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -223,13 +249,13 @@
  
   
     
-    <li data-nav-id="/2-prerequiste/2.4-attachiamrole/" title="Assign IAM role" class="dd-item 
+    <li data-nav-id="/3-cloudwatchmetric/3.4-dynamic/" title="Dynamic Labels" class="dd-item 
         
         
         
         ">
-      <a href="/2-prerequiste/2.4-attachiamrole/">
-           <b> 2.4 </b> Assign IAM role
+      <a href="/3-cloudwatchmetric/3.4-dynamic/">
+           <b> 3.4 </b> Dynamic Labels
           
             <i class="fas fa-check read-icon"></i>
           
@@ -258,13 +284,135 @@
  
   
     
-    <li data-nav-id="/3-cloudwatchagent/" title="Installing CloudWatch Agent" class="dd-item 
+    <li data-nav-id="/4-cloudwatchlogs/" title="CloudWatch Logs" class="dd-item 
         
         
         
         ">
-      <a href="/3-cloudwatchagent/">
-           <b> 3. </b> Installing CloudWatch Agent
+      <a href="/4-cloudwatchlogs/">
+           <b> 4. </b> CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-cloudwatchlogs/4.1-logs/" title="CloudWatch Logs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-cloudwatchlogs/4.1-logs/">
+           <b> 4.1 </b> CloudWatch Logs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-cloudwatchlogs/4.2-loginsights/" title="CloudWatch Logs Insights" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-cloudwatchlogs/4.2-loginsights/">
+           <b> 4.2 </b> CloudWatch Logs Insights
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-cloudwatchlogs/4.3-metricfilter/" title="CloudWatch Metric Filter" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-cloudwatchlogs/4.3-metricfilter/">
+           <b> 4.3 </b> CloudWatch Metric Filter
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-cloudwatchalarm/" title="CloudWatch Alarms" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-cloudwatchalarm/">
+           <b> 5. </b> CloudWatch Alarms
           
             <i class="fas fa-check read-icon"></i>
           
@@ -284,13 +432,13 @@
  
   
     
-    <li data-nav-id="/4-createcloudwatchdashboard/" title="Create CloudWatch Dashboard" class="dd-item 
+    <li data-nav-id="/6-cloudwatchdashboard/" title="CloudWatch Dashboards" class="dd-item 
         
         
         
         ">
-      <a href="/4-createcloudwatchdashboard/">
-           <b> 4. </b> Create CloudWatch Dashboard
+      <a href="/6-cloudwatchdashboard/">
+           <b> 6. </b> CloudWatch Dashboards
           
             <i class="fas fa-check read-icon"></i>
           
@@ -310,39 +458,13 @@
  
   
     
-    <li data-nav-id="/5-sharedashboard/" title="Share Dashboard" class="dd-item 
+    <li data-nav-id="/7-cleanup/" title="Clean up resources" class="dd-item 
         
         
         
         ">
-      <a href="/5-sharedashboard/">
-           <b> 5. </b> Share Dashboard
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/6-cleanup/" title="Clean up resources" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/6-cleanup/">
-           <b> 6. </b> Clean up resources
+      <a href="/7-cleanup/">
+           <b> 7. </b> Clean up resources
           
             <i class="fas fa-check read-icon"></i>
           
@@ -364,11 +486,7 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj/"><i class='fab fa-facebook'></i> AWS Study Group</a>
               </li>
           
         </ul>
@@ -445,15 +563,14 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>11-09-2023</font></i>
     </left>
     <left>
         <br>
         <br>
             <b> Team </b> <br>
-           
-            <i>
-                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+            <i> <a href="https://www.linkedin.com/in/vanhoangkha/"  style="color:orange"> Hoàng Kha </a> <br>
         </i>
         </left>
 
@@ -493,7 +610,7 @@
             
           
           
-            <a href='/'>Monitor Resources with Amazon CloudWatch</a> > Introduction
+            <a href='/'>AWS CloudWatch Workshop</a> > Introduction
           
         
           
@@ -536,12 +653,9 @@
 
 
 
-	<h4 id="amazon-cloudwatch">Amazon CloudWatch</h4>
-<p>Amazon CloudWatch is a tool that allows you to collect data about the performance of the resources, applications, and services running on the AWS Cloud or your servers. Collected data will be saved as logs, metrics, and events. Cloudwatch can also present data in the form of graphs for you to easily visualize and distill information from the data.</p>
-<h4 id="cloudwatch-agent">CloudWatch Agent</h4>
-<p>CloudWatch Agent is an application of the CloudWatch service. You need to download and launch the CloudWatch Agent on your on-premises server or EC2 Instance so that CloudWatch can collect activity data for each machine.</p>
-<p>In this section, you will practice setting up CloudWatch Agent to monitor EC2 Instance&rsquo;s RAM and send data back to CloudWatch. In order for EC2 Instance to have access to CloudWatch, you need to assign it an appropriate IAM Role.</p>
-<p><img src="/images/architect.png" alt="CloudWatch"></p>
+	<h4 id="overview">Overview</h4>
+<p><strong>Amazon CloudWatch</strong> is a monitoring and management service that provides action-oriented data and information for AWS application and infrastructure resources, hybrid and on-premises applications. You can collect and access all performance and operational data in the form of logs and metrics in the same platform, instead of monitoring in silos (servers, networks, or databases). CloudWatch allows you to monitor end-to-end (applications, infrastructure, and services) and leverage alerts, logs, and event data to take action automatically and reduce average processing time (MTTR). This service helps you free up critical resources and focus on building applications and business value.</p>
+<p><strong>CloudWatch</strong> provides action-oriented information, assisting in optimizing application performance, managing resource usage, and understanding the overall health of the system. CloudWatch displays detailed log and metric data down to the second, maintains data for 15 months (metric) and enables calculations on metrics. It also helps you with analytics based on stale data to optimize costs and collect real-time information that optimizes application and infrastructure resources. You can use CloudWatch Container Insights to monitor, troubleshoot, and alert the applications and microservices contained in your containers. CloudWatch collects, aggregates, and summarizes compute usage (such as CPU, memory, disk, and network data) as well as diagnostic information (such as container restart failures) to help DevOps engineers Isolate and resolve problems quickly. Container Insights gives you insights from container management services such as Amazon ECS for Kubernetes (EKS), Amazon Elastic Container Service (ECS), AWS Fargate, and standalone Kubernetes (k8s).</p>
 
 
 
@@ -607,6 +721,22 @@
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -689,8 +819,58 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -752,10 +932,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Monitor Resources with Amazon CloudWatch"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/" title="AWS CloudWatch Workshop"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/2-prerequiste/" title="Preparation steps" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/2-prerequiste/" title="Preparatory steps" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -765,19 +945,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680246793"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680246793"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680246793"></script>
-    <script src="/js/jquery.sticky.js?1680246793"></script>
-    <script src="/js/featherlight.min.js?1680246793"></script>
-    <script src="/js/highlight.pack.js?1680246793"></script>
+    <script src="/js/clipboard.min.js?1694365641"></script>
+    <script src="/js/perfect-scrollbar.min.js?1694365641"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1694365641"></script>
+    <script src="/js/jquery.sticky.js?1694365641"></script>
+    <script src="/js/featherlight.min.js?1694365641"></script>
+    <script src="/js/highlight.pack.js?1694365641"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680246793"></script>
-    <script src="/js/learn.js?1680246793"></script>
-    <script src="/js/hugo-learn.js?1680246793"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1694365641"></script>
+    <script src="/js/learn.js?1694365641"></script>
+    <script src="/js/hugo-learn.js?1694365641"></script>
 
-    <link href="/mermaid/mermaid.css?1680246793" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680246793"></script>
+    <link href="/mermaid/mermaid.css?1694365641" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1694365641"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

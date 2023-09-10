@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Theo dõi tài nguyên với AWS CloudWatch on THEO DÕI TÀI NGUYÊN VỚI AMAZON CLOUDWATCH</title>
+    <title>AWS CloudWatch Workshop on Làm việc với SNS</title>
     <link>/vi/</link>
-    <description>Recent content in Theo dõi tài nguyên với AWS CloudWatch on THEO DÕI TÀI NGUYÊN VỚI AMAZON CLOUDWATCH</description>
+    <description>Recent content in AWS CloudWatch Workshop on Làm việc với SNS</description>
     <generator>Hugo -- gohugo.io</generator><atom:link href="/vi/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

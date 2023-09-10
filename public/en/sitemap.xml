@@ -2,16 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/2-prerequiste/2.1-createvpcandsecuritygroup/</loc>
+    <loc>/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.1-createvpcandsecuritygroup/"
+                href="/vi/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.1-createvpcandsecuritygroup/"
+                href="/"
+                />
+  </url><url>
+    <loc>/4-cloudwatchlogs/4.1-logs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-cloudwatchlogs/4.1-logs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-cloudwatchlogs/4.1-logs/"
                 />
   </url><url>
     <loc>/1-introduce/</loc>
@@ -26,28 +38,28 @@
                 href="/1-introduce/"
                 />
   </url><url>
-    <loc>/</loc>
+    <loc>/3-cloudwatchmetric/3.1-view/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="/vi/3-cloudwatchmetric/3.1-view/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="/3-cloudwatchmetric/3.1-view/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.2-createec2instance/</loc>
+    <loc>/4-cloudwatchlogs/4.2-loginsights/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.2-createec2instance/"
+                href="/vi/4-cloudwatchlogs/4.2-loginsights/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.2-createec2instance/"
+                href="/4-cloudwatchlogs/4.2-loginsights/"
                 />
   </url><url>
     <loc>/2-prerequiste/</loc>
@@ -62,76 +74,112 @@
                 href="/2-prerequiste/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.3-createiamrole/</loc>
+    <loc>/3-cloudwatchmetric/3.2-search/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.3-createiamrole/"
+                href="/vi/3-cloudwatchmetric/3.2-search/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.3-createiamrole/"
+                href="/3-cloudwatchmetric/3.2-search/"
                 />
   </url><url>
-    <loc>/3-cloudwatchagent/</loc>
+    <loc>/3-cloudwatchmetric/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloudwatchagent/"
+                href="/vi/3-cloudwatchmetric/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloudwatchagent/"
+                href="/3-cloudwatchmetric/"
                 />
   </url><url>
-    <loc>/2-prerequiste/2.4-attachiamrole/</loc>
+    <loc>/4-cloudwatchlogs/4.3-metricfilter/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/2.4-attachiamrole/"
+                href="/vi/4-cloudwatchlogs/4.3-metricfilter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/2.4-attachiamrole/"
+                href="/4-cloudwatchlogs/4.3-metricfilter/"
                 />
   </url><url>
-    <loc>/4-createcloudwatchdashboard/</loc>
+    <loc>/3-cloudwatchmetric/3.3-math/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-createcloudwatchdashboard/"
+                href="/vi/3-cloudwatchmetric/3.3-math/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-createcloudwatchdashboard/"
+                href="/3-cloudwatchmetric/3.3-math/"
                 />
   </url><url>
-    <loc>/5-sharedashboard/</loc>
+    <loc>/4-cloudwatchlogs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-sharedashboard/"
+                href="/vi/4-cloudwatchlogs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-sharedashboard/"
+                href="/4-cloudwatchlogs/"
                 />
   </url><url>
-    <loc>/6-cleanup/</loc>
+    <loc>/3-cloudwatchmetric/3.4-dynamic/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cleanup/"
+                href="/vi/3-cloudwatchmetric/3.4-dynamic/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cleanup/"
+                href="/3-cloudwatchmetric/3.4-dynamic/"
+                />
+  </url><url>
+    <loc>/5-cloudwatchalarm/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/5-cloudwatchalarm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/5-cloudwatchalarm/"
+                />
+  </url><url>
+    <loc>/6-cloudwatchdashboard/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-cloudwatchdashboard/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-cloudwatchdashboard/"
+                />
+  </url><url>
+    <loc>/7-cleanup/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/7-cleanup/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/7-cleanup/"
                 />
   </url><url>
     <loc>/categories/</loc>
