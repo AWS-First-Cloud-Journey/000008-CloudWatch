@@ -4,14 +4,14 @@
 	"title": "AWS CloudWatch Workshop",
 	"tags": [],
 	"description": "",
-	"content": "AWS CloudWatch Workshop Overview Amazon CloudWatch is a monitoring and management service that provides action-oriented data and information for AWS application and infrastructure resources, hybrid and on-premises applications. You can collect and access all performance and operational data in the form of logs and metrics in the same platform, instead of monitoring in silos (servers, networks, or databases). CloudWatch allows you to monitor end-to-end (applications, infrastructure, and services) and leverage alerts, logs, and event data to take action automatically and reduce average processing time (MTTR). This service helps you free up critical resources and focus on building applications and business value.\nCloudWatch provides action-oriented information, assisting in optimizing application performance, managing resource usage, and understanding the overall health of the system. CloudWatch displays detailed log and metric data down to the second, maintains data for 15 months (metric), and enables calculations on metrics. It also helps you with analytics based on stale data to optimize costs and collect real-time information that optimizes application and infrastructure resources. You can use CloudWatch Container Insights to monitor, troubleshoot, and alert the applications and microservices contained in your containers. CloudWatch collects, aggregates, and summarizes compute usage (such as CPU, memory, disk, and network data) as well as diagnostic information (such as container restart failures) to help DevOps engineers Isolate and resolve problems quickly. Container Insights gives you insights from container management services such as Amazon ECS for Kubernetes (EKS), Amazon Elastic Container Service (ECS), AWS Fargate, and standalone Kubernetes (k8s).\nContent  Introduction Preparation steps CloudWatch Metric CloudWatch Logs CloudWatch Alarm CloudWatch Dashboard Resource Cleanup  "
+	"content": "AWS CloudWatch Workshop Overview Amazon CloudWatch is a monitoring and management service that provides action-oriented data and information for AWS application and infrastructure resources, hybrid and on-premises applications. You can collect and access all performance and operational data in the form of logs and metrics in the same platform, instead of monitoring in silos (servers, networks, or databases). CloudWatch allows you to monitor end-to-end (applications, infrastructure, and services) and leverage alerts, logs, and event data to take action automatically and reduce average processing time (MTTR). This service helps you free up critical resources and focus on building applications and business value.\nCloudWatch provides action-oriented information, assisting in optimizing application performance, managing resource usage, and understanding the overall health of the system. CloudWatch displays detailed log and metric data down to the second, maintains data for 15 months (metric), and enables calculations on metrics. It also helps you with analytics based on stale data to optimize costs and collect real-time information that optimizes application and infrastructure resources. You can use CloudWatch Container Insights to monitor, troubleshoot, and alert the applications and microservices contained in your containers. CloudWatch collects, aggregates, and summarizes compute usage (such as CPU, memory, disk, and network data) as well as diagnostic information (such as container restart failures) to help DevOps engineers Isolate and resolve problems quickly. Container Insights gives you insights from container management services such as Amazon ECS for Kubernetes (EKS), Amazon Elastic Container Service (ECS), AWS Fargate, and standalone Kubernetes (k8s).\nContent Introduction Preparation steps CloudWatch Metric CloudWatch Logs CloudWatch Alarm CloudWatch Dashboard Resource Cleanup "
 },
 {
 	"uri": "/4-cloudwatchlogs/4.1-logs/",
 	"title": "CloudWatch Logs",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Logs  Under Logs select Log groups   Select the log group named ec2/linux/var/log/messages  View log information.   Select Log streams Then select a log stream.  View details of event log.  Implement Edit retention  Select value 7 days  "
+	"content": "CloudWatch Logs Under Logs select Log groups Select the log group named ec2/linux/var/log/messages View log information. Select Log streams Then select a log stream. View details of event log. Implement Edit retention Select value 7 days "
 },
 {
 	"uri": "/1-introduce/",
@@ -25,49 +25,49 @@
 	"title": "Viewing Metrics",
 	"tags": [],
 	"description": "",
-	"content": "Viewing Metrics   Access AWS Management Console\n Find CloudWatch Select CloudWatch     In the CloudWatch interface\n Select All metrics Select EC2    Select Per-Instance Metrics.  Then we will see the following interface.  In the Dimension section, the InstanceId column will appear. Then select Add to search  See EBSWriteBytes  See CPUUtilization  Select Graphed metrics tab.   We can sort the positions of the metrics.  Select Graph Options. Perform configuration.  Finally we get the graph as shown.  In this part there is a small challenge: you will add labels with Horizontal annotation at 80% and vertical annotation.\n"
+	"content": "Viewing Metrics Access AWS Management Console\nFind CloudWatch Select CloudWatch In the CloudWatch interface\nSelect All metrics Select EC2 Select Per-Instance Metrics. Then we will see the following interface. In the Dimension section, the InstanceId column will appear. Then select Add to search See EBSWriteBytes See CPUUtilization Select Graphed metrics tab. We can sort the positions of the metrics. Select Graph Options. Perform configuration. Finally we get the graph as shown. In this part there is a small challenge: you will add labels with Horizontal annotation at 80% and vertical annotation.\n"
 },
 {
 	"uri": "/4-cloudwatchlogs/4.2-loginsights/",
 	"title": "CloudWatch Logs Insights",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Logs Insights  You access the EC2 interface   Select Instances Select /Instance-A/test-instance Then select Connect  In the Connect to instance interface   Select Session Manager Select Connect  We will have a new interface on the browser  After accessing the Session Manager interface. You execute the following script:  cd /tmp\rsudo aws s3 cp s3://workshop-template-bucket/logger.py . Continue granting permission by running the next script  sudo chmod +x logger.py\rpython3 logger.py \u0026amp; 5 . We check again with the following command:\n ps -aux | grep logger View the log with the following command:  sudo tail -f /var/log/messages Find logs in CloudWatch Log Insights  Access to CloudWatch interface   Select Logs Insights Select Select log group(s)  Select /ec2/linux/var/log/messages.  Execute Run query  fields @timestamp, @message\r| sort @timestamp desc\r| limit 20 Notice that we are querying the logs from the past one hour, select Custom  We will see the following log:  Filter error logs  fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 View logs containing WARN  fields @timestamp, @message\r| filter @message like /WARN/\r| sort @timestamp desc\r| limit 20 Then retry running the query ERROR  fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| stats count (*) by @logStream Continue query  fields @timestamp, @message\r| filter @message like /eth0/\r| sort @timestamp desc\r| stats count (*) by bin(5m) Then you see Visualization  Execute Save query  fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 Save query successfully.  View query history.  "
+	"content": "CloudWatch Logs Insights You access the EC2 interface Select Instances Select /Instance-A/test-instance Then select Connect In the Connect to instance interface Select Session Manager Select Connect We will have a new interface on the browser After accessing the Session Manager interface. You execute the following script: cd /tmp\rsudo aws s3 cp s3://workshop-template-bucket/logger.py . Continue granting permission by running the next script sudo chmod +x logger.py\rpython3 logger.py \u0026amp; 5 . We check again with the following command:\nps -aux | grep logger View the log with the following command: sudo tail -f /var/log/messages Find logs in CloudWatch Log Insights Access to CloudWatch interface Select Logs Insights Select Select log group(s) Select /ec2/linux/var/log/messages. Execute Run query fields @timestamp, @message\r| sort @timestamp desc\r| limit 20 Notice that we are querying the logs from the past one hour, select Custom We will see the following log: Filter error logs fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 View logs containing WARN fields @timestamp, @message\r| filter @message like /WARN/\r| sort @timestamp desc\r| limit 20 Then retry running the query ERROR fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| stats count (*) by @logStream Continue query fields @timestamp, @message\r| filter @message like /eth0/\r| sort @timestamp desc\r| stats count (*) by bin(5m) Then you see Visualization Execute Save query fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 Save query successfully. View query history. "
 },
 {
 	"uri": "/2-prerequiste/",
 	"title": "Preparatory steps",
 	"tags": [],
 	"description": "",
-	"content": "Preparation steps   Go to AWS Management Console\n Find CloudFormation Select CloudFormation     In the CloudFormation interface\n Select Create stack Select With new resources     In the Create stack interface. You download the configuration file template\n Select Template is ready Select Upload a template file Select Choose file Select template.yml Select Next    Enter the stack name AwsWorkshopStack and select Next  Select Next  Select Create stack  Complete CloudFormation stack creation. Successful infrastructure preparation.  "
+	"content": "Preparation steps Go to AWS Management Console\nFind CloudFormation Select CloudFormation In the CloudFormation interface\nSelect Create stack Select With new resources In the Create stack interface. You download the configuration file template\nSelect Template is ready Select Upload a template file Select Choose file Select template.yml Select Next Enter the stack name AwsWorkshopStack and select Next Select Next Select Create stack Complete CloudFormation stack creation. Successful infrastructure preparation. "
 },
 {
 	"uri": "/3-cloudwatchmetric/3.2-search/",
 	"title": "Search expressions",
 	"tags": [],
 	"description": "",
-	"content": "Search expressions   Like the previous part we access CloudWatch\n Select All metrics Select Browse Select EC2. Select Per-Instance Metrics Select CPUUtilization Select Add to search    Select Graph search  Observe and select Graphed metrics  The details of the syntax are as follows:\nSEARCH(\u0026#39;{AWS/EC2,InstanceId} MetricName=\u0026#34;CPUUtilization\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Continue practicing with the following syntaxes  SEARCH(\u0026#39;{CWAgent,ImageId,InstanceId,InstanceType,device,fstype,path} path=\u0026#34;/\u0026#34; MetricName=\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;used\u0026#39;, \u0026#39;Average\u0026#39;, 300) "
+	"content": "Search expressions Like the previous part we access CloudWatch\nSelect All metrics Select Browse Select EC2. Select Per-Instance Metrics Select CPUUtilization Select Add to search Select Graph search Observe and select Graphed metrics The details of the syntax are as follows:\nSEARCH(\u0026#39;{AWS/EC2,InstanceId} MetricName=\u0026#34;CPUUtilization\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Continue practicing with the following syntaxes SEARCH(\u0026#39;{CWAgent,ImageId,InstanceId,InstanceType,device,fstype,path} path=\u0026#34;/\u0026#34; MetricName=\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;used\u0026#39;, \u0026#39;Average\u0026#39;, 300) "
 },
 {
 	"uri": "/3-cloudwatchmetric/",
 	"title": "CloudWatch Metric",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Metric  Viewing Metrics Search expressions Math expressions Dynamic Labels  "
+	"content": "CloudWatch Metric Viewing Metrics Search expressions Math expressions Dynamic Labels "
 },
 {
 	"uri": "/4-cloudwatchlogs/4.3-metricfilter/",
 	"title": "CloudWatch Metric Filter",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Metric Filter  Return to CloudWatch interface   Select Log groups Select /ec2/linux/var/log/messages Select Actions Select Create metric filter  For Filter pattern, enter ERROR  Select Select log data to test and select Test pattern   You will see the following information:  [month, day, timestamp, host, appId=\u0026#34;logger.runJob:\u0026#34;, message=\u0026#34;ERROR*\u0026#34;]  Select Next  Name is PythonAppErrors   Set metric namespace to ec2-logs For Metric name is /var/log/messages - ERROR For Metric value set to 1 Default is set to 0 For Unit choose Count Select Next  Review and select Create metric filter  "
+	"content": "CloudWatch Metric Filter Return to CloudWatch interface Select Log groups Select /ec2/linux/var/log/messages Select Actions Select Create metric filter For Filter pattern, enter ERROR Select Select log data to test and select Test pattern You will see the following information: [month, day, timestamp, host, appId=\u0026#34;logger.runJob:\u0026#34;, message=\u0026#34;ERROR*\u0026#34;] Select Next Name is PythonAppErrors Set metric namespace to ec2-logs For Metric name is /var/log/messages - ERROR For Metric value set to 1 Default is set to 0 For Unit choose Count Select Next Review and select Create metric filter "
 },
 {
 	"uri": "/3-cloudwatchmetric/3.3-math/",
 	"title": "Math expressions",
 	"tags": [],
 	"description": "",
-	"content": "Math expressions  Continuing the previous step, we still access the CloudWatch interface   Select Graphed metrics\n Select Add math expression    Select Filter  Then select Top 10 by Sum. See details:  SORT(e1, SUM, DESC, 3)  Return to All metrics interface\n Select CWAgent namespace    Select ImageId, InstanceId, InstanceType, exe, process_name  exe=\u0026ldquo;cloudwatch\u0026rdquo; and MetricName=\u0026ldquo;procstat_memory_rss\u0026rdquo;  Results  Do the same  "
+	"content": "Math expressions Continuing the previous step, we still access the CloudWatch interface Select Graphed metrics\nSelect Add math expression Select Filter Then select Top 10 by Sum. See details: SORT(e1, SUM, DESC, 3) Return to All metrics interface\nSelect CWAgent namespace Select ImageId, InstanceId, InstanceType, exe, process_name exe=\u0026ldquo;cloudwatch\u0026rdquo; and MetricName=\u0026ldquo;procstat_memory_rss\u0026rdquo; Results Do the same "
 },
 {
 	"uri": "/4-cloudwatchlogs/",
@@ -81,28 +81,28 @@
 	"title": "Dynamic Labels",
 	"tags": [],
 	"description": "",
-	"content": "Dynamic Labels  Select Add math expression, then select Start with empty expression  Do a search:  SEARCH(\u0026#39;exe=\u0026#34;cloudwatch\u0026#34; MetricName=\u0026#34;procstat_memory_rss\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Select Add dynamic label   Then select All Labels and select PROP(\u0026lsquo;Dim.DimName\u0026rsquo;)  Result  Do the same for PROP(\u0026lsquo;MetricName\u0026rsquo;)  Then update Label  ${PROP(\u0026#39;Dim.exe\u0026#39;)} - ${PROP(\u0026#39;Dim.InstanceId\u0026#39;)} - ${PROP(\u0026#39;MetricName\u0026#39;)} "
+	"content": "Dynamic Labels Select Add math expression, then select Start with empty expression Do a search: SEARCH(\u0026#39;exe=\u0026#34;cloudwatch\u0026#34; MetricName=\u0026#34;procstat_memory_rss\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Select Add dynamic label Then select All Labels and select PROP(\u0026lsquo;Dim.DimName\u0026rsquo;) Result Do the same for PROP(\u0026lsquo;MetricName\u0026rsquo;) Then update Label ${PROP(\u0026#39;Dim.exe\u0026#39;)} - ${PROP(\u0026#39;Dim.InstanceId\u0026#39;)} - ${PROP(\u0026#39;MetricName\u0026#39;)} "
 },
 {
 	"uri": "/5-cloudwatchalarm/",
 	"title": "CloudWatch Alarms",
 	"tags": [],
 	"description": "",
-	"content": " Select All Alarms   Select \u0026ldquo;Create Alarm\u0026rdquo;  Select Select Metric  We will see \u0026ldquo;ec2-logs\u0026rdquo;  Metrics with no dimensions  Select /var/log/messages - ERROR   Select Select Metric  Select 1 minute for Period  Select Greater \u0026gt; threshold and set it to 10. Then select Next  Select Create Topic and enter your email to receive notifications.  Select Next  Select Create alarm  Confirm mail  Results  You have successfully created Alarm.  "
+	"content": " Select All Alarms Select \u0026ldquo;Create Alarm\u0026rdquo; Select Select Metric We will see \u0026ldquo;ec2-logs\u0026rdquo; Metrics with no dimensions Select /var/log/messages - ERROR Select Select Metric Select 1 minute for Period Select Greater \u0026gt; threshold and set it to 10. Then select Next Select Create Topic and enter your email to receive notifications. Select Next Select Create alarm Confirm mail Results You have successfully created Alarm. "
 },
 {
 	"uri": "/6-cloudwatchdashboard/",
 	"title": "CloudWatch Dashboards",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Dashboards  Select All Alarms   Select Actions Select Add to dashboard  Select Add to dashboard  Make dashboard customizations.  "
+	"content": "CloudWatch Dashboards Select All Alarms Select Actions Select Add to dashboard Select Add to dashboard Make dashboard customizations. "
 },
 {
 	"uri": "/7-cleanup/",
 	"title": "Clean up resources",
 	"tags": [],
 	"description": "",
-	"content": "Clean up resources  Delete CloudFormation stack  "
+	"content": "Clean up resources Delete CloudFormation stack "
 },
 {
 	"uri": "/categories/",

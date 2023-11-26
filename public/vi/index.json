@@ -4,14 +4,14 @@
 	"title": "AWS CloudWatch Workshop",
 	"tags": [],
 	"description": "",
-	"content": "AWS CloudWatch Workshop Tổng quan Amazon CloudWatch là dịch vụ theo dõi và quản lý cung cấp dữ liệu và thông tin định hướng hành động cho tài nguyên cơ sở hạ tầng và ứng dụng AWS, ứng dụng lai cũng như ứng dụng tại chỗ. Bạn có thể thu thập và tiếp cận tất cả dữ liệu về hiệu năng và hoạt động dưới hình thức nhật ký và số liệu trong cùng một nền tảng, thay vì theo dõi trong các silo (máy chủ, mạng hoặc cơ sở dữ liệu). CloudWatch cho phép bạn theo dõi toàn diện (ứng dụng, cơ sở hạ tầng và dịch vụ) và tận dụng cảnh báo, nhật ký và dữ liệu sự kiện để tự động hành động và giảm thời gian xử lý trung bình (MTTR). Dịch vụ này giúp bạn giải phóng tài nguyên quan trọng và tập trung vào việc xây dựng các ứng dụng và giá trị doanh nghiệp.\nCloudWatch cung cấp thông tin định hướng hành động, hỗ trợ việc tối ưu hóa hiệu năng ứng dụng, quản lý sử dụng tài nguyên và hiểu rõ tình trạng hoạt động của toàn hệ thống. CloudWatch hiển thị dữ liệu số liệu và nhật ký chi tiết đến từng giây, duy trì dữ liệu trong 15 tháng (số liệu) và cho phép tính toán trên số liệu. Dịch vụ này cũng giúp bạn phân tích dựa trên dữ liệu cũ nhằm tối ưu hóa chi phí và thu thập thông tin trong thời gian thực góp phần tối ưu hóa ứng dụng và tài nguyên cơ sở hạ tầng. Bạn có thể sử dụng CloudWatch Container Insights để theo dõi, khắc phục sự cố và cảnh báo ứng dụng và vi dịch vụ có trong bộ chứa của bạn. CloudWatch thu thập, tổng hợp và tóm tắt thông tin sử dụng điện toán (như CPU, bộ nhớ, ổ đĩa và dữ liệu mạng) cũng như thông tin chẩn đoán (như lỗi khi khởi động lại bộ chứa) nhằm giúp kỹ sư DevOps cô lập và giải quyết sự cố một cách nhanh chóng. Container Insights cung cấp cho bạn thông tin chi tiết từ các dịch vụ quản lý bộ chứa như Amazon ECS for Kubernetes (EKS), Amazon Elastic Container Service (ECS), AWS Fargate và Kubernetes (k8s) độc lập.\nNội dung  Giới thiệu Các bước chuẩn bị CloudWatch Metric CloudWatch Logs CloudWatch Alarm CloudWatch Dashboard Dọn dẹp tài nguyên  "
+	"content": "AWS CloudWatch Workshop Tổng quan Amazon CloudWatch là dịch vụ theo dõi và quản lý cung cấp dữ liệu và thông tin định hướng hành động cho tài nguyên cơ sở hạ tầng và ứng dụng AWS, ứng dụng lai cũng như ứng dụng tại chỗ. Bạn có thể thu thập và tiếp cận tất cả dữ liệu về hiệu năng và hoạt động dưới hình thức nhật ký và số liệu trong cùng một nền tảng, thay vì theo dõi trong các silo (máy chủ, mạng hoặc cơ sở dữ liệu). CloudWatch cho phép bạn theo dõi toàn diện (ứng dụng, cơ sở hạ tầng và dịch vụ) và tận dụng cảnh báo, nhật ký và dữ liệu sự kiện để tự động hành động và giảm thời gian xử lý trung bình (MTTR). Dịch vụ này giúp bạn giải phóng tài nguyên quan trọng và tập trung vào việc xây dựng các ứng dụng và giá trị doanh nghiệp.\nCloudWatch cung cấp thông tin định hướng hành động, hỗ trợ việc tối ưu hóa hiệu năng ứng dụng, quản lý sử dụng tài nguyên và hiểu rõ tình trạng hoạt động của toàn hệ thống. CloudWatch hiển thị dữ liệu số liệu và nhật ký chi tiết đến từng giây, duy trì dữ liệu trong 15 tháng (số liệu) và cho phép tính toán trên số liệu. Dịch vụ này cũng giúp bạn phân tích dựa trên dữ liệu cũ nhằm tối ưu hóa chi phí và thu thập thông tin trong thời gian thực góp phần tối ưu hóa ứng dụng và tài nguyên cơ sở hạ tầng. Bạn có thể sử dụng CloudWatch Container Insights để theo dõi, khắc phục sự cố và cảnh báo ứng dụng và vi dịch vụ có trong bộ chứa của bạn. CloudWatch thu thập, tổng hợp và tóm tắt thông tin sử dụng điện toán (như CPU, bộ nhớ, ổ đĩa và dữ liệu mạng) cũng như thông tin chẩn đoán (như lỗi khi khởi động lại bộ chứa) nhằm giúp kỹ sư DevOps cô lập và giải quyết sự cố một cách nhanh chóng. Container Insights cung cấp cho bạn thông tin chi tiết từ các dịch vụ quản lý bộ chứa như Amazon ECS for Kubernetes (EKS), Amazon Elastic Container Service (ECS), AWS Fargate và Kubernetes (k8s) độc lập.\nNội dung Giới thiệu Các bước chuẩn bị CloudWatch Metric CloudWatch Logs CloudWatch Alarm CloudWatch Dashboard Dọn dẹp tài nguyên "
 },
 {
 	"uri": "/vi/4-cloudwatchlogs/4.1-logs/",
 	"title": "CloudWatch Logs",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Logs  Dưới Logs chọn Log groups   Chọn log group có tên ec2/linux/var/log/messages  Xem thông tin log.   Chọn Log streams Sau đó, chọn một log tream.  Xem thông tin chi tiết của log event.  Thực hiện Edit retention  Chọn giá trị 7 days  "
+	"content": "CloudWatch Logs Dưới Logs chọn Log groups Chọn log group có tên ec2/linux/var/log/messages Xem thông tin log. Chọn Log streams Sau đó, chọn một log tream. Xem thông tin chi tiết của log event. Thực hiện Edit retention Chọn giá trị 7 days "
 },
 {
 	"uri": "/vi/1-introduce/",
@@ -25,49 +25,49 @@
 	"title": "Viewing Metrics",
 	"tags": [],
 	"description": "",
-	"content": "Viewing Metrics   Truy cập AWS Management Console\n Tìm CloudWatch Chọn CloudWatch     Trong giao diện CloudWatch\n Chọn All metrics Chọn EC2    Chọn Per-Instance Metrics.  Sau đó, chúng ta sẽ thấy giao diện như sau.  Trong phần Dimension, sẽ xuất hiện cột InstanceId. Sau đó chọn Add to search  Xem EBSWriteBytes  Xem CPUUtilization  Chọn Graphed metrics tab.   Chúng ta có thể sắp xếp vị trí của các metric.  Chọn Graph Options. Thực hiện cấu hình.  Cuối cùng chúng ta được graph như hình.  Trong phần này có một thử thách nhỏ: các bạn sẽ thêm label với Horizontal annotation tại 80% và vertical annotation.\n"
+	"content": "Viewing Metrics Truy cập AWS Management Console\nTìm CloudWatch Chọn CloudWatch Trong giao diện CloudWatch\nChọn All metrics Chọn EC2 Chọn Per-Instance Metrics. Sau đó, chúng ta sẽ thấy giao diện như sau. Trong phần Dimension, sẽ xuất hiện cột InstanceId. Sau đó chọn Add to search Xem EBSWriteBytes Xem CPUUtilization Chọn Graphed metrics tab. Chúng ta có thể sắp xếp vị trí của các metric. Chọn Graph Options. Thực hiện cấu hình. Cuối cùng chúng ta được graph như hình. Trong phần này có một thử thách nhỏ: các bạn sẽ thêm label với Horizontal annotation tại 80% và vertical annotation.\n"
 },
 {
 	"uri": "/vi/2-prerequiste/",
 	"title": "Các bước chuẩn bị",
 	"tags": [],
 	"description": "",
-	"content": "Các bước chuẩn bị   Truy cập vào AWS Management Console\n Tìm CloudFormation Chọn CloudFormation     Trong giao diện CloudFormation\n Chọn Create stack Chọn With new resources     Trong giao diện Create stack. Bạn tải file cấu hình template\n Chọn Template is ready Chọn Upload a template file Chọn Choose file Chọn template.yml Chọn Next    Điền stack name AwsWorkshopStack và chọn Next  Chọn Next  Chọn Create stack  Hoàn thành tạo stack CloudFormation. Chuẩn bị hạ tầng thành công.  "
+	"content": "Các bước chuẩn bị Truy cập vào AWS Management Console\nTìm CloudFormation Chọn CloudFormation Trong giao diện CloudFormation\nChọn Create stack Chọn With new resources Trong giao diện Create stack. Bạn tải file cấu hình template\nChọn Template is ready Chọn Upload a template file Chọn Choose file Chọn template.yml Chọn Next Điền stack name AwsWorkshopStack và chọn Next Chọn Next Chọn Create stack Hoàn thành tạo stack CloudFormation. Chuẩn bị hạ tầng thành công. "
 },
 {
 	"uri": "/vi/4-cloudwatchlogs/4.2-loginsights/",
 	"title": "CloudWatch Logs Insights",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Logs Insights  Bạn truy cập vào giao diện EC2   Chọn Instances Chọn /Instance-A/test-instance Sau đó, chọn Connect  Trong giao diện Connect to instance   Chọn Session Manager Chọn Connect  Chúng ta sẽ có một giao diện mới trên trình duyệt  Sau khi truy cập vào giao diện Session Manager. Bạn thực hiện chạy đoạn script sau:  cd /tmp\rsudo aws s3 cp s3://workshop-template-bucket/logger.py . Tiếp tục cấp quyền bằng cách chạy đoạn script tiếp theo  sudo chmod +x logger.py\rpython3 logger.py \u0026amp; 5 . Chúng ta kiểm tra lại bằng lệnh sau:\n ps -aux | grep logger Xem log bằng lệnh sau:  sudo tail -f /var/log/messages Tìm log trong CloudWatch Log Insights  Truy cập vào giao diện CloudWatch*   Chọn Logs Insights Chọn Select log group(s)  Chọn /ec2/linux/var/log/messages.  Thực hiện Run query  fields @timestamp, @message\r| sort @timestamp desc\r| limit 20 Notice that we are querying the logs from the past one hour, chọn Custom  Chúng ta sẽ thấy log như sau:  Lọc những log lỗi  fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 Xem các log chứa WARN  fields @timestamp, @message\r| filter @message like /WARN/\r| sort @timestamp desc\r| limit 20 Sau đó thử lại chạy query ERROR  fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| stats count (*) by @logStream Tiếp tục query  fields @timestamp, @message\r| filter @message like /eth0/\r| sort @timestamp desc\r| stats count (*) by bin(5m) Sau đó bạn xem Visualization  Thực hiện Save query  fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 Save query thành công.  Xem lịch sử các query.  "
+	"content": "CloudWatch Logs Insights Bạn truy cập vào giao diện EC2 Chọn Instances Chọn /Instance-A/test-instance Sau đó, chọn Connect Trong giao diện Connect to instance Chọn Session Manager Chọn Connect Chúng ta sẽ có một giao diện mới trên trình duyệt Sau khi truy cập vào giao diện Session Manager. Bạn thực hiện chạy đoạn script sau: cd /tmp\rsudo aws s3 cp s3://workshop-template-bucket/logger.py . Tiếp tục cấp quyền bằng cách chạy đoạn script tiếp theo sudo chmod +x logger.py\rpython3 logger.py \u0026amp; 5 . Chúng ta kiểm tra lại bằng lệnh sau:\nps -aux | grep logger Xem log bằng lệnh sau: sudo tail -f /var/log/messages Tìm log trong CloudWatch Log Insights Truy cập vào giao diện CloudWatch* Chọn Logs Insights Chọn Select log group(s) Chọn /ec2/linux/var/log/messages. Thực hiện Run query fields @timestamp, @message\r| sort @timestamp desc\r| limit 20 Notice that we are querying the logs from the past one hour, chọn Custom Chúng ta sẽ thấy log như sau: Lọc những log lỗi fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 Xem các log chứa WARN fields @timestamp, @message\r| filter @message like /WARN/\r| sort @timestamp desc\r| limit 20 Sau đó thử lại chạy query ERROR fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| stats count (*) by @logStream Tiếp tục query fields @timestamp, @message\r| filter @message like /eth0/\r| sort @timestamp desc\r| stats count (*) by bin(5m) Sau đó bạn xem Visualization Thực hiện Save query fields @timestamp, @message\r| filter @message like /ERROR/\r| sort @timestamp desc\r| limit 20 Save query thành công. Xem lịch sử các query. "
 },
 {
 	"uri": "/vi/3-cloudwatchmetric/3.2-search/",
 	"title": "Search expressions",
 	"tags": [],
 	"description": "",
-	"content": "Search expressions   Giống như phần trước chúng ta truy cập vào CloudWatch\n Chọn All metrics Chọn Browse Chọn EC2. Chọn Per-Instance Metrics Chọn CPUUtilization Chọn Add to search    Chọn Graph search  Quan sát và chọn Graphed metrics  Chi tiết về cú pháp như sau:\nSEARCH(\u0026#39;{AWS/EC2,InstanceId} MetricName=\u0026#34;CPUUtilization\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Tiếp tục thực hành với các cú pháp sau  SEARCH(\u0026#39;{CWAgent,ImageId,InstanceId,InstanceType,device,fstype,path} path=\u0026#34;/\u0026#34; MetricName=\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;used\u0026#39;, \u0026#39;Average\u0026#39;, 300) "
+	"content": "Search expressions Giống như phần trước chúng ta truy cập vào CloudWatch\nChọn All metrics Chọn Browse Chọn EC2. Chọn Per-Instance Metrics Chọn CPUUtilization Chọn Add to search Chọn Graph search Quan sát và chọn Graphed metrics Chi tiết về cú pháp như sau:\nSEARCH(\u0026#39;{AWS/EC2,InstanceId} MetricName=\u0026#34;CPUUtilization\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Tiếp tục thực hành với các cú pháp sau SEARCH(\u0026#39;{CWAgent,ImageId,InstanceId,InstanceType,device,fstype,path} path=\u0026#34;/\u0026#34; MetricName=\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;\u0026#34;disk_used_percent\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) SEARCH(\u0026#39;used\u0026#39;, \u0026#39;Average\u0026#39;, 300) "
 },
 {
 	"uri": "/vi/3-cloudwatchmetric/",
 	"title": "CloudWatch Metric",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Metric  Viewing Metrics Search expressions Math expressions Dynamic Labels  "
+	"content": "CloudWatch Metric Viewing Metrics Search expressions Math expressions Dynamic Labels "
 },
 {
 	"uri": "/vi/4-cloudwatchlogs/4.3-metricfilter/",
 	"title": "CloudWatch Metric Filter",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Metric Filter  Quay lại giao diện CloudWatch   Chọn Log groups Chọn /ec2/linux/var/log/messages Chọn Actions Chọn Create metric filter  Đối với Filter pattern, nhập ERROR  Chọn Select log data to test và chọn Test pattern   Bạn sẽ thấy theo thông tin sau:  [month, day, timestamp, host, appId=\u0026#34;logger.runJob:\u0026#34;, message=\u0026#34;ERROR*\u0026#34;]  Chọn Next  Name là PythonAppErrors   Đặt metric namespace là ec2-logs Đối với Metric name là /var/log/messages - ERROR Đối với Metric value đặt là 1 Mặc định đặt là 0 Đối với Unit chọn Count Chọn Next  Xem lại và chọn Create metric filter  "
+	"content": "CloudWatch Metric Filter Quay lại giao diện CloudWatch Chọn Log groups Chọn /ec2/linux/var/log/messages Chọn Actions Chọn Create metric filter Đối với Filter pattern, nhập ERROR Chọn Select log data to test và chọn Test pattern Bạn sẽ thấy theo thông tin sau: [month, day, timestamp, host, appId=\u0026#34;logger.runJob:\u0026#34;, message=\u0026#34;ERROR*\u0026#34;] Chọn Next Name là PythonAppErrors Đặt metric namespace là ec2-logs Đối với Metric name là /var/log/messages - ERROR Đối với Metric value đặt là 1 Mặc định đặt là 0 Đối với Unit chọn Count Chọn Next Xem lại và chọn Create metric filter "
 },
 {
 	"uri": "/vi/3-cloudwatchmetric/3.3-math/",
 	"title": "Math expressions",
 	"tags": [],
 	"description": "",
-	"content": "Math expressions  Tiếp tục bước trước, chúng ta vẫn truy cập vào giao diện CloudWatch   Chọn Graphed metrics\n Chọn Add math expression    Chọn Filter  Sau đó chọn Top 10 by Sum. Xem chi tiết:  SORT(e1, SUM, DESC, 3)  Quay lại giao diện All metrics\n Chọn CWAgent namespace    Chọn ImageId, InstanceId, InstanceType, exe, process_name  exe=\u0026ldquo;cloudwatch\u0026rdquo; và MetricName=\u0026ldquo;procstat_memory_rss\u0026rdquo;  Kết quả  Thực hiện tương tự  "
+	"content": "Math expressions Tiếp tục bước trước, chúng ta vẫn truy cập vào giao diện CloudWatch Chọn Graphed metrics\nChọn Add math expression Chọn Filter Sau đó chọn Top 10 by Sum. Xem chi tiết: SORT(e1, SUM, DESC, 3) Quay lại giao diện All metrics\nChọn CWAgent namespace Chọn ImageId, InstanceId, InstanceType, exe, process_name exe=\u0026ldquo;cloudwatch\u0026rdquo; và MetricName=\u0026ldquo;procstat_memory_rss\u0026rdquo; Kết quả Thực hiện tương tự "
 },
 {
 	"uri": "/vi/4-cloudwatchlogs/",
@@ -81,28 +81,28 @@
 	"title": "Dynamic Labels",
 	"tags": [],
 	"description": "",
-	"content": "Dynamic Labels  Chọn Add math expression, sau đó chọn Start with empty expression  Thực hiện search:  SEARCH(\u0026#39;exe=\u0026#34;cloudwatch\u0026#34; MetricName=\u0026#34;procstat_memory_rss\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Chọn Add dynamic label   Sau đó, chọn All Labels và chọn PROP(\u0026lsquo;Dim.DimName\u0026rsquo;)  Kết quả  Thực hiện tương tự đối với PROP(\u0026lsquo;MetricName\u0026rsquo;)  Sau đó, cập nhật Label  ${PROP(\u0026#39;Dim.exe\u0026#39;)} - ${PROP(\u0026#39;Dim.InstanceId\u0026#39;)} - ${PROP(\u0026#39;MetricName\u0026#39;)} "
+	"content": "Dynamic Labels Chọn Add math expression, sau đó chọn Start with empty expression Thực hiện search: SEARCH(\u0026#39;exe=\u0026#34;cloudwatch\u0026#34; MetricName=\u0026#34;procstat_memory_rss\u0026#34;\u0026#39;, \u0026#39;Average\u0026#39;, 300) Chọn Add dynamic label Sau đó, chọn All Labels và chọn PROP(\u0026lsquo;Dim.DimName\u0026rsquo;) Kết quả Thực hiện tương tự đối với PROP(\u0026lsquo;MetricName\u0026rsquo;) Sau đó, cập nhật Label ${PROP(\u0026#39;Dim.exe\u0026#39;)} - ${PROP(\u0026#39;Dim.InstanceId\u0026#39;)} - ${PROP(\u0026#39;MetricName\u0026#39;)} "
 },
 {
 	"uri": "/vi/5-cloudwatchalarm/",
 	"title": "CloudWatch Alarms",
 	"tags": [],
 	"description": "",
-	"content": " Chọn All Alarms   Chọn \u0026ldquo;Create Alarm\u0026rdquo;  Chọn Select Metric  Ta sẽ thấy \u0026ldquo;ec2-logs\u0026rdquo;  Metrics with no dimensions  Chọn /var/log/messages - ERROR   Chọn Select Metric  Chọn 1 minute cho Period  Chọn Greater \u0026gt; threshold và đặt là 10. Sau đó chọn Next  Chọn Create Topic và điền mail của bạn nhận thông báo.  Chọn Next  Chọn Create alarm  Xác nhận mail  Kết quả  Thế là bạn đã tạo Alarm thành công.  "
+	"content": " Chọn All Alarms Chọn \u0026ldquo;Create Alarm\u0026rdquo; Chọn Select Metric Ta sẽ thấy \u0026ldquo;ec2-logs\u0026rdquo; Metrics with no dimensions Chọn /var/log/messages - ERROR Chọn Select Metric Chọn 1 minute cho Period Chọn Greater \u0026gt; threshold và đặt là 10. Sau đó chọn Next Chọn Create Topic và điền mail của bạn nhận thông báo. Chọn Next Chọn Create alarm Xác nhận mail Kết quả Thế là bạn đã tạo Alarm thành công. "
 },
 {
 	"uri": "/vi/6-cloudwatchdashboard/",
 	"title": "CloudWatch Dashboards",
 	"tags": [],
 	"description": "",
-	"content": "CloudWatch Dashboards  Chọn All Alarms   Chọn Actions Chọn Add to dashboard  Chọn Add to dashboard  Thực hiện tùy chỉnh dashboard.  "
+	"content": "CloudWatch Dashboards Chọn All Alarms Chọn Actions Chọn Add to dashboard Chọn Add to dashboard Thực hiện tùy chỉnh dashboard. "
 },
 {
 	"uri": "/vi/7-cleanup/",
 	"title": "Dọn dẹp tài nguyên",
 	"tags": [],
 	"description": "",
-	"content": "Dọn dẹp tài nguyên  Xóa CloudFormation stack  "
+	"content": "Dọn dẹp tài nguyên Xóa CloudFormation stack "
 },
 {
 	"uri": "/vi/categories/",
