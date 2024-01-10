@@ -4,8 +4,6 @@
     <title>CloudWatch Logs Insights on Working with SNS</title>
     <link>/4-cloudwatchlogs/4.2-loginsights/</link>
     <description>Recent content in CloudWatch Logs Insights on Working with SNS</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <atom:link href="/4-cloudwatchlogs/4.2-loginsights/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator><atom:link href="/4-cloudwatchlogs/4.2-loginsights/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
