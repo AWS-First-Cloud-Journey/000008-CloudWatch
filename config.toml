@@ -1,5 +1,6 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
+canonifyURLs = true
 
 # For search functionality
 [outputs]
@@ -18,7 +19,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "Working with SNS"
+title = "AWS Account Setup"
 weight = 1
 languageName = "English"
 
@@ -29,7 +30,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj/"
 weight = 20
 
 [Languages.vi]
-title = "Làm việc với SNS"
+title = "Thiết lập AWS Account"
 weight = 2
 languageName = "Tiếng Việt"
 

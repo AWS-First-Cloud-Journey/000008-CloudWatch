@@ -14,172 +14,172 @@
                 href="/"
                 />
   </url><url>
-    <loc>/4-cloudwatchlogs/4.1-logs/</loc>
+    <loc>/4-cloud-watch-logs/4.1-logs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloudwatchlogs/4.1-logs/"
+                href="/vi/4-cloud-watch-logs/4.1-logs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloudwatchlogs/4.1-logs/"
+                href="/4-cloud-watch-logs/4.1-logs/"
                 />
   </url><url>
-    <loc>/1-introduce/</loc>
+    <loc>/1-introduction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduce/"
+                href="/vi/1-introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduce/"
+                href="/1-introduction/"
                 />
   </url><url>
-    <loc>/3-cloudwatchmetric/3.1-view/</loc>
+    <loc>/3-cloud-watch-metric/3.1-view-metrics/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloudwatchmetric/3.1-view/"
+                href="/vi/3-cloud-watch-metric/3.1-view-metrics/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloudwatchmetric/3.1-view/"
+                href="/3-cloud-watch-metric/3.1-view-metrics/"
                 />
   </url><url>
-    <loc>/4-cloudwatchlogs/4.2-loginsights/</loc>
+    <loc>/4-cloud-watch-logs/4.2-logs-insights/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloudwatchlogs/4.2-loginsights/"
+                href="/vi/4-cloud-watch-logs/4.2-logs-insights/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloudwatchlogs/4.2-loginsights/"
+                href="/4-cloud-watch-logs/4.2-logs-insights/"
                 />
   </url><url>
-    <loc>/2-prerequiste/</loc>
+    <loc>/2-preparatory-steps/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-prerequiste/"
+                href="/vi/2-preparatory-steps/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-prerequiste/"
+                href="/2-preparatory-steps/"
                 />
   </url><url>
-    <loc>/3-cloudwatchmetric/3.2-search/</loc>
+    <loc>/3-cloud-watch-metric/3.2-search-expression/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloudwatchmetric/3.2-search/"
+                href="/vi/3-cloud-watch-metric/3.2-search-expression/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloudwatchmetric/3.2-search/"
+                href="/3-cloud-watch-metric/3.2-search-expression/"
                 />
   </url><url>
-    <loc>/3-cloudwatchmetric/</loc>
+    <loc>/3-cloud-watch-metric/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloudwatchmetric/"
+                href="/vi/3-cloud-watch-metric/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloudwatchmetric/"
+                href="/3-cloud-watch-metric/"
                 />
   </url><url>
-    <loc>/4-cloudwatchlogs/4.3-metricfilter/</loc>
+    <loc>/4-cloud-watch-logs/4.3-metric-filter/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloudwatchlogs/4.3-metricfilter/"
+                href="/vi/4-cloud-watch-logs/4.3-metric-filter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloudwatchlogs/4.3-metricfilter/"
+                href="/4-cloud-watch-logs/4.3-metric-filter/"
                 />
   </url><url>
-    <loc>/3-cloudwatchmetric/3.3-math/</loc>
+    <loc>/3-cloud-watch-metric/3.3-math-expression/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloudwatchmetric/3.3-math/"
+                href="/vi/3-cloud-watch-metric/3.3-math-expression/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloudwatchmetric/3.3-math/"
+                href="/3-cloud-watch-metric/3.3-math-expression/"
                 />
   </url><url>
-    <loc>/4-cloudwatchlogs/</loc>
+    <loc>/4-cloud-watch-logs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloudwatchlogs/"
+                href="/vi/4-cloud-watch-logs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloudwatchlogs/"
+                href="/4-cloud-watch-logs/"
                 />
   </url><url>
-    <loc>/3-cloudwatchmetric/3.4-dynamic/</loc>
+    <loc>/3-cloud-watch-metric/3.4-dynamic-label/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloudwatchmetric/3.4-dynamic/"
+                href="/vi/3-cloud-watch-metric/3.4-dynamic-label/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloudwatchmetric/3.4-dynamic/"
+                href="/3-cloud-watch-metric/3.4-dynamic-label/"
                 />
   </url><url>
-    <loc>/5-cloudwatchalarm/</loc>
+    <loc>/5-cloud-watch-alarm/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-cloudwatchalarm/"
+                href="/vi/5-cloud-watch-alarm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-cloudwatchalarm/"
+                href="/5-cloud-watch-alarm/"
                 />
   </url><url>
-    <loc>/6-cloudwatchdashboard/</loc>
+    <loc>/6-cloud-watch-dashboard/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cloudwatchdashboard/"
+                href="/vi/6-cloud-watch-dashboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cloudwatchdashboard/"
+                href="/6-cloud-watch-dashboard/"
                 />
   </url><url>
-    <loc>/7-cleanup/</loc>
+    <loc>/7-clean-up-resources/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-cleanup/"
+                href="/vi/7-clean-up-resources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-cleanup/"
+                href="/7-clean-up-resources/"
                 />
   </url><url>
     <loc>/categories/</loc>
