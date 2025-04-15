@@ -10,9 +10,30 @@ chapter: false
 
 #### Tổng quan
 
-**Amazon CloudWatch** là dịch vụ theo dõi và quản lý cung cấp dữ liệu và thông tin định hướng hành động cho tài nguyên cơ sở hạ tầng và ứng dụng AWS, ứng dụng lai cũng như ứng dụng tại chỗ. Bạn có thể thu thập và tiếp cận tất cả dữ liệu về hiệu năng và hoạt động dưới hình thức nhật ký và số liệu trong cùng một nền tảng, thay vì theo dõi trong các silo (máy chủ, mạng hoặc cơ sở dữ liệu). **CloudWatch** cho phép bạn theo dõi toàn diện (ứng dụng, cơ sở hạ tầng và dịch vụ) và tận dụng cảnh báo, nhật ký và dữ liệu sự kiện để tự động hành động và giảm thời gian xử lý trung bình (MTTR). Dịch vụ này giúp bạn giải phóng tài nguyên quan trọng và tập trung vào việc xây dựng các ứng dụng và giá trị doanh nghiệp.
+**ℹ️ Information**: **Amazon CloudWatch** là dịch vụ theo dõi và quản lý cung cấp dữ liệu và thông tin định hướng hành động cho tài nguyên cơ sở hạ tầng và ứng dụng AWS, ứng dụng hybrid cũng như ứng dụng on-premises. Bạn có thể thu thập và truy cập tất cả dữ liệu về hiệu năng và hoạt động dưới hình thức logs và metrics trong cùng một nền tảng, thay vì theo dõi riêng lẻ (máy chủ, mạng hoặc cơ sở dữ liệu). **CloudWatch** cho phép bạn theo dõi end-to-end (ứng dụng, cơ sở hạ tầng và dịch vụ) và tận dụng cảnh báo, logs và dữ liệu sự kiện để tự động hóa các hành động và giảm Mean Time To Resolution (MTTR). Dịch vụ này giúp bạn giải phóng tài nguyên quan trọng và tập trung vào việc xây dựng các ứng dụng và giá trị kinh doanh.
 
-**CloudWatch** cung cấp thông tin định hướng hành động, hỗ trợ việc tối ưu hóa hiệu năng ứng dụng, quản lý sử dụng tài nguyên và hiểu rõ tình trạng hoạt động của toàn hệ thống. **CloudWatch** hiển thị dữ liệu số liệu và nhật ký chi tiết đến từng giây, duy trì dữ liệu trong 15 tháng (số liệu) và cho phép tính toán trên số liệu. Dịch vụ này cũng giúp bạn phân tích dựa trên dữ liệu cũ nhằm tối ưu hóa chi phí và thu thập thông tin trong thời gian thực góp phần tối ưu hóa ứng dụng và tài nguyên cơ sở hạ tầng. Bạn có thể sử dụng **CloudWatch** Container Insights để theo dõi, khắc phục sự cố và cảnh báo ứng dụng và vi dịch vụ có trong bộ chứa của bạn. **CloudWatch** thu thập, tổng hợp và tóm tắt thông tin sử dụng điện toán (như CPU, bộ nhớ, ổ đĩa và dữ liệu mạng) cũng như thông tin chẩn đoán (như lỗi khi khởi động lại bộ chứa) nhằm giúp kỹ sư DevOps cô lập và giải quyết sự cố một cách nhanh chóng. Container Insights cung cấp cho bạn thông tin chi tiết từ các dịch vụ quản lý bộ chứa như **Amazon ECS for Kubernetes** (EKS), **Amazon Elastic Container Service** (ECS), **AWS Fargate** và Kubernetes (k8s) độc lập.
+#### Tính năng chính
+
+**CloudWatch** cung cấp thông tin định hướng hành động, hỗ trợ việc tối ưu hóa hiệu năng ứng dụng, quản lý sử dụng tài nguyên và hiểu rõ tình trạng hoạt động của toàn hệ thống. **CloudWatch** hiển thị dữ liệu metrics và logs chi tiết đến từng giây, lưu trữ dữ liệu trong 15 tháng (đối với metrics) và cho phép thực hiện các phép tính trên metrics. 
+
+**💡 Pro Tip**: Dịch vụ này cũng giúp bạn phân tích dựa trên dữ liệu lịch sử nhằm tối ưu hóa chi phí và thu thập thông tin real-time để tối ưu hóa ứng dụng và tài nguyên cơ sở hạ tầng.
+
+#### Container Insights
+
+**ℹ️ Information**: **CloudWatch Container Insights** cho phép bạn theo dõi, khắc phục sự cố và thiết lập cảnh báo cho các ứng dụng và microservices chạy trong containers. **CloudWatch** thu thập, tổng hợp và tóm tắt thông tin sử dụng tài nguyên tính toán (như CPU, bộ nhớ, ổ đĩa và dữ liệu mạng) cũng như thông tin chẩn đoán (như lỗi khi khởi động lại container) nhằm giúp kỹ sư DevOps cô lập và giải quyết sự cố một cách nhanh chóng.
+
+**🔒 Security Note**: Container Insights cung cấp cho bạn thông tin chi tiết từ các dịch vụ quản lý container như **Amazon EKS (Elastic Kubernetes Service)**, **Amazon ECS (Elastic Container Service)**, **AWS Fargate** và Kubernetes (K8s) độc lập, giúp bạn duy trì tính khả dụng và bảo mật cho các ứng dụng containerized.
+
+#### Lợi ích chính
+
+**💡 Pro Tip**: Với **Amazon CloudWatch**, bạn có thể:
+- Giám sát toàn diện các tài nguyên AWS và ứng dụng của bạn
+- Thiết lập cảnh báo thông minh dựa trên ngưỡng tùy chỉnh
+- Tự động hóa phản hồi đối với các sự cố hoạt động
+- Tạo bảng điều khiển trực quan để theo dõi hiệu suất
+- Phân tích logs để khắc phục sự cố nhanh chóng
+
+**⚠️ Warning**: Việc không thiết lập giám sát đầy đủ có thể dẫn đến thời gian ngừng hoạt động không lường trước, hiệu suất kém và chi phí cao hơn do sử dụng tài nguyên không hiệu quả.
 
 #### Nội dung
 

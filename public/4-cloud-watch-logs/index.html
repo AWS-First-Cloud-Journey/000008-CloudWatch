@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Logs :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -508,25 +510,26 @@
 
 
 
-	<h4 id="cloudwatch-logs">CloudWatch Logs</h4>
-<p>Logs are an essential part of any system, providing valuable insights such as:</p>
+	<h4 id="amazon-cloudwatch-logs">Amazon CloudWatch Logs</h4>
+<p><strong>ℹ️ Information</strong>: Logs are an essential part of any AWS system, providing valuable insights such as:</p>
 <ul>
-<li>Application activities.</li>
-<li>Who performed what actions?</li>
-<li>Any errors occurring in the system?</li>
-<li>Any warnings that need attention?</li>
+<li>Application activities and performance metrics</li>
+<li>User actions and access patterns</li>
+<li>System errors and exceptions</li>
+<li>Warning conditions requiring attention</li>
 </ul>
-<p>In this section, we will cover some fundamental operations:</p>
+<p>In this section, we will cover these fundamental CloudWatch Logs operations:</p>
 <ul>
-<li>Viewing logs.</li>
-<li>Creating logs and querying logs.</li>
-<li>Creating Log Filters and extracting Metrics from logs.</li>
+<li>Viewing and analyzing logs in real-time</li>
+<li>Creating log groups/streams and performing advanced queries</li>
+<li>Implementing Metric Filters to extract quantifiable data from logs</li>
 </ul>
-<p>These operations will also be used in later sections, so make sure to go through this part carefully and thoroughly.</p>
+<p><strong>💡 Pro Tip</strong>: The skills learned in this section form the foundation for effective AWS monitoring and will be leveraged throughout later modules. We recommend thorough understanding of these concepts.</p>
+<p><strong>🔒 Security Note</strong>: CloudWatch Logs can contain sensitive information. Always follow AWS security best practices when configuring log retention and access permissions.</p>
 <ol>
-<li><a href="/4-cloud-watch-logs/4.1-logs/">CloudWatch Logs</a></li>
-<li><a href="/4-cloud-watch-logs/4.2-logs-insights/">CloudWatch Logs Insights</a></li>
-<li><a href="/4-cloud-watch-logs/4.3-metric-filter/">CloudWatch Metric Filter</a></li>
+<li><a href="/4-cloud-watch-logs/4.1-logs/">Amazon CloudWatch Logs Basics</a></li>
+<li><a href="/4-cloud-watch-logs/4.2-logs-insights/">CloudWatch Logs Insights Query Engine</a></li>
+<li><a href="/4-cloud-watch-logs/4.3-metric-filter/">CloudWatch Metric Filters and Transformations</a></li>
 </ol>
 
 
@@ -820,19 +823,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

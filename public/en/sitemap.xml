@@ -86,18 +86,6 @@
                 href="/3-cloud-watch-metric/3.2-search-expression/"
                 />
   </url><url>
-    <loc>/3-cloud-watch-metric/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-cloud-watch-metric/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-cloud-watch-metric/"
-                />
-  </url><url>
     <loc>/4-cloud-watch-logs/4.3-metric-filter/</loc>
     <xhtml:link
                 rel="alternate"
@@ -108,6 +96,18 @@
                 rel="alternate"
                 hreflang="en"
                 href="/4-cloud-watch-logs/4.3-metric-filter/"
+                />
+  </url><url>
+    <loc>/3-cloud-watch-metric/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/3-cloud-watch-metric/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/3-cloud-watch-metric/"
                 />
   </url><url>
     <loc>/3-cloud-watch-metric/3.3-math-expression/</loc>

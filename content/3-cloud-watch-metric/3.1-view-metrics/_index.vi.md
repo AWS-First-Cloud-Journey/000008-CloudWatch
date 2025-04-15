@@ -7,112 +7,112 @@ pre: " <b> 3.1. </b> "
 
 #### Xem các Metrics
 
-Đầu tiên, chúng ta sẽ thực hành thao tác xem các metrics.
+**ℹ️ Information**: Trong phần này, chúng ta sẽ thực hành cách xem và phân tích các metrics trong Amazon CloudWatch, giúp bạn hiểu rõ hơn về hiệu suất của các tài nguyên AWS.
 
 1. Truy cập **AWS Management Console**
 
-   - Tìm **CloudWatch**
-   - Chọn **CloudWatch**
+   - Tìm kiếm dịch vụ **CloudWatch** trong thanh tìm kiếm
+   - Chọn **CloudWatch** từ kết quả tìm kiếm
 
 ![3.1.1](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.1.png)
 
 2. Trong giao diện **CloudWatch**
 
-   - Xổ phần **Metrics** ở bên menu bên trái xuống.
-   - Chọn **All metrics**.
+   - Mở rộng phần **Metrics** ở menu bên trái
+   - Chọn **All metrics**
 
 ![3.1.2](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.2.png)
 
-3. Trong giao diện biểu đồ của metrics. Nhập `EC2` vào trong ô tìm kiếm và tìm.
+3. Trong giao diện biểu đồ metrics, nhập `EC2` vào ô tìm kiếm
 
 ![3.1.3](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.3.png)
 
-4. Sau khi ra kết quả, chọn **EC2 > Pre-Instance Metrics**.
+4. Từ kết quả tìm kiếm, chọn **EC2 > Per-Instance Metrics**
 
 ![3.1.4](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.4.png)
 
 ![3.1.5](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.5.png)
 
-5. Trên thanh tìm kiếm, gõ `CPUUtilization` và tìm kiếm
+5. Trên thanh tìm kiếm, nhập `CPUUtilization` và tìm kiếm
 
 ![3.1.6](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.6.png)
 
-Bạn có thể thấy được là khi gõ tìm kiếm, thì mặc định nó sẽ tìm theo **Metric name**.
+**💡 Pro Tip**: Khi sử dụng thanh tìm kiếm, CloudWatch mặc định sẽ tìm theo **Metric name**, giúp bạn nhanh chóng lọc ra các metrics cụ thể cần theo dõi.
 
 ![3.1.7](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.7.png)
 
-6. Thêm thử 2 trong số 5 instances được tạo ra từ CloudFormation stack, để xem các thông số CPUUtilization của 2 instances này được thể hiện như thế nào (bạn nên cuộn xuống để thấy).
+6. Chọn 2 trong số 5 instances được tạo ra từ CloudFormation stack để so sánh thông số CPUUtilization
 
-Ở đây thì chúng ta có thể kết luận là: cả 2 instances này bắt đầu hoạt động vào lúc khoảng 2:40, và cũng là lúc có nhiều hoạt động nhất. Sau đó đổ dần về 3:30 thì có vẻ như cả 2 instances này đã làm xong công việc của nó.
+**ℹ️ Information**: Từ biểu đồ, chúng ta có thể thấy cả hai instances bắt đầu hoạt động mạnh vào khoảng 2:40, đây là thời điểm có mức sử dụng CPU cao nhất. Sau đó, mức sử dụng CPU giảm dần và ổn định vào khoảng 3:30, cho thấy các instances đã hoàn thành phần lớn công việc được giao.
 
 ![3.1.8](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.8.png)
 
-7. Tiếp theo là chúng ta sẽ thực hiện việc xem các metrics khác của cùng một Instance.
+7. Tiếp theo, chúng ta sẽ xem các metrics khác của cùng một Instance
 
-   - Tích bỏ đi dòng của Instance B.
-   - Xoá tag tìm kiếm **CPUUtilization**.
-   - Trên thanh tìm kiếm, nhập `EBSWriteBytes` và tìm kiếm.
+   - Bỏ chọn dòng của Instance B
+   - Xóa tag tìm kiếm **CPUUtilization**
+   - Nhập `EBSWriteBytes` vào thanh tìm kiếm
 
 ![3.1.9](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.9.png)
 
 ![3.1.10](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.10.png)
 
-8. Kéo xuống và tích chọn Instance A
+8. Kéo xuống và chọn Instance A
 
-Ở biểu đồ này thì chúng ta cũng thấy một điều tương tự, vào khoảng thời gian đầu mà instance này thực hiện công việc, thì lượng đọc ghi vào EBS rất nhiều, hầu như là CPUUtilization & EBSWriteBytes trùng với nhau (có thời điểm là không trùng). Từ đây thì mình có thể thấy được là ứng dụng của chúng ta cần thao tác với EBS khi khởi động, nhưng ở đoạn trùng thì không cần thao tác với EBS **do nó đang thực hiện một thao tác nào đó khác**.
+**💡 Pro Tip**: Khi phân tích nhiều metrics cùng lúc, bạn có thể thấy mối tương quan giữa các hoạt động khác nhau của instance. Trong trường hợp này, chúng ta thấy rằng hoạt động ghi vào EBS và mức sử dụng CPU có mối tương quan trong giai đoạn đầu khi instance khởi động, nhưng không hoàn toàn trùng khớp ở tất cả các thời điểm.
 
 ![3.1.11](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.11.png)
 
-Bạn có thể ẩn một trong 2 đi để xem kỹ hơn.
+Bạn có thể ẩn một trong hai metrics để xem chi tiết hơn.
 
 ![3.1.12](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.12.png)
 
-Nhưng chúng ta sẽ không phải làm như thế này. Ở bước tiếp theo chúng ta sẽ đi thao tác với các biểu đồ này để có được cái nhìn trực quan hơn.
+**⚠️ Warning**: Khi hiển thị nhiều metrics có đơn vị đo khác nhau trên cùng một biểu đồ, việc phân tích có thể trở nên khó khăn. Trong phần tiếp theo, chúng ta sẽ tìm hiểu cách tùy chỉnh biểu đồ để có cái nhìn trực quan hơn.
 
 #### Thao tác với biểu đồ
 
-Ở bước trước thì biểu đồ của chúng ta khó có thể nhìn được vì cả 2 đơn vị của CPUUtilization và EBSWriteBytes đang ở trên cùng tục tung (Oy), nên trong phần này chúng ta sẽ tách nó ra và thêm một số "dấu" để việc quan sát biểu độ dễ dàng hơn.
+**ℹ️ Information**: CloudWatch cho phép bạn tùy chỉnh biểu đồ để hiển thị dữ liệu một cách hiệu quả hơn, đặc biệt khi so sánh các metrics có đơn vị đo và phạm vi giá trị khác nhau.
 
-1. Vào trong tab **Graphed metrics**, ở dòng **EBSWriteBytes**, cột **Y axis**, chọn **>**. Có thể thấy biểu đồ của chúng ta trông đã khác hơn vừa rồi.
+1. Trong tab **Graphed metrics**, tại dòng **EBSWriteBytes**, cột **Y axis**, chọn **>** để chuyển metric này sang trục Y thứ hai
 
 ![3.1.13](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.13.png)
 
-2. Tiếp theo, chúng ta sẽ thêm "mark" cho biểu đồ.
+2. Thêm đánh dấu ngang (horizontal annotation) cho biểu đồ
 
-   - Vào trong tab **Options**.
-   - Ấn chọn **Add horizontal annotation**.
+   - Chuyển sang tab **Options**
+   - Chọn **Add horizontal annotation**
 
 ![3.1.14](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.14.png)
 
-3. Nhập một số thông tin cho horizontal annotation như sau:
+3. Cấu hình horizontal annotation với các thông tin sau:
 
-   - Label: **5% Mark**.
-   - Value: **5**.
+   - Label: **5% Mark**
+   - Value: **5**
 
-Và bạn có thể thấy một đường kẻ nét đứt hiện trên biểu đồ, có nhãn.
+**💡 Pro Tip**: Sử dụng annotations để đánh dấu các ngưỡng quan trọng giúp bạn dễ dàng xác định khi nào metrics vượt quá hoặc giảm xuống dưới các mức cần quan tâm.
 
 ![3.1.15](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.15.png)
 
-4. Tạo thêm Vertical annotation với label là `Job start`. Và chúng ta sẽ thấy thêm một đường kẻ dọc, nét đứt hiện trên biểu đồ.
+4. Tạo thêm Vertical annotation với label là `Job start`
 
 ![3.1.16](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.16.png)
 
-Nhưng Job start không phải là ở thời điểm 2:16 như mặc định đã tạo. Nên chúng ta cần sẽ phải chỉnh sửa lại thông số này.
+5. Điều chỉnh thời gian cho vertical annotation
 
-5. Chỉnh lại Date cho vertical annotation.
-
-   - Di trỏ chuột vào trong phần đầu của đường chỉ trên biểu đồ.
-   - Ở đây thì chúng ta có thể thấy nó Job được bắt đầu vào khoảng **02:40**.
+   - Di chuột vào phần đầu của đường chỉ trên biểu đồ
+   - Quan sát thấy công việc bắt đầu vào khoảng **02:40**
 
 ![3.1.17](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.17.png)
 
-- Sửa lại thông tin giờ của Date của Job start thành **02:40**.
-- Ấn chọn **Apply** để thay đổi.
+   - Sửa thông tin giờ của Date của Job start thành **02:40**
+   - Chọn **Apply** để áp dụng thay đổi
 
 ![3.1.18](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.18.png)
 
-Đường Job start đã thay đổi vị trí.
+Đường Job start đã được di chuyển đến vị trí chính xác.
 
 ![3.1.19](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.19.png)
 
-Ok, thì đó là những gì mà chúng ta thực hiện thao tác trên biểu đồ. Trong phần sau, chúng ta sẽ thao tác chủ yếu với các biểu thức và bạn cũng có thể xoá 2 đường dấu này đi để sang bước tiếp theo.
+**🔒 Security Note**: Việc theo dõi chính xác thời điểm bắt đầu và kết thúc của các công việc không chỉ giúp tối ưu hiệu suất mà còn hỗ trợ phát hiện các hoạt động bất thường, góp phần nâng cao bảo mật cho hệ thống của bạn.
+
+**💡 Pro Tip**: Bạn có thể xóa các đánh dấu này trước khi chuyển sang phần tiếp theo, nơi chúng ta sẽ tập trung vào việc làm việc với các biểu thức phức tạp hơn trong CloudWatch.

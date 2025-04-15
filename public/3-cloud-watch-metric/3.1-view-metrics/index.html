@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Viewing Metrics :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         parent
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -469,7 +471,7 @@
             
           
           
-            <a href='/'>AWS CloudWatch Workshop</a> > <a href='/3-cloud-watch-metric/'>CloudWatch Metric</a> > Viewing Metrics
+            <a href='/'>AWS CloudWatch Workshop</a> > <a href='/3-cloud-watch-metric/'>CloudWatch Metrics</a> > Viewing Metrics
           
         
           
@@ -489,7 +491,6 @@
         <li></li>
       </ul>
     </li>
-    <li><a href="#working-with-charts">Working with Charts</a></li>
   </ul>
 </nav>
     </div>
@@ -515,134 +516,176 @@
 
 
 
-	<h4 id="viewing-metrics">Viewing Metrics</h4>
-<p>First, we will practice viewing metrics.</p>
+	<h4 id="viewing-cloudwatch-metrics">Viewing CloudWatch Metrics</h4>
+<p><strong>ℹ️ Information</strong>: In this section, you&rsquo;ll learn how to navigate and visualize Amazon CloudWatch metrics to gain insights into your AWS resources&rsquo; performance and health.</p>
+<h4 id="accessing-cloudwatch-metrics">Accessing CloudWatch Metrics</h4>
 <ol>
-<li>Access <strong>AWS Management Console</strong>
+<li>Access the <strong>AWS Management Console</strong>:
 <ul>
-<li>Search for <strong>CloudWatch</strong></li>
-<li>Select <strong>CloudWatch</strong></li>
+<li>In the search bar, type <strong>CloudWatch</strong>.</li>
+<li>Select <strong>CloudWatch</strong> from the services list.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.1.png" alt="3.1.1"></p>
+<p><img alt="3.1.1" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.1.png"></p>
 <ol start="2">
-<li>In the <strong>CloudWatch</strong> interface
+<li>In the <strong>CloudWatch</strong> console:
 <ul>
-<li>Expand the <strong>Metrics</strong> section in the left menu.</li>
+<li>Expand the <strong>Metrics</strong> section in the left navigation pane.</li>
 <li>Select <strong>All metrics</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.2.png" alt="3.1.2"></p>
-<ol start="3">
-<li>In the metrics dashboard, enter <code>EC2</code> in the search bar.</li>
-</ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.3.png" alt="3.1.3"></p>
-<ol start="4">
-<li>Once the results appear, select <strong>EC2 &gt; Per-Instance Metrics</strong>.</li>
-</ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.4.png" alt="3.1.4"></p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.5.png" alt="3.1.5"></p>
-<ol start="5">
-<li>In the search bar, type <code>CPUUtilization</code> and search.</li>
-</ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.6.png" alt="3.1.6"></p>
-<p>By default, the search is performed by <strong>Metric name</strong>.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.7.png" alt="3.1.7"></p>
-<ol start="6">
-<li>Add two out of the five instances created by the CloudFormation stack to observe their <code>CPUUtilization</code> metrics.</li>
-</ol>
-<p>Scroll down to view the data.</p>
-<p>From the graph, we can conclude:</p>
+<p><img alt="3.1.2" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.2.png"></p>
+<h4 id="finding-ec2-instance-metrics">Finding EC2 Instance Metrics</h4>
+<ol>
+<li>In the metrics dashboard:
 <ul>
-<li>Both instances started operating around <strong>2:40 AM</strong>, which is also when they had the highest activity.</li>
-<li>By <strong>3:30 AM</strong>, both instances seem to have completed their tasks.</li>
+<li>Enter <code>EC2</code> in the search bar to filter metrics by service.</li>
 </ul>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.8.png" alt="3.1.8"></p>
-<ol start="7">
-<li>Viewing additional metrics for a single instance
+</li>
+</ol>
+<p><img alt="3.1.3" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.3.png"></p>
+<ol start="2">
+<li>From the search results:
+<ul>
+<li>Select <strong>EC2 &gt; Per-Instance Metrics</strong> to view metrics for individual EC2 instances.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.4" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.4.png"></p>
+<p><img alt="3.1.5" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.5.png"></p>
+<h4 id="analyzing-cpu-utilization">Analyzing CPU Utilization</h4>
+<ol>
+<li>Filter for specific metrics:
+<ul>
+<li>In the search bar, type <code>CPUUtilization</code> and press Enter.</li>
+<li>By default, CloudWatch searches by <strong>Metric name</strong>.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.6" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.6.png"></p>
+<p><img alt="3.1.7" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.7.png"></p>
+<ol start="2">
+<li>Compare instance performance:
+<ul>
+<li>Select two of the five instances created by the CloudFormation stack.</li>
+<li>Scroll down to view the graphed data.</li>
+</ul>
+</li>
+</ol>
+<p><strong>💡 Pro Tip</strong>: When comparing multiple instances, look for patterns that might indicate system-wide events versus instance-specific issues.</p>
+<ol start="3">
+<li>Analyze the graph data:
+<ul>
+<li>Both instances initiated operations around <strong>2:40 AM</strong>, showing peak activity at this time.</li>
+<li>By <strong>3:30 AM</strong>, both instances appear to have completed their workloads.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.8" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.8.png"></p>
+<h4 id="examining-multiple-metrics">Examining Multiple Metrics</h4>
+<ol>
+<li>Focus on a single instance:
 <ul>
 <li>Deselect the line for <strong>Instance B</strong>.</li>
-<li>Remove the <strong>CPUUtilization</strong> filter.</li>
-<li>In the search bar, enter <code>EBSWriteBytes</code> and search.</li>
+<li>Clear the <strong>CPUUtilization</strong> filter.</li>
+<li>Search for <code>EBSWriteBytes</code> to examine storage I/O.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.9.png" alt="3.1.9"></p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.10.png" alt="3.1.10"></p>
-<ol start="8">
-<li>Scroll down and select <strong>Instance A</strong>.</li>
-</ol>
-<p>From this chart, we observe:</p>
-<ul>
-<li>Initially, there was a high volume of read/write operations to <strong>EBS</strong>, indicating that the instance was processing data.</li>
-<li><strong>CPUUtilization</strong> and <strong>EBSWriteBytes</strong> follow a similar pattern, except at certain points where they diverge.</li>
-<li>This suggests that the application interacts with <strong>EBS</strong> mainly during startup but performs other tasks afterward.</li>
-</ul>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.11.png" alt="3.1.11"></p>
-<p>You can hide one of the metrics to analyze the data more clearly.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.12.png" alt="3.1.12"></p>
-<p>However, we will take a better approach in the next section by customizing the charts for improved visualization.</p>
-<h2 id="working-with-charts">Working with Charts</h2>
-<p>In the previous step, our chart was difficult to interpret because both <code>CPUUtilization</code> and <code>EBSWriteBytes</code> were plotted on the same <strong>Y-axis</strong>. Now, we will separate them and add markers for better visualization.</p>
-<ol>
-<li>Adjusting the Y-axis
-<ul>
-<li>Go to the <strong>Graphed metrics</strong> tab.</li>
-<li>Locate <strong>EBSWriteBytes</strong>, then under the <strong>Y-axis</strong> column, select <strong>&gt;</strong>.</li>
-<li>The chart should now appear more readable.</li>
-</ul>
-</li>
-</ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.13.png" alt="3.1.13"></p>
+<p><img alt="3.1.9" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.9.png"></p>
+<p><img alt="3.1.10" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.10.png"></p>
 <ol start="2">
-<li>Adding a horizontal annotation (threshold marker)
+<li>Select <strong>Instance A</strong> and analyze the correlation:
+<ul>
+<li>Initially, high volume of EBS read/write operations indicates data processing.</li>
+<li><strong>CPUUtilization</strong> and <strong>EBSWriteBytes</strong> follow similar patterns with some divergence.</li>
+<li>This suggests the application primarily interacts with EBS during startup before transitioning to other operations.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.11" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.11.png"></p>
+<ol start="3">
+<li>For clearer analysis:
+<ul>
+<li>You can hide individual metrics by toggling their visibility.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.12" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.12.png"></p>
+<p><strong>ℹ️ Information</strong>: In the next section, we&rsquo;ll explore more advanced visualization techniques for better metric analysis.</p>
+<h4 id="enhancing-chart-visualization">Enhancing Chart Visualization</h4>
+<p>When multiple metrics with different units are displayed on the same chart, interpretation can be challenging. Let&rsquo;s improve visualization with CloudWatch&rsquo;s advanced charting features.</p>
+<ol>
+<li>Separate Y-axis for different metrics:
+<ul>
+<li>Navigate to the <strong>Graphed metrics</strong> tab.</li>
+<li>For <strong>EBSWriteBytes</strong>, click the <strong>Y-axis</strong> column dropdown and select <strong>Right Y-axis</strong>.</li>
+<li>The chart now displays each metric on its appropriate scale.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.13" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.13.png"></p>
+<ol start="2">
+<li>Add a horizontal threshold annotation:
 <ul>
 <li>Go to the <strong>Options</strong> tab.</li>
 <li>Click <strong>Add horizontal annotation</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.14.png" alt="3.1.14"></p>
+<p><img alt="3.1.14" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.14.png"></p>
 <ol start="3">
-<li>Enter annotation details:
+<li>Configure the threshold:
 <ul>
-<li><strong>Label:</strong> <code>5% Mark</code></li>
-<li><strong>Value:</strong> <code>5</code></li>
+<li><strong>Label</strong>: <code>5% Mark</code></li>
+<li><strong>Value</strong>: <code>5</code></li>
+<li>This adds a dashed horizontal line at the 5% CPU utilization level.</li>
 </ul>
 </li>
 </ol>
-<p>This adds a <strong>dashed line</strong> on the chart, labeled accordingly.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.15.png" alt="3.1.15"></p>
+<p><img alt="3.1.15" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.15.png"></p>
+<p><strong>💡 Pro Tip</strong>: Horizontal annotations are excellent for visualizing thresholds that might trigger alarms or indicate performance boundaries.</p>
 <ol start="4">
-<li>Adding a vertical annotation (event marker)
+<li>Add a vertical event marker:
 <ul>
 <li>Create a <strong>Vertical annotation</strong> labeled <code>Job start</code>.</li>
-<li>A <strong>dashed vertical line</strong> appears on the chart.</li>
+<li>This adds a dashed vertical line to mark a specific point in time.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.16.png" alt="3.1.16"></p>
-<p>By default, the <strong>Job start</strong> marker is set at <strong>2:16 AM</strong>, but this is incorrect. We need to adjust it.</p>
+<p><img alt="3.1.16" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.16.png"></p>
 <ol start="5">
-<li>Adjusting the vertical annotation time:
+<li>Adjust the vertical annotation time:
 <ul>
 <li>Hover over the <strong>Job start</strong> marker.</li>
-<li>The job actually started around <strong>2:40 AM</strong>.</li>
+<li>Note that the job actually started around <strong>2:40 AM</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.17.png" alt="3.1.17"></p>
+<p><img alt="3.1.17" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.17.png"></p>
+<ol start="6">
+<li>Update the annotation:
 <ul>
 <li>Change the <strong>Date/Time</strong> for <code>Job start</code> to <strong>2:40 AM</strong>.</li>
-<li>Click <strong>Apply</strong> to save changes.</li>
+<li>Click <strong>Apply</strong> to save your changes.</li>
 </ul>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.18.png" alt="3.1.18"></p>
-<p>The <code>Job start</code> marker has now been repositioned.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.19.png" alt="3.1.19"></p>
-<p>That concludes our hands-on work with charts.</p>
-<p>In the next section, we will focus on <strong>working with metric expressions</strong>. You can remove the markers before proceeding to the next step.</p>
+</li>
+</ol>
+<p><img alt="3.1.18" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.18.png"></p>
+<ol start="7">
+<li>Verify the repositioned marker:
+<ul>
+<li>The <code>Job start</code> marker now aligns with the beginning of instance activity.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="3.1.19" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.19.png"></p>
+<p><strong>🔒 Security Note</strong>: When analyzing metrics for production workloads, pay special attention to unexpected spikes or patterns that might indicate security events or unauthorized access.</p>
+<h4 id="next-steps">Next Steps</h4>
+<p>This concludes our exploration of basic CloudWatch metric visualization. In the next section, we&rsquo;ll dive into <strong>working with metric expressions</strong> for more advanced analysis capabilities.</p>
+<p><strong>⚠️ Warning</strong>: Before proceeding to the next section, you may want to remove the annotations to start with a clean workspace.</p>
 
 
 
@@ -923,7 +966,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/3-cloud-watch-metric/" title="CloudWatch Metric"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/3-cloud-watch-metric/" title="CloudWatch Metrics"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/3-cloud-watch-metric/3.2-search-expression/" title="Search expressions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -936,19 +979,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

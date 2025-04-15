@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Introduction :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -509,14 +511,14 @@
 
 
 	<h4 id="overview">Overview</h4>
-<p>In this lab, we will practice working with Amazon CloudWatch through the following tasks:</p>
+<p><strong>ℹ️ Information</strong>: In this lab, you will gain hands-on experience with Amazon CloudWatch, AWS&rsquo;s comprehensive monitoring and observability service, through the following tasks:</p>
 <ul>
-<li>Working with <strong>Metrics</strong> sent from sample applications running on pre-configured EC2 Instances.</li>
-<li>Viewing <strong>Logs</strong> also sent from these applications running on EC2 Instances, then creating <strong>Metrics</strong> from <strong>Logs</strong>.</li>
-<li>Creating Alarms from <strong>Metrics</strong>.</li>
-<li>Finally, adding Custom Metrics and Alarms to the CloudWatch Dashboard for better system monitoring.</li>
+<li>Working with <strong>Metrics</strong> sent from sample applications running on pre-configured Amazon EC2 instances</li>
+<li>Viewing <strong>Logs</strong> from these applications on EC2 instances, then creating <strong>Metrics</strong> from <strong>Logs</strong></li>
+<li>Creating <strong>Alarms</strong> based on <strong>Metrics</strong> to receive notifications about system changes</li>
+<li>Building a custom CloudWatch Dashboard with Custom Metrics and Alarms for enhanced system visibility</li>
 </ul>
-<p>This workshop is suitable for those who are interested in System Administration and want to start using CloudWatch to monitor a simple system, providing a more intuitive view of System Monitoring and Observation.</p>
+<p><strong>💡 Pro Tip</strong>: This workshop is ideal for IT professionals interested in cloud operations who want to leverage CloudWatch for comprehensive system monitoring. You&rsquo;ll learn practical skills that provide an intuitive approach to system observability in AWS environments.</p>
 
 
 
@@ -806,19 +808,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

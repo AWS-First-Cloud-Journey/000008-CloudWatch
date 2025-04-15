@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Metric Filter :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -515,76 +517,82 @@
 
 
 	<h4 id="cloudwatch-metric-filter">CloudWatch Metric Filter</h4>
+<p><strong>ℹ️ Information</strong>: CloudWatch Metric Filters cho phép bạn trích xuất dữ liệu có giá trị từ logs và chuyển đổi chúng thành các metrics có thể đo lường được, giúp bạn theo dõi và cảnh báo về các sự kiện quan trọng trong hệ thống.</p>
 <ol>
 <li>
 <p>Quay lại màn hình chính của <strong>CloudWatch</strong></p>
 <ul>
-<li>Chọn <strong>Log groups</strong></li>
-<li>Tìm <code>/ec2</code>.</li>
+<li>Chọn <strong>Log groups</strong> từ menu bên trái</li>
+<li>Tìm kiếm <code>/ec2</code> trong thanh tìm kiếm</li>
 <li>Chọn <strong>/ec2/linux/var/log/messages</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.1.png" alt="4.3.1"></p>
+<p><img alt="4.3.1" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.1.png"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện của <strong>/ec2/linux/var/log/messages</strong></p>
 <ul>
-<li>Ấn xổ <strong>Actions</strong>.</li>
-<li>Ấn <strong>Create metric filter</strong>.</li>
+<li>Mở rộng menu <strong>Actions</strong></li>
+<li>Chọn <strong>Create metric filter</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.2.png" alt="4.3.2"></p>
+<p><img alt="4.3.2" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.2.png"></p>
 <ol start="3">
 <li>
-<p>Trong phần <strong>Define Pattern</strong>, điền một số thông tin như sau</p>
+<p>Trong phần <strong>Define Pattern</strong>, cấu hình các thông tin sau:</p>
 <ul>
-<li>Filter pattern: xổ xuống và chọn <strong>ERROR</strong>.</li>
-<li>Test pattern: xổ xuống và chọn bất kì một instance nào, nhưng nên chọn instance mà chúng ta mới thực hiện việc tạo processes ở 2 bước trước.</li>
+<li>Filter pattern: mở rộng dropdown và chọn <strong>ERROR</strong></li>
+<li>Test pattern: mở rộng và chọn một instance (nên chọn instance mà chúng ta đã tạo processes ở các bước trước)</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.3.png" alt="4.3.3"></p>
+<p><img alt="4.3.3" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.3.png"></p>
+<p><strong>💡 Pro Tip</strong>: Việc kiểm thử pattern trước khi tạo metric filter giúp bạn xác nhận rằng filter sẽ bắt đúng các sự kiện mong muốn, tránh tình trạng thiếu dữ liệu hoặc dữ liệu không chính xác.</p>
 <ol start="4">
-<li>Ấn chọn <strong>Test pattern</strong> để kiểm tra thử xem filter chạy ổn không.</li>
+<li>Nhấn <strong>Test pattern</strong> để kiểm tra xem filter hoạt động chính xác không</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.4.png" alt="4.3.4"></p>
+<p><img alt="4.3.4" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.4.png"></p>
 <ol start="5">
-<li>Trong phần <strong>Create filter name</strong> của <strong>Assign metric</strong>, nhập <code>PythonAppErrors</code>.</li>
+<li>Trong phần <strong>Create filter name</strong> của <strong>Assign metric</strong>, nhập <code>PythonAppErrors</code></li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.5.png" alt="4.3.5"></p>
+<p><img alt="4.3.5" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.5.png"></p>
 <ol start="6">
 <li>
-<p>Trong phần Metric details, nhập một số thông tin như sau:</p>
+<p>Trong phần <strong>Metric details</strong>, cấu hình các thông tin sau:</p>
 <ul>
-<li>Metric namespace: <code>ec2-logs</code>.</li>
-<li>Metric name: <code>/var/log/messages - ERROR</code>.</li>
-<li>Metric value: <strong>1</strong>.</li>
-<li>Default value: <strong>0</strong>.</li>
-<li>Unit: xổ xuống và chọn <strong>Count</strong>.</li>
-<li>Ấn <strong>Next</strong>.</li>
+<li>Metric namespace: <code>ec2-logs</code></li>
+<li>Metric name: <code>/var/log/messages - ERROR</code></li>
+<li>Metric value: <strong>1</strong></li>
+<li>Default value: <strong>0</strong></li>
+<li>Unit: mở rộng dropdown và chọn <strong>Count</strong></li>
+<li>Nhấn <strong>Next</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.6.png" alt="4.3.6"></p>
+<p><img alt="4.3.6" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.6.png"></p>
+<p><strong>⚠️ Warning</strong>: Việc đặt namespace và tên metric phù hợp rất quan trọng để dễ dàng tìm kiếm và phân loại metrics trong môi trường có nhiều ứng dụng. Hãy sử dụng quy ước đặt tên nhất quán trong toàn bộ hệ thống của bạn.</p>
 <ol start="7">
-<li>Review xong và ấn chọn <strong>Create metric filter</strong>.</li>
+<li>Xem lại cấu hình và nhấn <strong>Create metric filter</strong></li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.7.png" alt="4.3.7"></p>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.8.png" alt="4.3.8"></p>
+<p><img alt="4.3.7" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.7.png"></p>
+<p><img alt="4.3.8" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.8.png"></p>
 <ol start="8">
 <li>
-<p>Trở lại Metrics &gt; All metrics.</p>
+<p>Trở lại <strong>Metrics &gt; All metrics</strong></p>
 <ul>
-<li>Tìm 2 từ khoá là <code>/var/log/messages</code> và <code>ERROR</code>.</li>
-<li>Chọn <strong>ec2-logs &gt; Metrics with no dimensions</strong>.</li>
+<li>Tìm kiếm với từ khóa <code>/var/log/messages</code> và <code>ERROR</code></li>
+<li>Chọn <strong>ec2-logs &gt; Metrics with no dimensions</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.9.png" alt="4.3.9"></p>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.10.png" alt="4.3.10"></p>
-<p>Như vậy là chúng ta đã có được một Metric được lấy từng những ERROR Logs trong ứng dụng. Trong bước tiếp theo thì chúng ta sẽ thiết lập Alarm cho metric này.</p>
+<p><img alt="4.3.9" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.9.png"></p>
+<p><img alt="4.3.10" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.10.png"></p>
+<p><strong>ℹ️ Information</strong>: Bây giờ chúng ta đã có một metric được tạo từ các log ERROR trong ứng dụng Python. Metric này có thể được sử dụng để tạo biểu đồ, dashboards, và cảnh báo khi số lượng lỗi vượt quá ngưỡng cho phép.</p>
+<p><strong>💡 Pro Tip</strong>: Bạn có thể tạo nhiều metric filters khác nhau cho cùng một log group để theo dõi các loại sự kiện khác nhau, như WARNING, INFO, hoặc các mẫu tùy chỉnh phù hợp với ứng dụng của bạn.</p>
+<p><strong>🔒 Security Note</strong>: Metric filters là công cụ quan trọng để phát hiện các vấn đề bảo mật tiềm ẩn trong hệ thống của bạn. Hãy cân nhắc tạo các filters đặc biệt cho các sự kiện liên quan đến bảo mật như đăng nhập thất bại, thay đổi quyền, hoặc truy cập trái phép.</p>
+<p>Trong bước tiếp theo, chúng ta sẽ thiết lập CloudWatch Alarm cho metric này để nhận thông báo khi có quá nhiều lỗi xảy ra trong ứng dụng.</p>
 
 
 
@@ -881,19 +889,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

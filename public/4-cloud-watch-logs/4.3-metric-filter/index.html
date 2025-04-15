@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Metric Filter :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -514,77 +516,80 @@
 
 
 
-	<h4 id="cloudwatch-metric-filter">CloudWatch Metric Filter</h4>
+	<h4 id="creating-a-cloudwatch-metric-filter">Creating a CloudWatch Metric Filter</h4>
+<p><strong>ℹ️ Information</strong>: CloudWatch Metric Filters allow you to extract and transform log data into numerical CloudWatch metrics that you can graph or set alarms on.</p>
 <ol>
 <li>
-<p>Return to the main screen of <strong>CloudWatch</strong></p>
+<p>Return to the main screen of <strong>Amazon CloudWatch</strong></p>
 <ul>
-<li>Select <strong>Log groups</strong></li>
-<li>Search for <code>/ec2</code>.</li>
-<li>Select <strong>/ec2/linux/var/log/messages</strong></li>
+<li>Select <strong>Log groups</strong> from the navigation pane</li>
+<li>Search for <code>/ec2</code> in the filter box</li>
+<li>Select <strong>/ec2/linux/var/log/messages</strong> log group</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.1.png" alt="4.3.1"></p>
+<p><img alt="4.3.1" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.1.png"></p>
 <ol start="2">
 <li>
-<p>In the interface of <strong>/ec2/linux/var/log/messages</strong></p>
+<p>In the <strong>/ec2/linux/var/log/messages</strong> log group interface</p>
 <ul>
-<li>Click on <strong>Actions</strong>.</li>
-<li>Click <strong>Create metric filter</strong>.</li>
+<li>Click on <strong>Actions</strong> dropdown menu</li>
+<li>Select <strong>Create metric filter</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.2.png" alt="4.3.2"></p>
+<p><img alt="4.3.2" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.2.png"></p>
 <ol start="3">
 <li>
-<p>In the <strong>Define Pattern</strong> section, enter the following information:</p>
+<p>In the <strong>Define Pattern</strong> section, configure the following:</p>
 <ul>
-<li>Filter pattern: select <strong>ERROR</strong> from the dropdown.</li>
-<li>Test pattern: select any instance, but it’s recommended to choose the instance where we created processes in the previous two steps.</li>
+<li>Filter pattern: select <strong>ERROR</strong> from the dropdown menu</li>
+<li>Test pattern: select any log stream instance (preferably the instance where we created processes in the previous steps)</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.3.png" alt="4.3.3"></p>
+<p><img alt="4.3.3" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.3.png"></p>
 <ol start="4">
-<li>Click <strong>Test pattern</strong> to check if the filter works properly.</li>
+<li>Click <strong>Test pattern</strong> to validate the filter configuration</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.4.png" alt="4.3.4"></p>
+<p><img alt="4.3.4" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.4.png"></p>
 <ol start="5">
-<li>In the <strong>Create filter name</strong> section of <strong>Assign metric</strong>, enter <code>PythonAppErrors</code>.</li>
+<li>In the <strong>Create filter name</strong> section of <strong>Assign metric</strong>, enter <code>PythonAppErrors</code></li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.5.png" alt="4.3.5"></p>
+<p><img alt="4.3.5" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.5.png"></p>
 <ol start="6">
 <li>
-<p>In the <strong>Metric details</strong> section, enter the following information:</p>
+<p>In the <strong>Metric details</strong> section, configure the following:</p>
 <ul>
-<li>Metric namespace: <code>ec2-logs</code>.</li>
-<li>Metric name: <code>/var/log/messages - ERROR</code>.</li>
-<li>Metric value: <strong>1</strong>.</li>
-<li>Default value: <strong>0</strong>.</li>
-<li>Unit: select <strong>Count</strong> from the dropdown.</li>
-<li>Click <strong>Next</strong>.</li>
+<li>Metric namespace: <code>ec2-logs</code></li>
+<li>Metric name: <code>/var/log/messages - ERROR</code></li>
+<li>Metric value: <strong>1</strong></li>
+<li>Default value: <strong>0</strong></li>
+<li>Unit: select <strong>Count</strong> from the dropdown menu</li>
+<li>Click <strong>Next</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.6.png" alt="4.3.6"></p>
+<p><img alt="4.3.6" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.6.png"></p>
 <ol start="7">
-<li>After reviewing, click <strong>Create metric filter</strong>.</li>
+<li>Review your configuration and click <strong>Create metric filter</strong></li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.7.png" alt="4.3.7"></p>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.8.png" alt="4.3.8"></p>
+<p><img alt="4.3.7" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.7.png"></p>
+<p><img alt="4.3.8" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.8.png"></p>
 <ol start="8">
 <li>
-<p>Go back to Metrics &gt; All metrics.</p>
+<p>Navigate to <strong>Metrics &gt; All metrics</strong> in the CloudWatch console</p>
 <ul>
-<li>Search for the keywords <code>/var/log/messages</code> and <code>ERROR</code>.</li>
-<li>Select <strong>ec2-logs &gt; Metrics with no dimensions</strong>.</li>
+<li>Search for the keywords <code>/var/log/messages</code> and <code>ERROR</code></li>
+<li>Select <strong>ec2-logs &gt; Metrics with no dimensions</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.9.png" alt="4.3.9"></p>
-<p><img src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.10.png" alt="4.3.10"></p>
-<p>Now we have a metric that retrieves ERROR logs from the application. In the next step, we will set up an alarm for this metric.</p>
+<p><img alt="4.3.9" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.9.png"></p>
+<p><img alt="4.3.10" src="/images/4-cloud-watch-logs/4.3-metric-filter/4.3.10.png"></p>
+<p><strong>💡 Pro Tip</strong>: You can create multiple metric filters for different error patterns or log events to gain comprehensive visibility into your application&rsquo;s behavior.</p>
+<p><strong>🔒 Security Note</strong>: Ensure that your metric filters don&rsquo;t extract sensitive information that might be present in your logs.</p>
+<p>Now we have a metric that captures ERROR logs from the application. In the next step, we will set up a CloudWatch Alarm for this metric to receive notifications when errors occur.</p>
 
 
 
@@ -881,19 +886,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

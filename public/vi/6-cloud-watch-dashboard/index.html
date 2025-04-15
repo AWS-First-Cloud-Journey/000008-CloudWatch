@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Dashboards :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -509,39 +511,45 @@
 
 
 	<h4 id="cloudwatch-dashboards">CloudWatch Dashboards</h4>
-<p>Đây là phần cuối của workshop này, trong phần này thì chúng ta sẽ thực hiện việc tạo một Dashboard đơn giản để quản lý các Metrics, Alarms mà mình đã tạo ra, cụ thể là Error Logs mà chúng ta đã tạo ở phần trước đó.</p>
+<p><strong>ℹ️ Information</strong>: Amazon CloudWatch Dashboards là công cụ trực quan hóa mạnh mẽ cho phép bạn tạo các bảng điều khiển tùy chỉnh để giám sát tài nguyên AWS trong thời gian thực. Dashboards giúp tập hợp các metrics, logs và alarms quan trọng vào một nơi duy nhất, tạo điều kiện thuận lợi cho việc giám sát và phân tích hệ thống.</p>
+<p>Trong phần cuối của workshop này, chúng ta sẽ tạo một Dashboard đơn giản để tập trung quản lý các Metrics và Alarms đã thiết lập trước đó, đặc biệt là Error Logs đã cấu hình trong phần trước.</p>
 <ol>
 <li>
-<p>Thêm alarm mà chúng ta mới tạo vào trong Dashboard.</p>
+<p>Thêm alarm đã tạo vào Dashboard:</p>
 <ul>
-<li>Chọn <strong>PythonApplicationErrorAlarm</strong>.</li>
-<li>Xổ Actions.</li>
-<li>Chọn <strong>Add to dashboard</strong>.</li>
+<li>Chọn <strong>PythonApplicationErrorAlarm</strong></li>
+<li>Mở rộng menu <strong>Actions</strong></li>
+<li>Chọn <strong>Add to dashboard</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/6-cloud-watch-dashboard/6.1.png" alt="6.1"></p>
+<p><img alt="6.1" src="/images/6-cloud-watch-dashboard/6.1.png"></p>
 <ol start="2">
-<li>Trong dialog <strong>Add to dashboard</strong>, chọn <strong>Create new</strong>.</li>
+<li>Trong hộp thoại <strong>Add to dashboard</strong>, chọn <strong>Create new</strong></li>
 </ol>
-<p><img src="/images/6-cloud-watch-dashboard/6.2.png" alt="6.2"></p>
+<p><img alt="6.2" src="/images/6-cloud-watch-dashboard/6.2.png"></p>
 <ol start="3">
 <li>
-<p>Nhập tên cho dashboard là <code>CloudWatch-Workshop</code>.</p>
+<p>Cấu hình Dashboard mới:</p>
 <ul>
-<li>Ấn chọn <strong>Create</strong>.</li>
-<li>Ấn chọn <strong>Add to dashboard</strong>.</li>
+<li>Nhập tên dashboard: <code>CloudWatch-Workshop</code></li>
+<li>Nhấn <strong>Create</strong></li>
+<li>Nhấn <strong>Add to dashboard</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/6-cloud-watch-dashboard/6.3.png" alt="6.3"></p>
-<p><img src="/images/6-cloud-watch-dashboard/6.4.png" alt="6.4"></p>
-<p>Và đây là dashboard của chúng ta.</p>
-<p><img src="/images/6-cloud-watch-dashboard/6.5.png" alt="6.5"></p>
-<p>Bạn có thể có một số thao tác trên Widget này.</p>
-<p><img src="/images/6-cloud-watch-dashboard/6.6.png" alt="6.6"></p>
-<p><img src="/images/6-cloud-watch-dashboard/6.7.png" alt="6.7"></p>
-<p>Nếu như bạn làm tới đây rồi thì chúc mừng bạn đã hoàn thành xong bài workshop này!</p>
+<p><img alt="6.3" src="/images/6-cloud-watch-dashboard/6.3.png"></p>
+<p><img alt="6.4" src="/images/6-cloud-watch-dashboard/6.4.png"></p>
+<p><strong>💡 Pro Tip</strong>: Đặt tên dashboard có ý nghĩa và phân loại rõ ràng sẽ giúp bạn dễ dàng quản lý khi số lượng dashboards tăng lên trong môi trường thực tế. Cân nhắc sử dụng các tiền tố như &ldquo;Prod-&rdquo;, &ldquo;Dev-&rdquo;, hoặc tên ứng dụng để phân loại.</p>
+<p>Dưới đây là dashboard vừa được tạo:</p>
+<p><img alt="6.5" src="/images/6-cloud-watch-dashboard/6.5.png"></p>
+<p><strong>ℹ️ Information</strong>: CloudWatch Dashboards hỗ trợ nhiều loại widget khác nhau như biểu đồ, số liệu đơn, bảng, văn bản và nhiều hơn nữa. Mỗi widget có thể được tùy chỉnh về kích thước, vị trí và hiển thị dữ liệu.</p>
+<p>Bạn có thể thực hiện nhiều thao tác tùy chỉnh trên widget này:</p>
+<p><img alt="6.6" src="/images/6-cloud-watch-dashboard/6.6.png"></p>
+<p><img alt="6.7" src="/images/6-cloud-watch-dashboard/6.7.png"></p>
+<p><strong>🔒 Security Note</strong>: Dashboards có thể được chia sẻ với người dùng khác trong tổ chức của bạn hoặc thậm chí công khai (không yêu cầu đăng nhập AWS). Hãy cẩn thận khi chia sẻ dashboards có chứa thông tin nhạy cảm về cơ sở hạ tầng của bạn.</p>
+<p><strong>⚠️ Warning</strong>: CloudWatch Dashboards có giới hạn 500 widgets trên mỗi dashboard và 20.000 metrics trên tất cả các dashboards. Trong môi trường sản xuất lớn, hãy cân nhắc tạo nhiều dashboards chuyên biệt thay vì một dashboard quá lớn và phức tạp.</p>
+<p>Chúc mừng! Bạn đã hoàn thành bài workshop về Amazon CloudWatch. Giờ đây bạn đã nắm vững các kỹ năng cơ bản để giám sát, phân tích và cảnh báo trong môi trường AWS của mình.</p>
 
 
 
@@ -834,19 +842,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Preparatory steps :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -509,65 +511,90 @@
 
 
 	<h4 id="preparation-steps">Preparation Steps</h4>
+<p><strong>ℹ️ Information</strong>: In this section, you&rsquo;ll set up the necessary AWS resources for the CloudWatch workshop using AWS CloudFormation. This automated deployment will create EC2 instances with pre-configured applications that generate metrics and logs for our monitoring exercises.</p>
 <ol>
 <li>
 <p>Access the <strong>AWS Management Console</strong>:</p>
 <ul>
-<li>Search for <strong>CloudFormation</strong>.</li>
-<li>Select <strong>CloudFormation</strong>.</li>
+<li>In the search bar, type <strong>CloudFormation</strong>.</li>
+<li>Select <strong>CloudFormation</strong> from the services list.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.1.png" alt="2.1"></p>
+<p><img alt="2.1" src="/images/2-preparatory-steops/2.1.png"></p>
 <ol start="2">
 <li>
-<p>In the <strong>CloudFormation</strong> interface:</p>
+<p>In the <strong>CloudFormation</strong> console:</p>
 <ul>
-<li>Select <strong>Create stack</strong>.</li>
-<li>Choose <strong>With new resources (standard)</strong>.</li>
+<li>Click <strong>Create stack</strong>.</li>
+<li>Select <strong>With new resources (standard)</strong> from the dropdown.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.2.png" alt="2.2"></p>
+<p><img alt="2.2" src="/images/2-preparatory-steops/2.2.png"></p>
 <ol start="3">
 <li>
-<p>In the <strong>Create stack</strong> interface. First, download the <a href="https://raw.githubusercontent.com/AWS-First-Cloud-Journey/CloudWatchWorkshop/main/template.yml">template</a> file, and then follow these steps:</p>
+<p>For the stack template:</p>
 <ul>
-<li>In the <strong>Prerequisite - Prepare template</strong> section, choose <strong>Choose an existing template</strong>.</li>
-<li>Then, select <strong>Upload a template file</strong>.</li>
-<li>Click <strong>Choose file</strong> to upload the template file you just downloaded.</li>
-<li>Click <strong>Next</strong>.</li>
+<li>Download the <a href="https://raw.githubusercontent.com/AWS-First-Cloud-Journey/CloudWatchWorkshop/main/template.yml">CloudFormation template</a>.</li>
+<li>Under <strong>Prerequisite - Prepare template</strong>, select <strong>Choose an existing template</strong>.</li>
+<li>Choose <strong>Upload a template file</strong>.</li>
+<li>Click <strong>Choose file</strong> and select the template you just downloaded.</li>
+<li>Click <strong>Next</strong> to proceed.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.3.png" alt="2.3"></p>
+<p><img alt="2.3" src="/images/2-preparatory-steops/2.3.png"></p>
 <ol start="4">
 <li>
-<p>Next, fill in the following information:</p>
+<p>Configure stack details:</p>
 <ul>
-<li>Name: <code>FCJ-CloudWatch-Workshop</code> (or any name you prefer, but it’s a good idea to choose a memorable name).</li>
-<li>RegionId: select the region ID where you are performing the lab, for this lab, I chose <strong>us-east-1</strong> (N. Virginia).</li>
-<li>Leave the remaining parameters as is.</li>
+<li>Stack name: Enter <code>FCJ-CloudWatch-Workshop</code> (or a preferred name that&rsquo;s easily identifiable).</li>
+<li>RegionId: Select the AWS Region where you&rsquo;re conducting this lab (for this example, we&rsquo;re using <strong>us-east-1</strong> - N. Virginia).</li>
+<li>Keep all other parameters at their default values.</li>
 <li>Click <strong>Next</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.4.png" alt="2.4"></p>
+<p><img alt="2.4" src="/images/2-preparatory-steops/2.4.png"></p>
+<p><strong>💡 Pro Tip</strong>: Using a consistent naming convention for your CloudFormation stacks makes resource management easier, especially when working across multiple projects or environments.</p>
 <ol start="5">
-<li>On this page, no configuration is needed, so scroll down to the bottom, check <strong>I acknowledge that AWS CloudFormation might create IAM resources with custom names</strong>, and then click <strong>Next</strong>.</li>
+<li>
+<p>Configure stack options:</p>
+<ul>
+<li>No additional configuration is required on this page.</li>
+<li>Scroll to the bottom and check the acknowledgment box: <strong>I acknowledge that AWS CloudFormation might create IAM resources with custom names</strong>.</li>
+<li>Click <strong>Next</strong>.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.5.png" alt="2.5"></p>
+<p><img alt="2.5" src="/images/2-preparatory-steops/2.5.png"></p>
+<p><strong>🔒 Security Note</strong>: The CloudFormation template creates IAM roles with least-privilege permissions necessary for this workshop. In production environments, always review IAM permissions carefully to ensure they follow security best practices.</p>
 <ol start="6">
-<li>Verify everything once more, scroll to the bottom, and click <strong>Submit</strong> to create the stack.</li>
+<li>
+<p>Review and create:</p>
+<ul>
+<li>Verify all configuration details.</li>
+<li>Scroll to the bottom and click <strong>Submit</strong> to initiate stack creation.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.6.png" alt="2.6"></p>
+<p><img alt="2.6" src="/images/2-preparatory-steops/2.6.png"></p>
 <ol start="7">
-<li>A new stack will be created. Wait for about 5 minutes for the installation to complete.</li>
+<li>
+<p>Monitor stack creation:</p>
+<ul>
+<li>The stack creation process will begin immediately.</li>
+<li>Wait approximately 5 minutes for the deployment to complete.</li>
+<li>You can monitor the progress in the CloudFormation console.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.7.png" alt="2.7"></p>
-<p>When the installation is finished, you should see the following result:</p>
-<p><img src="/images/2-preparatory-steops/2.8.png" alt="2.8"></p>
-<p>The preparation step is now complete. In the following steps, we will proceed with hands-on practice in CloudWatch.</p>
+<p><img alt="2.7" src="/images/2-preparatory-steops/2.7.png"></p>
+<p>When the deployment completes successfully, you&rsquo;ll see the stack status change to <strong>CREATE_COMPLETE</strong>:</p>
+<p><img alt="2.8" src="/images/2-preparatory-steops/2.8.png"></p>
+<p><strong>ℹ️ Information</strong>: The CloudFormation stack has deployed EC2 instances running sample applications that will generate metrics and logs for our CloudWatch exercises. These resources are pre-configured to demonstrate various CloudWatch capabilities throughout this workshop.</p>
+<p>The preparation step is now complete. In the following sections, we&rsquo;ll explore CloudWatch&rsquo;s monitoring and observability features using the resources we&rsquo;ve just deployed.</p>
 
 
 
@@ -850,7 +877,7 @@
 			<a class="nav nav-prev" href="/1-introduction/" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/3-cloud-watch-metric/" title="CloudWatch Metric" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/3-cloud-watch-metric/" title="CloudWatch Metrics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -860,19 +887,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

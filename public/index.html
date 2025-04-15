@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>AWS CloudWatch Workshop :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -457,10 +459,11 @@
 
  
 <h1 id="aws-cloudwatch-workshop">AWS CloudWatch Workshop</h1>
-<p><img src="/images/architecture.png" alt="architecture"></p>
+<p><img alt="architecture" src="/images/architecture.png"></p>
 <h4 id="overview">Overview</h4>
-<p><strong>Amazon CloudWatch</strong> is a monitoring and management service that provides action-oriented data and information for AWS application and infrastructure resources, hybrid and on-premises applications. You can collect and access all performance and operational data in the form of logs and metrics in the same platform, instead of monitoring in silos (servers, networks, or databases). <strong>CloudWatch</strong> allows you to monitor end-to-end (applications, infrastructure, and services) and leverage alerts, logs, and event data to take action automatically and reduce average processing time (MTTR). This service helps you free up critical resources and focus on building applications and business value.</p>
-<p><strong>CloudWatch</strong> provides action-oriented information, assisting in optimizing application performance, managing resource usage, and understanding the overall health of the system. <strong>CloudWatch</strong> displays detailed log and metric data down to the second, maintains data for 15 months (metric), and enables calculations on metrics. It also helps you with analytics based on stale data to optimize costs and collect real-time information that optimizes application and infrastructure resources. You can use <strong>CloudWatch</strong> Container Insights to monitor, troubleshoot, and alert the applications and microservices contained in your containers. <strong>CloudWatch</strong> collects, aggregates, and summarizes compute usage (such as CPU, memory, disk, and network data) as well as diagnostic information (such as container restart failures) to help DevOps engineers Isolate and resolve problems quickly. Container Insights gives you insights from container management services such as <strong>Amazon ECS for Kubernetes</strong> (EKS), <strong>Amazon Elastic Container Service</strong> (ECS), <strong>AWS Fargate</strong>, and standalone Kubernetes (k8s).</p>
+<p><strong>ℹ️ Information</strong>: Amazon CloudWatch is a comprehensive monitoring and management service that provides data-driven insights for AWS resources, hybrid, and on-premises applications. It enables you to collect and analyze performance and operational data through unified logs and metrics, eliminating siloed monitoring approaches across servers, networks, and databases. CloudWatch facilitates end-to-end observability across your applications, infrastructure, and services while enabling automated actions based on alerts, logs, and events to reduce mean time to resolution (MTTR). This powerful service allows you to redirect valuable resources toward application development and business innovation.</p>
+<p>CloudWatch delivers actionable insights that help optimize application performance, efficiently manage resources, and maintain visibility into system health. The service provides high-resolution metric and log data with one-second granularity, retains metric data for 15 months, and supports advanced metric calculations. CloudWatch enables cost optimization through historical data analysis while providing real-time information to fine-tune application and infrastructure resources.</p>
+<p><strong>💡 Pro Tip</strong>: CloudWatch Container Insights offers specialized monitoring capabilities for containerized applications and microservices. It automatically collects, aggregates, and summarizes key compute metrics (CPU, memory, disk, network) and diagnostic information (such as container restart failures), enabling DevOps teams to quickly identify and resolve issues. Container Insights provides visibility into various container orchestration platforms including Amazon EKS (Elastic Kubernetes Service), Amazon ECS (Elastic Container Service), AWS Fargate, and self-managed Kubernetes clusters.</p>
 <h4 id="content">Content</h4>
 <ol>
 <li><a href="/1-introduction/">Introduction</a></li>
@@ -750,19 +753,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

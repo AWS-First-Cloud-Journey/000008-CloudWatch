@@ -5,85 +5,103 @@ chapter: false
 pre: " <b> 5. </b> "
 ---
 
-#### CloudWatch Alarms
+#### Amazon CloudWatch Alarms
 
-In this section, we will set up an Alarm for the Error Log Metric that we created in the previous section.
+**ℹ️ Information**: CloudWatch Alarms monitor your metrics and trigger actions when thresholds are breached. They're essential for proactive monitoring and automated responses to changing conditions in your AWS environment.
 
-1. Return to the main screen of CloudWatch.
+Follow these steps to create an alarm for the error log metric we configured in the previous section:
 
-   - Select **Alarms** from the left menu.
-   - Choose **All alarms**.
-   - Click **Create alarm**.
+1. Navigate to the CloudWatch console:
+
+   - Select **Alarms** from the left navigation pane
+   - Choose **All alarms**
+   - Click **Create alarm**
 
 ![5.1](/images/5-cloud-watch-alarm/5.1.png)
 
-2. Select **Select metric**.
+2. Begin the metric selection process:
+
+   - Click **Select metric**
 
 ![5.2](/images/5-cloud-watch-alarm/5.2.png)
 
-The metrics window appears, under **Custom namespaces**, select **ec2-logs**.
+   - Under **Custom namespaces**, select **ec2-logs**
 
 ![5.3](/images/5-cloud-watch-alarm/5.3.png)
 
-Next, select **Metrics with no dimensions**, choose **/var/log/messages**, and click **Select metric**.
+   - Select **Metrics with no dimensions**
+   - Choose **/var/log/messages - ERROR** metric
+   - Click **Select metric**
 
 ![5.4](/images/5-cloud-watch-alarm/5.4.png)
 
-3. In the **Specify metric and conditions** section, set **Period** to **1 minute**.
+3. Configure the metric parameters:
+
+   - Set **Period** to **1 minute** for timely detection of error spikes
 
 ![5.5](/images/5-cloud-watch-alarm/5.5.png)
 
-4. In the **Conditions** section:
+4. Define the alarm conditions:
 
-   - Threshold type: **Static**.
-   - Condition: **Greater** than **10**.
+   - Threshold type: **Static**
+   - Condition: **Greater than 10**
 
 ![5.6](/images/5-cloud-watch-alarm/5.6.png)
 
-You will see a dashed line indicating that this is the threshold where the **Alarm** will be triggered => when there are too many errors, something unusual has happened in the application and needs to be checked immediately.
+**💡 Pro Tip**: The dashed line represents your threshold boundary. When the metric crosses this line, the alarm will transition to the ALARM state, indicating unusual application behavior that requires immediate investigation.
 
 ![5.7](/images/5-cloud-watch-alarm/5.7.png)
 
-Then click **Next** to continue.
+   - Click **Next** to continue
 
-5. Now, configure the notification as follows:
+5. Configure notification settings:
 
-   - Alarm state trigger: **In alarm**.
-   - Choose **Create new topic**.
-   - Topic name: `Error_logs_reach_10`.
-   - Email to notify: enter your email, here I will enter mine.
-   - Click **Create topic**.
+   - Alarm state trigger: **In alarm**
+   - Select **Create new topic**
+   - Topic name: `Error_logs_reach_10`
+   - Email to notify: enter your email address
+   - Click **Create topic**
 
 ![5.8](/images/5-cloud-watch-alarm/5.8.png)
 
 ![5.9](/images/5-cloud-watch-alarm/5.9.png)
 
-Click **Next**.
+   - Click **Next**
 
 ![5.10](/images/5-cloud-watch-alarm/5.10.png)
 
-6. In the final step, enter the alarm name as `PythonApplicationErrorAlarm` and click **Next**.
+6. Name your alarm:
+
+   - Enter alarm name: `PythonApplicationErrorAlarm`
+   - Click **Next**
 
 ![5.11](/images/5-cloud-watch-alarm/5.11.png)
 
-7. Review the results and click **Create alarm**.
+7. Review and create:
+
+   - Verify all configurations
+   - Click **Create alarm**
 
 ![5.12](/images/5-cloud-watch-alarm/5.12.png)
 
 ![5.13](/images/5-cloud-watch-alarm/5.13.png)
 
-Result:
+**⚠️ Warning**: Your alarm will remain in the INSUFFICIENT_DATA state until Amazon SNS confirms your subscription and the metric receives data points.
 
 ![5.14](/images/5-cloud-watch-alarm/5.14.png)
 
-8. Log in to Gmail or any email service you use. You will receive an email from **AWS Notification**.
+8. Confirm your SNS subscription:
+
+   - Check your email for a message from **AWS Notifications**
 
 ![5.15](/images/5-cloud-watch-alarm/5.15.png)
 
-Click **Confirm subscription**.
+   - Click **Confirm subscription**
 
 ![5.16](/images/5-cloud-watch-alarm/5.16.png)
 
 ![5.17](/images/5-cloud-watch-alarm/5.17.png)
 
-Okay, now we have completed the alarm setup.
+**🔒 Security Note**: Always confirm SNS subscriptions promptly to ensure you receive critical alerts. Consider using Amazon SNS with AWS Lambda for automated remediation of issues detected by CloudWatch Alarms.
+
+Your CloudWatch Alarm is now fully configured and will monitor your application for error spikes, notifying you when the threshold is exceeded.

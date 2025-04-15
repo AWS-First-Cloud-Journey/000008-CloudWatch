@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>AWS CloudWatch Workshop :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -457,10 +459,25 @@
 
  
 <h1 id="aws-cloudwatch-workshop">AWS CloudWatch Workshop</h1>
-<p><img src="/images/architecture.png" alt="architecture"></p>
+<p><img alt="architecture" src="/images/architecture.png"></p>
 <h4 id="tổng-quan">Tổng quan</h4>
-<p><strong>Amazon CloudWatch</strong> là dịch vụ theo dõi và quản lý cung cấp dữ liệu và thông tin định hướng hành động cho tài nguyên cơ sở hạ tầng và ứng dụng AWS, ứng dụng lai cũng như ứng dụng tại chỗ. Bạn có thể thu thập và tiếp cận tất cả dữ liệu về hiệu năng và hoạt động dưới hình thức nhật ký và số liệu trong cùng một nền tảng, thay vì theo dõi trong các silo (máy chủ, mạng hoặc cơ sở dữ liệu). <strong>CloudWatch</strong> cho phép bạn theo dõi toàn diện (ứng dụng, cơ sở hạ tầng và dịch vụ) và tận dụng cảnh báo, nhật ký và dữ liệu sự kiện để tự động hành động và giảm thời gian xử lý trung bình (MTTR). Dịch vụ này giúp bạn giải phóng tài nguyên quan trọng và tập trung vào việc xây dựng các ứng dụng và giá trị doanh nghiệp.</p>
-<p><strong>CloudWatch</strong> cung cấp thông tin định hướng hành động, hỗ trợ việc tối ưu hóa hiệu năng ứng dụng, quản lý sử dụng tài nguyên và hiểu rõ tình trạng hoạt động của toàn hệ thống. <strong>CloudWatch</strong> hiển thị dữ liệu số liệu và nhật ký chi tiết đến từng giây, duy trì dữ liệu trong 15 tháng (số liệu) và cho phép tính toán trên số liệu. Dịch vụ này cũng giúp bạn phân tích dựa trên dữ liệu cũ nhằm tối ưu hóa chi phí và thu thập thông tin trong thời gian thực góp phần tối ưu hóa ứng dụng và tài nguyên cơ sở hạ tầng. Bạn có thể sử dụng <strong>CloudWatch</strong> Container Insights để theo dõi, khắc phục sự cố và cảnh báo ứng dụng và vi dịch vụ có trong bộ chứa của bạn. <strong>CloudWatch</strong> thu thập, tổng hợp và tóm tắt thông tin sử dụng điện toán (như CPU, bộ nhớ, ổ đĩa và dữ liệu mạng) cũng như thông tin chẩn đoán (như lỗi khi khởi động lại bộ chứa) nhằm giúp kỹ sư DevOps cô lập và giải quyết sự cố một cách nhanh chóng. Container Insights cung cấp cho bạn thông tin chi tiết từ các dịch vụ quản lý bộ chứa như <strong>Amazon ECS for Kubernetes</strong> (EKS), <strong>Amazon Elastic Container Service</strong> (ECS), <strong>AWS Fargate</strong> và Kubernetes (k8s) độc lập.</p>
+<p><strong>ℹ️ Information</strong>: <strong>Amazon CloudWatch</strong> là dịch vụ theo dõi và quản lý cung cấp dữ liệu và thông tin định hướng hành động cho tài nguyên cơ sở hạ tầng và ứng dụng AWS, ứng dụng hybrid cũng như ứng dụng on-premises. Bạn có thể thu thập và truy cập tất cả dữ liệu về hiệu năng và hoạt động dưới hình thức logs và metrics trong cùng một nền tảng, thay vì theo dõi riêng lẻ (máy chủ, mạng hoặc cơ sở dữ liệu). <strong>CloudWatch</strong> cho phép bạn theo dõi end-to-end (ứng dụng, cơ sở hạ tầng và dịch vụ) và tận dụng cảnh báo, logs và dữ liệu sự kiện để tự động hóa các hành động và giảm Mean Time To Resolution (MTTR). Dịch vụ này giúp bạn giải phóng tài nguyên quan trọng và tập trung vào việc xây dựng các ứng dụng và giá trị kinh doanh.</p>
+<h4 id="tính-năng-chính">Tính năng chính</h4>
+<p><strong>CloudWatch</strong> cung cấp thông tin định hướng hành động, hỗ trợ việc tối ưu hóa hiệu năng ứng dụng, quản lý sử dụng tài nguyên và hiểu rõ tình trạng hoạt động của toàn hệ thống. <strong>CloudWatch</strong> hiển thị dữ liệu metrics và logs chi tiết đến từng giây, lưu trữ dữ liệu trong 15 tháng (đối với metrics) và cho phép thực hiện các phép tính trên metrics.</p>
+<p><strong>💡 Pro Tip</strong>: Dịch vụ này cũng giúp bạn phân tích dựa trên dữ liệu lịch sử nhằm tối ưu hóa chi phí và thu thập thông tin real-time để tối ưu hóa ứng dụng và tài nguyên cơ sở hạ tầng.</p>
+<h4 id="container-insights">Container Insights</h4>
+<p><strong>ℹ️ Information</strong>: <strong>CloudWatch Container Insights</strong> cho phép bạn theo dõi, khắc phục sự cố và thiết lập cảnh báo cho các ứng dụng và microservices chạy trong containers. <strong>CloudWatch</strong> thu thập, tổng hợp và tóm tắt thông tin sử dụng tài nguyên tính toán (như CPU, bộ nhớ, ổ đĩa và dữ liệu mạng) cũng như thông tin chẩn đoán (như lỗi khi khởi động lại container) nhằm giúp kỹ sư DevOps cô lập và giải quyết sự cố một cách nhanh chóng.</p>
+<p><strong>🔒 Security Note</strong>: Container Insights cung cấp cho bạn thông tin chi tiết từ các dịch vụ quản lý container như <strong>Amazon EKS (Elastic Kubernetes Service)</strong>, <strong>Amazon ECS (Elastic Container Service)</strong>, <strong>AWS Fargate</strong> và Kubernetes (K8s) độc lập, giúp bạn duy trì tính khả dụng và bảo mật cho các ứng dụng containerized.</p>
+<h4 id="lợi-ích-chính">Lợi ích chính</h4>
+<p><strong>💡 Pro Tip</strong>: Với <strong>Amazon CloudWatch</strong>, bạn có thể:</p>
+<ul>
+<li>Giám sát toàn diện các tài nguyên AWS và ứng dụng của bạn</li>
+<li>Thiết lập cảnh báo thông minh dựa trên ngưỡng tùy chỉnh</li>
+<li>Tự động hóa phản hồi đối với các sự cố hoạt động</li>
+<li>Tạo bảng điều khiển trực quan để theo dõi hiệu suất</li>
+<li>Phân tích logs để khắc phục sự cố nhanh chóng</li>
+</ul>
+<p><strong>⚠️ Warning</strong>: Việc không thiết lập giám sát đầy đủ có thể dẫn đến thời gian ngừng hoạt động không lường trước, hiệu suất kém và chi phí cao hơn do sử dụng tài nguyên không hiệu quả.</p>
 <h4 id="nội-dung">Nội dung</h4>
 <ol>
 <li><a href="/vi/1-introduction/">Giới thiệu</a></li>
@@ -740,7 +757,7 @@
 	 
 		
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -750,19 +767,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

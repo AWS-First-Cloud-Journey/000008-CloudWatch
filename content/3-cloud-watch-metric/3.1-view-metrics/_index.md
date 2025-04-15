@@ -5,124 +5,138 @@ chapter: false
 pre: " <b> 3.1 </b> "
 ---
 
-#### Viewing Metrics
+#### Viewing CloudWatch Metrics
 
-First, we will practice viewing metrics.
+**ℹ️ Information**: In this section, you'll learn how to navigate and visualize Amazon CloudWatch metrics to gain insights into your AWS resources' performance and health.
 
-1. Access **AWS Management Console**
-   - Search for **CloudWatch**
-   - Select **CloudWatch**
+#### Accessing CloudWatch Metrics
+
+1. Access the **AWS Management Console**:
+   - In the search bar, type **CloudWatch**.
+   - Select **CloudWatch** from the services list.
 
 ![3.1.1](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.1.png)
 
-2. In the **CloudWatch** interface
-   - Expand the **Metrics** section in the left menu.
+2. In the **CloudWatch** console:
+   - Expand the **Metrics** section in the left navigation pane.
    - Select **All metrics**.
 
 ![3.1.2](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.2.png)
 
-3. In the metrics dashboard, enter `EC2` in the search bar.
+#### Finding EC2 Instance Metrics
+
+1. In the metrics dashboard:
+   - Enter `EC2` in the search bar to filter metrics by service.
 
 ![3.1.3](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.3.png)
 
-4. Once the results appear, select **EC2 > Per-Instance Metrics**.
+2. From the search results:
+   - Select **EC2 > Per-Instance Metrics** to view metrics for individual EC2 instances.
 
 ![3.1.4](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.4.png)
 
 ![3.1.5](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.5.png)
 
-5. In the search bar, type `CPUUtilization` and search.
+#### Analyzing CPU Utilization
+
+1. Filter for specific metrics:
+   - In the search bar, type `CPUUtilization` and press Enter.
+   - By default, CloudWatch searches by **Metric name**.
 
 ![3.1.6](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.6.png)
 
-By default, the search is performed by **Metric name**.
-
 ![3.1.7](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.7.png)
 
-6. Add two out of the five instances created by the CloudFormation stack to observe their `CPUUtilization` metrics.
+2. Compare instance performance:
+   - Select two of the five instances created by the CloudFormation stack.
+   - Scroll down to view the graphed data.
 
-Scroll down to view the data.
+**💡 Pro Tip**: When comparing multiple instances, look for patterns that might indicate system-wide events versus instance-specific issues.
 
-From the graph, we can conclude:
-
-- Both instances started operating around **2:40 AM**, which is also when they had the highest activity.
-- By **3:30 AM**, both instances seem to have completed their tasks.
+3. Analyze the graph data:
+   - Both instances initiated operations around **2:40 AM**, showing peak activity at this time.
+   - By **3:30 AM**, both instances appear to have completed their workloads.
 
 ![3.1.8](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.8.png)
 
-7. Viewing additional metrics for a single instance
+#### Examining Multiple Metrics
+
+1. Focus on a single instance:
    - Deselect the line for **Instance B**.
-   - Remove the **CPUUtilization** filter.
-   - In the search bar, enter `EBSWriteBytes` and search.
+   - Clear the **CPUUtilization** filter.
+   - Search for `EBSWriteBytes` to examine storage I/O.
 
 ![3.1.9](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.9.png)
 
 ![3.1.10](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.10.png)
 
-8. Scroll down and select **Instance A**.
-
-From this chart, we observe:
-
-- Initially, there was a high volume of read/write operations to **EBS**, indicating that the instance was processing data.
-- **CPUUtilization** and **EBSWriteBytes** follow a similar pattern, except at certain points where they diverge.
-- This suggests that the application interacts with **EBS** mainly during startup but performs other tasks afterward.
+2. Select **Instance A** and analyze the correlation:
+   - Initially, high volume of EBS read/write operations indicates data processing.
+   - **CPUUtilization** and **EBSWriteBytes** follow similar patterns with some divergence.
+   - This suggests the application primarily interacts with EBS during startup before transitioning to other operations.
 
 ![3.1.11](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.11.png)
 
-You can hide one of the metrics to analyze the data more clearly.
+3. For clearer analysis:
+   - You can hide individual metrics by toggling their visibility.
 
 ![3.1.12](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.12.png)
 
-However, we will take a better approach in the next section by customizing the charts for improved visualization.
+**ℹ️ Information**: In the next section, we'll explore more advanced visualization techniques for better metric analysis.
 
-## Working with Charts
+#### Enhancing Chart Visualization
 
-In the previous step, our chart was difficult to interpret because both `CPUUtilization` and `EBSWriteBytes` were plotted on the same **Y-axis**. Now, we will separate them and add markers for better visualization.
+When multiple metrics with different units are displayed on the same chart, interpretation can be challenging. Let's improve visualization with CloudWatch's advanced charting features.
 
-1. Adjusting the Y-axis
-   - Go to the **Graphed metrics** tab.
-   - Locate **EBSWriteBytes**, then under the **Y-axis** column, select **>**.
-   - The chart should now appear more readable.
+1. Separate Y-axis for different metrics:
+   - Navigate to the **Graphed metrics** tab.
+   - For **EBSWriteBytes**, click the **Y-axis** column dropdown and select **Right Y-axis**.
+   - The chart now displays each metric on its appropriate scale.
 
 ![3.1.13](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.13.png)
 
-2. Adding a horizontal annotation (threshold marker)
+2. Add a horizontal threshold annotation:
    - Go to the **Options** tab.
    - Click **Add horizontal annotation**.
 
 ![3.1.14](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.14.png)
 
-3. Enter annotation details:
-   - **Label:** `5% Mark`
-   - **Value:** `5`
-
-This adds a **dashed line** on the chart, labeled accordingly.
+3. Configure the threshold:
+   - **Label**: `5% Mark`
+   - **Value**: `5`
+   - This adds a dashed horizontal line at the 5% CPU utilization level.
 
 ![3.1.15](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.15.png)
 
-4. Adding a vertical annotation (event marker)
+**💡 Pro Tip**: Horizontal annotations are excellent for visualizing thresholds that might trigger alarms or indicate performance boundaries.
+
+4. Add a vertical event marker:
    - Create a **Vertical annotation** labeled `Job start`.
-   - A **dashed vertical line** appears on the chart.
+   - This adds a dashed vertical line to mark a specific point in time.
 
 ![3.1.16](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.16.png)
 
-By default, the **Job start** marker is set at **2:16 AM**, but this is incorrect. We need to adjust it.
-
-5. Adjusting the vertical annotation time:
+5. Adjust the vertical annotation time:
    - Hover over the **Job start** marker.
-   - The job actually started around **2:40 AM**.
+   - Note that the job actually started around **2:40 AM**.
 
 ![3.1.17](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.17.png)
 
-- Change the **Date/Time** for `Job start` to **2:40 AM**.
-- Click **Apply** to save changes.
+6. Update the annotation:
+   - Change the **Date/Time** for `Job start` to **2:40 AM**.
+   - Click **Apply** to save your changes.
 
 ![3.1.18](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.18.png)
 
-The `Job start` marker has now been repositioned.
+7. Verify the repositioned marker:
+   - The `Job start` marker now aligns with the beginning of instance activity.
 
 ![3.1.19](/images/3-cloud-watch-metric/3.1-view-metrics/3.1.19.png)
 
-That concludes our hands-on work with charts.
+**🔒 Security Note**: When analyzing metrics for production workloads, pay special attention to unexpected spikes or patterns that might indicate security events or unauthorized access.
 
-In the next section, we will focus on **working with metric expressions**. You can remove the markers before proceeding to the next step.
+#### Next Steps
+
+This concludes our exploration of basic CloudWatch metric visualization. In the next section, we'll dive into **working with metric expressions** for more advanced analysis capabilities.
+
+**⚠️ Warning**: Before proceeding to the next section, you may want to remove the annotations to start with a clean workspace.

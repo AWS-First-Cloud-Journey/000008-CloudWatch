@@ -7,11 +7,11 @@ pre: " <b> 1. </b> "
 
 #### Overview
 
-In this lab, we will practice working with Amazon CloudWatch through the following tasks:
+**ℹ️ Information**: In this lab, you will gain hands-on experience with Amazon CloudWatch, AWS's comprehensive monitoring and observability service, through the following tasks:
 
-- Working with **Metrics** sent from sample applications running on pre-configured EC2 Instances.
-- Viewing **Logs** also sent from these applications running on EC2 Instances, then creating **Metrics** from **Logs**.
-- Creating Alarms from **Metrics**.
-- Finally, adding Custom Metrics and Alarms to the CloudWatch Dashboard for better system monitoring.
+- Working with **Metrics** sent from sample applications running on pre-configured Amazon EC2 instances
+- Viewing **Logs** from these applications on EC2 instances, then creating **Metrics** from **Logs**
+- Creating **Alarms** based on **Metrics** to receive notifications about system changes
+- Building a custom CloudWatch Dashboard with Custom Metrics and Alarms for enhanced system visibility
 
-This workshop is suitable for those who are interested in System Administration and want to start using CloudWatch to monitor a simple system, providing a more intuitive view of System Monitoring and Observation.
+**💡 Pro Tip**: This workshop is ideal for IT professionals interested in cloud operations who want to leverage CloudWatch for comprehensive system monitoring. You'll learn practical skills that provide an intuitive approach to system observability in AWS environments.

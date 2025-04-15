@@ -7,14 +7,18 @@ pre: " <b> 3. </b> "
 
 #### CloudWatch Metric
 
-Khi thao tác với CloudWatch, thì chúng ta sẽ chủ yêu là "nhìn", nên CloudWatch đã cung cấp cho chúng ta các biểu đồ, data table trực quan để quan sát Metric. Việc này rất quan trọng vì nó nói lên được tình trạng của ứng dụng / hệ thống mà chúng ta đang vận hành, từ đó giúp đưa ra được các quyết định trong việc tối ưu, nâng cấp.
+**ℹ️ Information**: Khi làm việc với **Amazon CloudWatch**, chúng ta chủ yếu tập trung vào việc "quan sát". **CloudWatch** cung cấp các biểu đồ trực quan và bảng dữ liệu chi tiết để theo dõi các Metric. Việc này đóng vai trò quan trọng trong việc đánh giá tình trạng của ứng dụng và hệ thống, từ đó giúp đưa ra quyết định chính xác về việc tối ưu hóa và nâng cấp.
 
-Trong phần này thì chúng ta sẽ cùng đi thao tác:
+**💡 Pro Tip**: Metrics trong **CloudWatch** là nền tảng cho việc xây dựng hệ thống giám sát toàn diện, giúp bạn phát hiện sớm các vấn đề tiềm ẩn trước khi chúng ảnh hưởng đến người dùng cuối.
 
-- Lựa ra các metric mà chúng ta muốn xem (đến từ những ứng dụng mà chúng ta đã setup từ phần trước).
-- Thực hiện các phép tìm kiếm Metric nâng cao để hiển thị lên biểu đồ.
-- Thực hiện các phép tính toán Metric nâng cao để hiển thị nhiều thông tin hơn như là tổng, trung bình, rank của các Metric.
-- Thực hiện tạo các Dynamic Label để phần chú thích biểu đồ trực quan hơn.
+Trong phần này, chúng ta sẽ thực hành các kỹ thuật sau:
+
+- Lựa chọn và hiển thị các Metrics từ các ứng dụng đã triển khai ở phần trước
+- Sử dụng các biểu thức tìm kiếm nâng cao (Search Expressions) để lọc và hiển thị Metrics trên biểu đồ
+- Áp dụng các phép tính toán Metric nâng cao (Math Expressions) để trích xuất thông tin giá trị như tổng, trung bình, xếp hạng của các Metrics
+- Tạo và tùy chỉnh Dynamic Labels để nâng cao tính trực quan cho các chú thích biểu đồ
+
+**🔒 Security Note**: Việc theo dõi Metrics một cách hiệu quả không chỉ giúp tối ưu hiệu suất mà còn là một phần quan trọng trong chiến lược bảo mật, giúp phát hiện các hoạt động bất thường trong hệ thống.
 
 Nội dung của phần này bao gồm:
 

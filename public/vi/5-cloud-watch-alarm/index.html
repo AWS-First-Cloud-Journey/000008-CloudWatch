@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Alarms :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -509,7 +511,7 @@
 
 
 	<h4 id="cloudwatch-alarms">CloudWatch Alarms</h4>
-<p>Trong phần này chúng ta sẽ setup Alarm cho Error Log Metric mà chúng ta đã tạo từ phần trước.</p>
+<p><strong>ℹ️ Information</strong>: Amazon CloudWatch Alarms giúp bạn tự động giám sát các metrics và logs, kích hoạt hành động khi các ngưỡng được vượt qua. Trong phần này, chúng ta sẽ thiết lập Alarm cho Error Log Metric đã tạo từ phần trước.</p>
 <ol>
 <li>
 <p>Trở lại màn hình chính của CloudWatch.</p>
@@ -520,19 +522,19 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.1.png" alt="5.1"></p>
+<p><img alt="5.1" src="/images/5-cloud-watch-alarm/5.1.png"></p>
 <ol start="2">
 <li>Chọn <strong>Select metric</strong>.</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.2.png" alt="5.2"></p>
+<p><img alt="5.2" src="/images/5-cloud-watch-alarm/5.2.png"></p>
 <p>Cửa sổ metrics hiện lên, trong <strong>Custom namespaces</strong>, chọn <strong>ec2-logs</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.3.png" alt="5.3"></p>
+<p><img alt="5.3" src="/images/5-cloud-watch-alarm/5.3.png"></p>
 <p>Chọn tiếp <strong>Metrics with no dimensions</strong>, chọn <strong>/var/log/messages</strong> và ấn chọn <strong>Select metric</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.4.png" alt="5.4"></p>
+<p><img alt="5.4" src="/images/5-cloud-watch-alarm/5.4.png"></p>
 <ol start="3">
 <li>Trong phần <strong>Specify metric and conditions</strong>, chọn <strong>Period</strong> là <strong>1 minutes</strong>.</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.5.png" alt="5.5"></p>
+<p><img alt="5.5" src="/images/5-cloud-watch-alarm/5.5.png"></p>
 <ol start="4">
 <li>
 <p>Trong phần <strong>Conditions</strong></p>
@@ -542,10 +544,10 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.6.png" alt="5.6"></p>
-<p>Bạn sẽ thấy một đường nét đứt ngang, chỉ ra rằng đây chính là ngưỡng mà <strong>Alarm</strong> sẽ được kích hoạt =&gt; khi có quá nhiều lỗi thì đã xảy ra việc gì đó bất trường trong ứng dụng, cần phải được kiếm tra ngay.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.7.png" alt="5.7"></p>
-<p>Sau đó là ấn <strong>Next</strong> để tiếp tục.</p>
+<p><img alt="5.6" src="/images/5-cloud-watch-alarm/5.6.png"></p>
+<p><strong>💡 Pro Tip</strong>: Đường nét đứt ngang trên biểu đồ chỉ ra ngưỡng mà <strong>Alarm</strong> sẽ được kích hoạt. Khi số lượng lỗi vượt quá ngưỡng này, đó là dấu hiệu của sự cố tiềm ẩn trong ứng dụng cần được kiểm tra ngay lập tức.</p>
+<p><img alt="5.7" src="/images/5-cloud-watch-alarm/5.7.png"></p>
+<p>Sau đó ấn <strong>Next</strong> để tiếp tục.</p>
 <ol start="5">
 <li>
 <p>Giờ thì chúng ta cấu hình thông báo như sau</p>
@@ -558,29 +560,32 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.8.png" alt="5.8"></p>
-<p><img src="/images/5-cloud-watch-alarm/5.9.png" alt="5.9"></p>
+<p><img alt="5.8" src="/images/5-cloud-watch-alarm/5.8.png"></p>
+<p><img alt="5.9" src="/images/5-cloud-watch-alarm/5.9.png"></p>
 <p>Ấn chọn <strong>Next</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.10.png" alt="5.10"></p>
+<p><img alt="5.10" src="/images/5-cloud-watch-alarm/5.10.png"></p>
+<p><strong>⚠️ Warning</strong>: Đảm bảo rằng địa chỉ email bạn cung cấp là chính xác và được kiểm tra thường xuyên. Nếu không xác nhận đăng ký SNS, bạn sẽ không nhận được thông báo khi alarm kích hoạt.</p>
 <ol start="6">
 <li>Ở bước cuối, nhập tên alarm là <code>PythonApplicationErrorAlarm</code> và ấn chọn <strong>Next</strong>.</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.11.png" alt="5.11"></p>
+<p><img alt="5.11" src="/images/5-cloud-watch-alarm/5.11.png"></p>
+<p><strong>💡 Pro Tip</strong>: Đặt tên alarm có ý nghĩa và mô tả rõ mục đích giúp dễ dàng quản lý khi số lượng alarm tăng lên trong môi trường sản xuất thực tế.</p>
 <ol start="7">
 <li>Xem lại kết quả và ấn chọn <strong>Create alarm</strong>.</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.12.png" alt="5.12"></p>
-<p><img src="/images/5-cloud-watch-alarm/5.13.png" alt="5.13"></p>
+<p><img alt="5.12" src="/images/5-cloud-watch-alarm/5.12.png"></p>
+<p><img alt="5.13" src="/images/5-cloud-watch-alarm/5.13.png"></p>
 <p>Kết quả</p>
-<p><img src="/images/5-cloud-watch-alarm/5.14.png" alt="5.14"></p>
+<p><img alt="5.14" src="/images/5-cloud-watch-alarm/5.14.png"></p>
 <ol start="8">
 <li>Đăng nhập vào Gmail hoặc bất kì trang email nào mà bạn dùng. Bạn sẽ thấy một email được gửi tới từ <strong>AWS Notification</strong>.</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.15.png" alt="5.15"></p>
+<p><img alt="5.15" src="/images/5-cloud-watch-alarm/5.15.png"></p>
 <p>Ấn chọn <strong>Confirm subscription</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.16.png" alt="5.16"></p>
-<p><img src="/images/5-cloud-watch-alarm/5.17.png" alt="5.17"></p>
-<p>Ok, như vậy thì chúng ta đã setup Alarm xong.</p>
+<p><img alt="5.16" src="/images/5-cloud-watch-alarm/5.16.png"></p>
+<p><img alt="5.17" src="/images/5-cloud-watch-alarm/5.17.png"></p>
+<p><strong>🔒 Security Note</strong>: Việc xác nhận đăng ký SNS không chỉ kích hoạt thông báo mà còn là một biện pháp bảo mật, đảm bảo rằng chỉ những người dùng được ủy quyền mới nhận được thông báo về trạng thái hệ thống.</p>
+<p><strong>ℹ️ Information</strong>: Với CloudWatch Alarms đã thiết lập, bạn có thể mở rộng hệ thống giám sát bằng cách tích hợp với các dịch vụ khác như AWS Lambda để tự động khắc phục sự cố, hoặc AWS Systems Manager để thực hiện các hành động tự động trên tài nguyên bị ảnh hưởng.</p>
 
 
 
@@ -873,19 +878,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

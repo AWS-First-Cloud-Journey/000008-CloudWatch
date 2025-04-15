@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Dọn dẹp tài nguyên :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -509,27 +511,49 @@
 
 
 	<h4 id="dọn-dẹp-tài-nguyên">Dọn dẹp tài nguyên</h4>
-<p>Để dọn dẹp tài nguyên thì các bạn chỉ đơn giản là vào trong CloudFormation stack để xoá stack mà chúng ta đã tạo ở đầu bài. Còn Metrics với Logs thì nó sẽ tồn tại ở đó tới tối đa là 15 tháng.</p>
+<p><strong>ℹ️ Information</strong>: Sau khi hoàn thành workshop, việc dọn dẹp tài nguyên là bước quan trọng để tránh phát sinh chi phí không cần thiết. Trong phần này, chúng ta sẽ xóa CloudFormation stack đã tạo ở đầu bài.</p>
+<p><strong>⚠️ Warning</strong>: Mặc dù các tài nguyên EC2 và các dịch vụ liên quan sẽ bị xóa ngay lập tức, CloudWatch Metrics và Logs sẽ vẫn tồn tại trong hệ thống AWS của bạn tối đa 15 tháng theo chính sách lưu trữ mặc định.</p>
 <ol>
 <li>
-<p>Trên thanh tìm kiếm</p>
+<p>Trên thanh tìm kiếm dịch vụ AWS:</p>
 <ul>
 <li>Nhập <code>CloudFormation</code>.</li>
 <li>Chọn <strong>CloudFormation</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/7-clean-up-resources/7.1.png" alt="7.1"></p>
+<p><img alt="7.1" src="/images/7-clean-up-resources/7.1.png"></p>
 <ol start="2">
-<li>Chọn stack đã tạo, ấn chọn <strong>Delete</strong>.</li>
+<li>
+<p>Trong CloudFormation Console:</p>
+<ul>
+<li>Chọn stack đã tạo trong workshop này.</li>
+<li>Ấn chọn <strong>Delete</strong>.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/7-clean-up-resources/7.2.png" alt="7.2"></p>
+<p><img alt="7.2" src="/images/7-clean-up-resources/7.2.png"></p>
 <ol start="3">
-<li>Ấn chọn tiếp <strong>Delete</strong> để xác nhận xoá.</li>
+<li>
+<p>Trong hộp thoại xác nhận:</p>
+<ul>
+<li>Ấn chọn <strong>Delete</strong> để xác nhận việc xóa stack.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/7-clean-up-resources/7.3.png" alt="7.3"></p>
-<p>Stack đang xoá, chờ một lúc sau thì stack sẽ được xoá.</p>
-<p><img src="/images/7-clean-up-resources/7.4.png" alt="7.4"></p>
+<p><img alt="7.3" src="/images/7-clean-up-resources/7.3.png"></p>
+<p><strong>💡 Pro Tip</strong>: Quá trình xóa stack có thể mất vài phút tùy thuộc vào số lượng và độ phức tạp của tài nguyên. Bạn có thể theo dõi tiến trình trong tab &ldquo;Events&rdquo; của stack.</p>
+<ol start="4">
+<li>
+<p>Chờ đợi quá trình xóa hoàn tất:</p>
+<ul>
+<li>Stack sẽ hiển thị trạng thái &ldquo;DELETE_IN_PROGRESS&rdquo; trong quá trình xóa.</li>
+<li>Sau khi hoàn tất, stack sẽ biến mất khỏi danh sách.</li>
+</ul>
+</li>
+</ol>
+<p><img alt="7.4" src="/images/7-clean-up-resources/7.4.png"></p>
+<p><strong>🔒 Security Note</strong>: Việc dọn dẹp tài nguyên không chỉ giúp tiết kiệm chi phí mà còn là biện pháp bảo mật tốt, giảm thiểu bề mặt tấn công tiềm ẩn trong môi trường AWS của bạn.</p>
 
 
 
@@ -809,7 +833,7 @@
 			<a class="nav nav-prev" href="/vi/6-cloud-watch-dashboard/" title="CloudWatch Dashboards"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-introduction/" title="Giới thiệu" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -819,19 +843,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

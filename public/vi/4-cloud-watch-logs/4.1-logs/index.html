@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Logs :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -515,45 +517,50 @@
 
 
 	<h4 id="cloudwatch-logs">CloudWatch Logs</h4>
+<p><strong>ℹ️ Information</strong>: Amazon CloudWatch Logs cho phép bạn tập trung và phân tích logs từ các tài nguyên AWS, giúp bạn hiểu rõ hơn về hoạt động của hệ thống và khắc phục sự cố nhanh chóng.</p>
 <ol>
 <li>
 <p>Trong trang chính của CloudWatch.</p>
 <ul>
-<li>Phần menu bên phải, xổ <strong>Logs</strong> xuống.</li>
-<li>Chọn <strong>Log groups</strong>.</li>
+<li>Phần menu bên trái, mở rộng mục <strong>Logs</strong></li>
+<li>Chọn <strong>Log groups</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.1.png" alt="4.1.1"></p>
+<p><img alt="4.1.1" src="/images/4-cloud-watch-logs/4.1-logs/4.1.1.png"></p>
 <ol start="2">
-<li>Trên thành tìm kiếm, nhập <code>/ec2</code> và ấn chọn <strong>/ec2/linux/var/log/messages</strong>.</li>
+<li>Trên thanh tìm kiếm, nhập <code>/ec2</code> và chọn <strong>/ec2/linux/var/log/messages</strong></li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.2.png" alt="4.1.2"></p>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.3.png" alt="4.1.3"></p>
+<p><img alt="4.1.2" src="/images/4-cloud-watch-logs/4.1-logs/4.1.2.png"></p>
+<p><img alt="4.1.3" src="/images/4-cloud-watch-logs/4.1-logs/4.1.3.png"></p>
+<p><strong>💡 Pro Tip</strong>: Sử dụng thanh tìm kiếm giúp bạn nhanh chóng tìm thấy các log groups cụ thể trong môi trường có nhiều tài nguyên, tiết kiệm thời gian phân tích.</p>
 <ol start="3">
-<li>Chọn một instance bất kì để xem.</li>
+<li>Chọn một instance bất kỳ để xem chi tiết logs</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.4.png" alt="4.1.4"></p>
+<p><img alt="4.1.4" src="/images/4-cloud-watch-logs/4.1-logs/4.1.4.png"></p>
 <ol start="4">
-<li>Ở đây chúng ta có thể thấy log từ instance này tạo ra, tới từ nhiều nguồn khác nhau như: dhclient, NET, ec2net, systemd&hellip;</li>
+<li>Trong giao diện logs, bạn có thể thấy các bản ghi từ instance này được tạo ra từ nhiều nguồn khác nhau như: dhclient, NET, ec2net, systemd&hellip;</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.5.png" alt="4.1.5"></p>
+<p><img alt="4.1.5" src="/images/4-cloud-watch-logs/4.1-logs/4.1.5.png"></p>
+<p><strong>ℹ️ Information</strong>: Các logs này cung cấp thông tin chi tiết về hoạt động của hệ thống, giúp bạn theo dõi các sự kiện, phát hiện lỗi và hiểu rõ hơn về cách hệ thống đang hoạt động.</p>
 <ol start="5">
 <li>
-<p>Trở lại thông tin của group <strong>/ec2/linux/var/log/messages</strong>. Giờ chúng ta sẽ cài đặt thời gian huỷ event (log) này.</p>
+<p>Trở lại thông tin của log group <strong>/ec2/linux/var/log/messages</strong>. Bây giờ chúng ta sẽ cấu hình thời gian lưu trữ (retention) cho các log events</p>
 <ul>
-<li>Xổ Actions.</li>
-<li>Edit retention setting.</li>
+<li>Mở rộng menu <strong>Actions</strong></li>
+<li>Chọn <strong>Edit retention setting</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.6.png" alt="4.1.6"></p>
+<p><img alt="4.1.6" src="/images/4-cloud-watch-logs/4.1-logs/4.1.6.png"></p>
 <ol start="6">
-<li>Trong <strong>Retention setting</strong>, chọn <strong>1 week (7 days)</strong> cho <strong>Expire events after</strong>.</li>
+<li>Trong phần <strong>Retention setting</strong>, chọn <strong>1 week (7 days)</strong> cho <strong>Expire events after</strong></li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.7.png" alt="4.1.7"></p>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.8.png" alt="4.1.8"></p>
-<p>Ok thì đó là một số thao tác cơ bản với Logs, bạn có thể biết được trong instance đó các log có thể là tới từ đâu, từ dịch vụ nào, từ ứng dụng nào.</p>
+<p><img alt="4.1.7" src="/images/4-cloud-watch-logs/4.1-logs/4.1.7.png"></p>
+<p><img alt="4.1.8" src="/images/4-cloud-watch-logs/4.1-logs/4.1.8.png"></p>
+<p><strong>⚠️ Warning</strong>: Việc cấu hình thời gian lưu trữ logs là rất quan trọng để tối ưu chi phí. Logs lưu trữ quá lâu sẽ làm tăng chi phí lưu trữ, trong khi thời gian lưu trữ quá ngắn có thể khiến bạn mất dữ liệu quan trọng khi cần phân tích sự cố.</p>
+<p><strong>🔒 Security Note</strong>: Đối với các môi trường yêu cầu tuân thủ quy định, bạn nên xem xét các yêu cầu về thời gian lưu trữ logs trước khi thiết lập chính sách retention.</p>
+<p><strong>💡 Pro Tip</strong>: Bạn có thể xuất logs sang Amazon S3 để lưu trữ dài hạn với chi phí thấp hơn, đồng thời vẫn duy trì khả năng truy xuất khi cần thiết.</p>
 
 
 
@@ -847,19 +854,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

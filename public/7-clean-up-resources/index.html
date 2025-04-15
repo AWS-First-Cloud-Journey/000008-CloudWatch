@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Clean up resources :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -508,28 +510,52 @@
 
 
 
-	<h4 id="clean-up-resources">Clean up resources</h4>
-<p>To clean up resources, you can simply go to the CloudFormation stack and delete the stack we created at the beginning of the tutorial. The Metrics and Logs will remain there for up to 15 months.</p>
+	<h4 id="resource-cleanup">Resource Cleanup</h4>
+<p><strong>ℹ️ Information</strong>: Properly cleaning up AWS resources after completing this workshop prevents unexpected charges on your AWS account while allowing you to retain valuable monitoring data for future reference.</p>
+<p>Follow these steps to remove all workshop resources:</p>
 <ol>
 <li>
-<p>In the search bar:</p>
+<p>Navigate to AWS CloudFormation:</p>
 <ul>
-<li>Type <code>CloudFormation</code>.</li>
-<li>Select <strong>CloudFormation</strong>.</li>
+<li>In the AWS Management Console search bar, type <code>CloudFormation</code></li>
+<li>Select <strong>CloudFormation</strong> from the results</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/7-clean-up-resources/7.1.png" alt="7.1"></p>
+<p><img alt="7.1" src="/images/7-clean-up-resources/7.1.png"></p>
 <ol start="2">
-<li>Select the stack you created, then click <strong>Delete</strong>.</li>
+<li>
+<p>Delete the CloudFormation stack:</p>
+<ul>
+<li>Select the stack you created for this workshop</li>
+<li>Click <strong>Delete</strong> to initiate the deletion process</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/7-clean-up-resources/7.2.png" alt="7.2"></p>
+<p><img alt="7.2" src="/images/7-clean-up-resources/7.2.png"></p>
 <ol start="3">
-<li>Click <strong>Delete</strong> again to confirm deletion.</li>
+<li>
+<p>Confirm the deletion:</p>
+<ul>
+<li>Review the resources that will be deleted</li>
+<li>Click <strong>Delete</strong> to confirm</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/7-clean-up-resources/7.3.png" alt="7.3"></p>
-<p>The stack is being deleted. Wait for a while, and the stack will be removed.</p>
-<p><img src="/images/7-clean-up-resources/7.4.png" alt="7.4"></p>
+<p><img alt="7.3" src="/images/7-clean-up-resources/7.3.png"></p>
+<p><strong>💡 Pro Tip</strong>: CloudFormation handles the deletion of all resources in the correct order, ensuring proper cleanup without manual intervention.</p>
+<ol start="4">
+<li>
+<p>Monitor the deletion process:</p>
+<ul>
+<li>The stack status will change to &ldquo;DELETE_IN_PROGRESS&rdquo;</li>
+<li>Wait for the stack to be completely removed from the list</li>
+</ul>
+</li>
+</ol>
+<p><img alt="7.4" src="/images/7-clean-up-resources/7.4.png"></p>
+<p><strong>⚠️ Warning</strong>: While the infrastructure resources will be deleted immediately, CloudWatch Metrics and Logs data will remain available for up to 15 months according to the default retention policy, which may incur minimal storage costs.</p>
+<p><strong>🔒 Security Note</strong>: Consider reviewing your CloudWatch Logs retention policies for production environments to balance compliance requirements with cost optimization.</p>
 
 
 
@@ -819,19 +845,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

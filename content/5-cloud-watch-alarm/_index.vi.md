@@ -7,7 +7,7 @@ pre: " <b> 5. </b> "
 
 #### CloudWatch Alarms
 
-Trong phần này chúng ta sẽ setup Alarm cho Error Log Metric mà chúng ta đã tạo từ phần trước.
+**ℹ️ Information**: Amazon CloudWatch Alarms giúp bạn tự động giám sát các metrics và logs, kích hoạt hành động khi các ngưỡng được vượt qua. Trong phần này, chúng ta sẽ thiết lập Alarm cho Error Log Metric đã tạo từ phần trước.
 
 1. Trở lại màn hình chính của CloudWatch.
 
@@ -40,11 +40,11 @@ Chọn tiếp **Metrics with no dimensions**, chọn **/var/log/messages** và �
 
 ![5.6](/images/5-cloud-watch-alarm/5.6.png)
 
-Bạn sẽ thấy một đường nét đứt ngang, chỉ ra rằng đây chính là ngưỡng mà **Alarm** sẽ được kích hoạt => khi có quá nhiều lỗi thì đã xảy ra việc gì đó bất trường trong ứng dụng, cần phải được kiếm tra ngay.
+**💡 Pro Tip**: Đường nét đứt ngang trên biểu đồ chỉ ra ngưỡng mà **Alarm** sẽ được kích hoạt. Khi số lượng lỗi vượt quá ngưỡng này, đó là dấu hiệu của sự cố tiềm ẩn trong ứng dụng cần được kiểm tra ngay lập tức.
 
 ![5.7](/images/5-cloud-watch-alarm/5.7.png)
 
-Sau đó là ấn **Next** để tiếp tục.
+Sau đó ấn **Next** để tiếp tục.
 
 5. Giờ thì chúng ta cấu hình thông báo như sau
 
@@ -62,9 +62,13 @@ Sau đó là ấn **Next** để tiếp tục.
 
 ![5.10](/images/5-cloud-watch-alarm/5.10.png)
 
+**⚠️ Warning**: Đảm bảo rằng địa chỉ email bạn cung cấp là chính xác và được kiểm tra thường xuyên. Nếu không xác nhận đăng ký SNS, bạn sẽ không nhận được thông báo khi alarm kích hoạt.
+
 6. Ở bước cuối, nhập tên alarm là `PythonApplicationErrorAlarm` và ấn chọn **Next**.
 
 ![5.11](/images/5-cloud-watch-alarm/5.11.png)
+
+**💡 Pro Tip**: Đặt tên alarm có ý nghĩa và mô tả rõ mục đích giúp dễ dàng quản lý khi số lượng alarm tăng lên trong môi trường sản xuất thực tế.
 
 7. Xem lại kết quả và ấn chọn **Create alarm**.
 
@@ -86,4 +90,6 @@ Kết quả
 
 ![5.17](/images/5-cloud-watch-alarm/5.17.png)
 
-Ok, như vậy thì chúng ta đã setup Alarm xong.
+**🔒 Security Note**: Việc xác nhận đăng ký SNS không chỉ kích hoạt thông báo mà còn là một biện pháp bảo mật, đảm bảo rằng chỉ những người dùng được ủy quyền mới nhận được thông báo về trạng thái hệ thống.
+
+**ℹ️ Information**: Với CloudWatch Alarms đã thiết lập, bạn có thể mở rộng hệ thống giám sát bằng cách tích hợp với các dịch vụ khác như AWS Lambda để tự động khắc phục sự cố, hoặc AWS Systems Manager để thực hiện các hành động tự động trên tài nguyên bị ảnh hưởng.

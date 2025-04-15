@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Logs :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -514,46 +516,55 @@
 
 
 
-	<h4 id="cloudwatch-logs">CloudWatch Logs</h4>
+	<h4 id="amazon-cloudwatch-logs-basics">Amazon CloudWatch Logs Basics</h4>
+<p><strong>ℹ️ Information</strong>: CloudWatch Logs is a centralized service that enables you to monitor, store, and access log files from various AWS resources and applications. It provides a unified view of your system&rsquo;s operational health through log data.</p>
+<p>Follow these steps to explore CloudWatch Logs functionality:</p>
 <ol>
 <li>
-<p>On the main CloudWatch page:</p>
+<p>On the main CloudWatch console:</p>
 <ul>
-<li>Expand the <strong>Logs</strong> menu on the left sidebar.</li>
+<li>Expand the <strong>Logs</strong> menu on the left navigation pane.</li>
 <li>Select <strong>Log groups</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.1.png" alt="4.1.1"></p>
+<p><img alt="4.1.1" src="/images/4-cloud-watch-logs/4.1-logs/4.1.1.png"></p>
 <ol start="2">
-<li>In the search bar, enter <code>/ec2</code> and select <strong>/ec2/linux/var/log/messages</strong>.</li>
+<li>In the search field, enter <code>/ec2</code> and select the <strong>/ec2/linux/var/log/messages</strong> log group.</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.2.png" alt="4.1.2"></p>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.3.png" alt="4.1.3"></p>
+<p><img alt="4.1.2" src="/images/4-cloud-watch-logs/4.1-logs/4.1.2.png"></p>
+<p><img alt="4.1.3" src="/images/4-cloud-watch-logs/4.1-logs/4.1.3.png"></p>
 <ol start="3">
-<li>Choose any instance to view its logs.</li>
+<li>Select any EC2 instance from the list to view its specific logs.</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.4.png" alt="4.1.4"></p>
+<p><img alt="4.1.4" src="/images/4-cloud-watch-logs/4.1-logs/4.1.4.png"></p>
 <ol start="4">
-<li>Here, you can see logs generated by the instance from various sources such as <code>dhclient</code>, <code>NET</code>, <code>ec2net</code>, <code>systemd</code>, and more.</li>
+<li>Examine the log entries generated by various system components such as <code>dhclient</code>, <code>NET</code>, <code>ec2net</code>, <code>systemd</code>, and other services.</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.5.png" alt="4.1.5"></p>
+<p><img alt="4.1.5" src="/images/4-cloud-watch-logs/4.1-logs/4.1.5.png"></p>
+<p><strong>💡 Pro Tip</strong>: When troubleshooting EC2 instances, these system logs often contain valuable information about service failures, network configuration issues, and system resource constraints.</p>
 <ol start="5">
 <li>
-<p>Go back to the <strong>/ec2/linux/var/log/messages</strong> log group details. Now, set up the log retention period.</p>
+<p>Return to the <strong>/ec2/linux/var/log/messages</strong> log group details page to configure log retention settings:</p>
 <ul>
-<li>Click <strong>Actions</strong>.</li>
+<li>Click <strong>Actions</strong> in the upper right.</li>
 <li>Select <strong>Edit retention setting</strong>.</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.6.png" alt="4.1.6"></p>
+<p><img alt="4.1.6" src="/images/4-cloud-watch-logs/4.1-logs/4.1.6.png"></p>
 <ol start="6">
-<li>In the <strong>Retention setting</strong>, choose <strong>1 week (7 days)</strong> for <strong>Expire events after</strong>.</li>
+<li>In the <strong>Retention setting</strong> dialog:
+<ul>
+<li>Set <strong>Expire events after</strong> to <strong>1 week (7 days)</strong>.</li>
+<li>Click <strong>Save</strong>.</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.7.png" alt="4.1.7"></p>
-<p><img src="/images/4-cloud-watch-logs/4.1-logs/4.1.8.png" alt="4.1.8"></p>
-<p>That&rsquo;s it! These basic operations help you understand where logs in your instance originate from, including services and applications generating them.</p>
+<p><img alt="4.1.7" src="/images/4-cloud-watch-logs/4.1-logs/4.1.7.png"></p>
+<p><img alt="4.1.8" src="/images/4-cloud-watch-logs/4.1-logs/4.1.8.png"></p>
+<p><strong>🔒 Security Note</strong>: Setting appropriate log retention periods helps balance operational visibility with cost optimization. For compliance-sensitive workloads, consider longer retention periods and exporting logs to Amazon S3 for long-term archival.</p>
+<p>These fundamental operations provide insight into how CloudWatch Logs captures and organizes log data from your EC2 instances, helping you understand the operational patterns and troubleshoot issues across your AWS environment.</p>
 
 
 
@@ -847,19 +858,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

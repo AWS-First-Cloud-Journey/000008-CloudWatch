@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Xem các Metrics :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -515,117 +517,117 @@
 
 
 	<h4 id="xem-các-metrics">Xem các Metrics</h4>
-<p>Đầu tiên, chúng ta sẽ thực hành thao tác xem các metrics.</p>
+<p><strong>ℹ️ Information</strong>: Trong phần này, chúng ta sẽ thực hành cách xem và phân tích các metrics trong Amazon CloudWatch, giúp bạn hiểu rõ hơn về hiệu suất của các tài nguyên AWS.</p>
 <ol>
 <li>
 <p>Truy cập <strong>AWS Management Console</strong></p>
 <ul>
-<li>Tìm <strong>CloudWatch</strong></li>
-<li>Chọn <strong>CloudWatch</strong></li>
+<li>Tìm kiếm dịch vụ <strong>CloudWatch</strong> trong thanh tìm kiếm</li>
+<li>Chọn <strong>CloudWatch</strong> từ kết quả tìm kiếm</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.1.png" alt="3.1.1"></p>
+<p><img alt="3.1.1" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.1.png"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện <strong>CloudWatch</strong></p>
 <ul>
-<li>Xổ phần <strong>Metrics</strong> ở bên menu bên trái xuống.</li>
-<li>Chọn <strong>All metrics</strong>.</li>
+<li>Mở rộng phần <strong>Metrics</strong> ở menu bên trái</li>
+<li>Chọn <strong>All metrics</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.2.png" alt="3.1.2"></p>
+<p><img alt="3.1.2" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.2.png"></p>
 <ol start="3">
-<li>Trong giao diện biểu đồ của metrics. Nhập <code>EC2</code> vào trong ô tìm kiếm và tìm.</li>
+<li>Trong giao diện biểu đồ metrics, nhập <code>EC2</code> vào ô tìm kiếm</li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.3.png" alt="3.1.3"></p>
+<p><img alt="3.1.3" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.3.png"></p>
 <ol start="4">
-<li>Sau khi ra kết quả, chọn <strong>EC2 &gt; Pre-Instance Metrics</strong>.</li>
+<li>Từ kết quả tìm kiếm, chọn <strong>EC2 &gt; Per-Instance Metrics</strong></li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.4.png" alt="3.1.4"></p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.5.png" alt="3.1.5"></p>
+<p><img alt="3.1.4" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.4.png"></p>
+<p><img alt="3.1.5" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.5.png"></p>
 <ol start="5">
-<li>Trên thanh tìm kiếm, gõ <code>CPUUtilization</code> và tìm kiếm</li>
+<li>Trên thanh tìm kiếm, nhập <code>CPUUtilization</code> và tìm kiếm</li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.6.png" alt="3.1.6"></p>
-<p>Bạn có thể thấy được là khi gõ tìm kiếm, thì mặc định nó sẽ tìm theo <strong>Metric name</strong>.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.7.png" alt="3.1.7"></p>
+<p><img alt="3.1.6" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.6.png"></p>
+<p><strong>💡 Pro Tip</strong>: Khi sử dụng thanh tìm kiếm, CloudWatch mặc định sẽ tìm theo <strong>Metric name</strong>, giúp bạn nhanh chóng lọc ra các metrics cụ thể cần theo dõi.</p>
+<p><img alt="3.1.7" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.7.png"></p>
 <ol start="6">
-<li>Thêm thử 2 trong số 5 instances được tạo ra từ CloudFormation stack, để xem các thông số CPUUtilization của 2 instances này được thể hiện như thế nào (bạn nên cuộn xuống để thấy).</li>
+<li>Chọn 2 trong số 5 instances được tạo ra từ CloudFormation stack để so sánh thông số CPUUtilization</li>
 </ol>
-<p>Ở đây thì chúng ta có thể kết luận là: cả 2 instances này bắt đầu hoạt động vào lúc khoảng 2:40, và cũng là lúc có nhiều hoạt động nhất. Sau đó đổ dần về 3:30 thì có vẻ như cả 2 instances này đã làm xong công việc của nó.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.8.png" alt="3.1.8"></p>
+<p><strong>ℹ️ Information</strong>: Từ biểu đồ, chúng ta có thể thấy cả hai instances bắt đầu hoạt động mạnh vào khoảng 2:40, đây là thời điểm có mức sử dụng CPU cao nhất. Sau đó, mức sử dụng CPU giảm dần và ổn định vào khoảng 3:30, cho thấy các instances đã hoàn thành phần lớn công việc được giao.</p>
+<p><img alt="3.1.8" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.8.png"></p>
 <ol start="7">
 <li>
-<p>Tiếp theo là chúng ta sẽ thực hiện việc xem các metrics khác của cùng một Instance.</p>
+<p>Tiếp theo, chúng ta sẽ xem các metrics khác của cùng một Instance</p>
 <ul>
-<li>Tích bỏ đi dòng của Instance B.</li>
-<li>Xoá tag tìm kiếm <strong>CPUUtilization</strong>.</li>
-<li>Trên thanh tìm kiếm, nhập <code>EBSWriteBytes</code> và tìm kiếm.</li>
+<li>Bỏ chọn dòng của Instance B</li>
+<li>Xóa tag tìm kiếm <strong>CPUUtilization</strong></li>
+<li>Nhập <code>EBSWriteBytes</code> vào thanh tìm kiếm</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.9.png" alt="3.1.9"></p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.10.png" alt="3.1.10"></p>
+<p><img alt="3.1.9" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.9.png"></p>
+<p><img alt="3.1.10" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.10.png"></p>
 <ol start="8">
-<li>Kéo xuống và tích chọn Instance A</li>
+<li>Kéo xuống và chọn Instance A</li>
 </ol>
-<p>Ở biểu đồ này thì chúng ta cũng thấy một điều tương tự, vào khoảng thời gian đầu mà instance này thực hiện công việc, thì lượng đọc ghi vào EBS rất nhiều, hầu như là CPUUtilization &amp; EBSWriteBytes trùng với nhau (có thời điểm là không trùng). Từ đây thì mình có thể thấy được là ứng dụng của chúng ta cần thao tác với EBS khi khởi động, nhưng ở đoạn trùng thì không cần thao tác với EBS <strong>do nó đang thực hiện một thao tác nào đó khác</strong>.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.11.png" alt="3.1.11"></p>
-<p>Bạn có thể ẩn một trong 2 đi để xem kỹ hơn.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.12.png" alt="3.1.12"></p>
-<p>Nhưng chúng ta sẽ không phải làm như thế này. Ở bước tiếp theo chúng ta sẽ đi thao tác với các biểu đồ này để có được cái nhìn trực quan hơn.</p>
+<p><strong>💡 Pro Tip</strong>: Khi phân tích nhiều metrics cùng lúc, bạn có thể thấy mối tương quan giữa các hoạt động khác nhau của instance. Trong trường hợp này, chúng ta thấy rằng hoạt động ghi vào EBS và mức sử dụng CPU có mối tương quan trong giai đoạn đầu khi instance khởi động, nhưng không hoàn toàn trùng khớp ở tất cả các thời điểm.</p>
+<p><img alt="3.1.11" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.11.png"></p>
+<p>Bạn có thể ẩn một trong hai metrics để xem chi tiết hơn.</p>
+<p><img alt="3.1.12" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.12.png"></p>
+<p><strong>⚠️ Warning</strong>: Khi hiển thị nhiều metrics có đơn vị đo khác nhau trên cùng một biểu đồ, việc phân tích có thể trở nên khó khăn. Trong phần tiếp theo, chúng ta sẽ tìm hiểu cách tùy chỉnh biểu đồ để có cái nhìn trực quan hơn.</p>
 <h4 id="thao-tác-với-biểu-đồ">Thao tác với biểu đồ</h4>
-<p>Ở bước trước thì biểu đồ của chúng ta khó có thể nhìn được vì cả 2 đơn vị của CPUUtilization và EBSWriteBytes đang ở trên cùng tục tung (Oy), nên trong phần này chúng ta sẽ tách nó ra và thêm một số &ldquo;dấu&rdquo; để việc quan sát biểu độ dễ dàng hơn.</p>
+<p><strong>ℹ️ Information</strong>: CloudWatch cho phép bạn tùy chỉnh biểu đồ để hiển thị dữ liệu một cách hiệu quả hơn, đặc biệt khi so sánh các metrics có đơn vị đo và phạm vi giá trị khác nhau.</p>
 <ol>
-<li>Vào trong tab <strong>Graphed metrics</strong>, ở dòng <strong>EBSWriteBytes</strong>, cột <strong>Y axis</strong>, chọn <strong>&gt;</strong>. Có thể thấy biểu đồ của chúng ta trông đã khác hơn vừa rồi.</li>
+<li>Trong tab <strong>Graphed metrics</strong>, tại dòng <strong>EBSWriteBytes</strong>, cột <strong>Y axis</strong>, chọn <strong>&gt;</strong> để chuyển metric này sang trục Y thứ hai</li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.13.png" alt="3.1.13"></p>
+<p><img alt="3.1.13" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.13.png"></p>
 <ol start="2">
 <li>
-<p>Tiếp theo, chúng ta sẽ thêm &ldquo;mark&rdquo; cho biểu đồ.</p>
+<p>Thêm đánh dấu ngang (horizontal annotation) cho biểu đồ</p>
 <ul>
-<li>Vào trong tab <strong>Options</strong>.</li>
-<li>Ấn chọn <strong>Add horizontal annotation</strong>.</li>
+<li>Chuyển sang tab <strong>Options</strong></li>
+<li>Chọn <strong>Add horizontal annotation</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.14.png" alt="3.1.14"></p>
+<p><img alt="3.1.14" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.14.png"></p>
 <ol start="3">
 <li>
-<p>Nhập một số thông tin cho horizontal annotation như sau:</p>
+<p>Cấu hình horizontal annotation với các thông tin sau:</p>
 <ul>
-<li>Label: <strong>5% Mark</strong>.</li>
-<li>Value: <strong>5</strong>.</li>
+<li>Label: <strong>5% Mark</strong></li>
+<li>Value: <strong>5</strong></li>
 </ul>
 </li>
 </ol>
-<p>Và bạn có thể thấy một đường kẻ nét đứt hiện trên biểu đồ, có nhãn.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.15.png" alt="3.1.15"></p>
+<p><strong>💡 Pro Tip</strong>: Sử dụng annotations để đánh dấu các ngưỡng quan trọng giúp bạn dễ dàng xác định khi nào metrics vượt quá hoặc giảm xuống dưới các mức cần quan tâm.</p>
+<p><img alt="3.1.15" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.15.png"></p>
 <ol start="4">
-<li>Tạo thêm Vertical annotation với label là <code>Job start</code>. Và chúng ta sẽ thấy thêm một đường kẻ dọc, nét đứt hiện trên biểu đồ.</li>
+<li>Tạo thêm Vertical annotation với label là <code>Job start</code></li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.16.png" alt="3.1.16"></p>
-<p>Nhưng Job start không phải là ở thời điểm 2:16 như mặc định đã tạo. Nên chúng ta cần sẽ phải chỉnh sửa lại thông số này.</p>
+<p><img alt="3.1.16" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.16.png"></p>
 <ol start="5">
 <li>
-<p>Chỉnh lại Date cho vertical annotation.</p>
+<p>Điều chỉnh thời gian cho vertical annotation</p>
 <ul>
-<li>Di trỏ chuột vào trong phần đầu của đường chỉ trên biểu đồ.</li>
-<li>Ở đây thì chúng ta có thể thấy nó Job được bắt đầu vào khoảng <strong>02:40</strong>.</li>
+<li>Di chuột vào phần đầu của đường chỉ trên biểu đồ</li>
+<li>Quan sát thấy công việc bắt đầu vào khoảng <strong>02:40</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.17.png" alt="3.1.17"></p>
+<p><img alt="3.1.17" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.17.png"></p>
 <ul>
-<li>Sửa lại thông tin giờ của Date của Job start thành <strong>02:40</strong>.</li>
-<li>Ấn chọn <strong>Apply</strong> để thay đổi.</li>
+<li>Sửa thông tin giờ của Date của Job start thành <strong>02:40</strong></li>
+<li>Chọn <strong>Apply</strong> để áp dụng thay đổi</li>
 </ul>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.18.png" alt="3.1.18"></p>
-<p>Đường Job start đã thay đổi vị trí.</p>
-<p><img src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.19.png" alt="3.1.19"></p>
-<p>Ok, thì đó là những gì mà chúng ta thực hiện thao tác trên biểu đồ. Trong phần sau, chúng ta sẽ thao tác chủ yếu với các biểu thức và bạn cũng có thể xoá 2 đường dấu này đi để sang bước tiếp theo.</p>
+<p><img alt="3.1.18" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.18.png"></p>
+<p>Đường Job start đã được di chuyển đến vị trí chính xác.</p>
+<p><img alt="3.1.19" src="/images/3-cloud-watch-metric/3.1-view-metrics/3.1.19.png"></p>
+<p><strong>🔒 Security Note</strong>: Việc theo dõi chính xác thời điểm bắt đầu và kết thúc của các công việc không chỉ giúp tối ưu hiệu suất mà còn hỗ trợ phát hiện các hoạt động bất thường, góp phần nâng cao bảo mật cho hệ thống của bạn.</p>
+<p><strong>💡 Pro Tip</strong>: Bạn có thể xóa các đánh dấu này trước khi chuyển sang phần tiếp theo, nơi chúng ta sẽ tập trung vào việc làm việc với các biểu thức phức tạp hơn trong CloudWatch.</p>
 
 
 
@@ -919,19 +921,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

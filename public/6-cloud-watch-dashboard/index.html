@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Dashboards :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -508,40 +510,55 @@
 
 
 
-	<h4 id="cloudwatch-dashboards">CloudWatch Dashboards</h4>
-<p>This is the final part of this workshop, where we will create a simple Dashboard to manage the Metrics and Alarms we have created, specifically the Error Logs we created in the previous section.</p>
+	<h4 id="amazon-cloudwatch-dashboards">Amazon CloudWatch Dashboards</h4>
+<p><strong>ℹ️ Information</strong>: CloudWatch Dashboards provide a customizable home page in the CloudWatch console that you can use to monitor your resources across multiple regions. Dashboards allow you to create a unified view of the metrics and alarms that matter most to your operations.</p>
+<p>In this final section of the workshop, we&rsquo;ll create a comprehensive dashboard to visualize the metrics and alarms we&rsquo;ve configured throughout the previous modules, with special focus on the error log monitoring we established.</p>
 <ol>
 <li>
-<p>Add the alarm we just created to the Dashboard.</p>
+<p>Add the alarm we created to the dashboard:</p>
 <ul>
-<li>Select <strong>PythonApplicationErrorAlarm</strong>.</li>
-<li>Expand <strong>Actions</strong>.</li>
-<li>Select <strong>Add to dashboard</strong>.</li>
+<li>Select <strong>PythonApplicationErrorAlarm</strong></li>
+<li>Expand <strong>Actions</strong></li>
+<li>Select <strong>Add to dashboard</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/6-cloud-watch-dashboard/6.1.png" alt="6.1"></p>
+<p><img alt="6.1" src="/images/6-cloud-watch-dashboard/6.1.png"></p>
 <ol start="2">
-<li>In the <strong>Add to dashboard</strong> dialog, select <strong>Create new</strong>.</li>
+<li>
+<p>In the <strong>Add to dashboard</strong> dialog:</p>
+<ul>
+<li>Select <strong>Create new</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/6-cloud-watch-dashboard/6.2.png" alt="6.2"></p>
+<p><img alt="6.2" src="/images/6-cloud-watch-dashboard/6.2.png"></p>
 <ol start="3">
 <li>
-<p>Enter the name for the dashboard as <code>CloudWatch-Workshop</code>.</p>
+<p>Configure your new dashboard:</p>
 <ul>
-<li>Click <strong>Create</strong>.</li>
-<li>Click <strong>Add to dashboard</strong>.</li>
+<li>Enter dashboard name: <code>CloudWatch-Workshop</code></li>
+<li>Click <strong>Create</strong></li>
+<li>Click <strong>Add to dashboard</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/6-cloud-watch-dashboard/6.3.png" alt="6.3"></p>
-<p><img src="/images/6-cloud-watch-dashboard/6.4.png" alt="6.4"></p>
-<p>Here is our dashboard.</p>
-<p><img src="/images/6-cloud-watch-dashboard/6.5.png" alt="6.5"></p>
-<p>You can perform several actions on this widget.</p>
-<p><img src="/images/6-cloud-watch-dashboard/6.6.png" alt="6.6"></p>
-<p><img src="/images/6-cloud-watch-dashboard/6.7.png" alt="6.7"></p>
-<p>If you&rsquo;ve made it this far, congratulations on completing this workshop!</p>
+<p><img alt="6.3" src="/images/6-cloud-watch-dashboard/6.3.png"></p>
+<p><img alt="6.4" src="/images/6-cloud-watch-dashboard/6.4.png"></p>
+<p><strong>💡 Pro Tip</strong>: Dashboards support cross-region monitoring, allowing you to track resources deployed across your global AWS infrastructure from a single view.</p>
+<p>Your completed dashboard should now display the alarm widget:</p>
+<p><img alt="6.5" src="/images/6-cloud-watch-dashboard/6.5.png"></p>
+<p><strong>ℹ️ Information</strong>: Dashboard widgets are highly customizable. You can:</p>
+<ul>
+<li>Resize and reposition widgets by dragging</li>
+<li>Edit widget properties to change visualization types</li>
+<li>Add text annotations for context</li>
+<li>Share dashboards with your team</li>
+</ul>
+<p><img alt="6.6" src="/images/6-cloud-watch-dashboard/6.6.png"></p>
+<p><img alt="6.7" src="/images/6-cloud-watch-dashboard/6.7.png"></p>
+<p><strong>🔒 Security Note</strong>: Consider using AWS Identity and Access Management (IAM) to control who can view or modify your dashboards, especially when they contain sensitive operational metrics.</p>
+<p>Congratulations on completing this workshop! You&rsquo;ve successfully implemented a comprehensive monitoring solution using Amazon CloudWatch&rsquo;s powerful features for metrics, logs, alarms, and dashboards.</p>
 
 
 
@@ -834,19 +851,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

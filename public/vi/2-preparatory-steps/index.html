@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Các bước chuẩn bị :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -508,17 +510,19 @@
 
 
 
-	<h4 id="các-bước-chuẩn-bị">Các bước chuẩn bị</h4>
+	<h4 id="tổng-quan">Tổng quan</h4>
+<p><strong>ℹ️ Information</strong>: Trong phần này, chúng ta sẽ thiết lập môi trường lab bằng cách triển khai một <strong>AWS CloudFormation Stack</strong>. Stack này sẽ tự động cung cấp tất cả tài nguyên AWS cần thiết để thực hành với <strong>Amazon CloudWatch</strong>.</p>
+<h4 id="triển-khai-cloudformation-stack">Triển khai CloudFormation Stack</h4>
 <ol>
 <li>
 <p>Truy cập vào <strong>AWS Management Console</strong></p>
 <ul>
-<li>Tìm <strong>CloudFormation</strong></li>
-<li>Chọn <strong>CloudFormation</strong></li>
+<li>Tìm kiếm dịch vụ <strong>CloudFormation</strong> trong thanh tìm kiếm</li>
+<li>Chọn <strong>CloudFormation</strong> từ kết quả tìm kiếm</li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.1.png" alt="2.1"></p>
+<p><img alt="2.1" src="/images/2-preparatory-steops/2.1.png"></p>
 <ol start="2">
 <li>
 <p>Trong giao diện <strong>CloudFormation</strong></p>
@@ -528,46 +532,67 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.2.png" alt="2.2"></p>
+<p><img alt="2.2" src="/images/2-preparatory-steops/2.2.png"></p>
 <ol start="3">
 <li>
-<p>Trong giao diện <strong>Create stack</strong>. Bạn tải file cấu hình <a href="https://raw.githubusercontent.com/AWS-First-Cloud-Journey/CloudWatchWorkshop/main/template.yml">template</a> về trước và sau đó thực hiện các bước.</p>
+<p>Trong giao diện <strong>Create stack</strong></p>
+<p><strong>💡 Pro Tip</strong>: Tải file template về máy trước khi tiếp tục để quá trình triển khai diễn ra suôn sẻ.</p>
 <ul>
-<li>Trong phần <strong>Prerequisite - Prepare template</strong>, chọn <strong>Choose an existing template</strong>.</li>
-<li>Tiếp theo chọn <strong>Upload a template file</strong>.</li>
-<li>Ấn <strong>Choose file</strong> để tải lên file template mới tải về.</li>
+<li>Tải file cấu hình <a href="https://raw.githubusercontent.com/AWS-First-Cloud-Journey/CloudWatchWorkshop/main/template.yml">template</a> về máy</li>
+<li>Trong phần <strong>Prerequisite - Prepare template</strong>, chọn <strong>Choose an existing template</strong></li>
+<li>Tiếp theo chọn <strong>Upload a template file</strong></li>
+<li>Ấn <strong>Choose file</strong> để tải lên file template đã tải về</li>
 <li>Ấn <strong>Next</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.3.png" alt="2.3"></p>
+<p><img alt="2.3" src="/images/2-preparatory-steops/2.3.png"></p>
 <ol start="4">
 <li>
-<p>Tiếp đến là điền các thông tin như sau:</p>
+<p>Cấu hình thông tin Stack</p>
 <ul>
-<li>Name: <code>FCJ-CloudWatch-Workshop</code> (hoặc tên nào đó mà bạn thích, nhưng nên đặt một cái tên dễ gợi nhớ).</li>
-<li>RegionId: chọn đúng id của region mà bạn đang thực hiện bài lab này, như trong bài này thì mình chọn <strong>us-east-1</strong> (N. Virginia).</li>
-<li>Parameter còn lại bạn nên giữ nguyên.</li>
-<li>Ấn <strong>Next</strong>.</li>
+<li><strong>Stack name</strong>: Nhập <code>FCJ-CloudWatch-Workshop</code> (hoặc một tên dễ nhớ khác)</li>
+<li><strong>RegionId</strong>: Chọn đúng Region ID nơi bạn đang thực hiện workshop (ví dụ: <strong>us-east-1</strong> cho N. Virginia)</li>
+<li>Giữ nguyên các tham số còn lại với giá trị mặc định</li>
+<li>Ấn <strong>Next</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.4.png" alt="2.4"></p>
+<p><img alt="2.4" src="/images/2-preparatory-steops/2.4.png"></p>
 <ol start="5">
-<li>Ở trang này thì chúng ta không cần cấu hình gì hết, nên cuộn xuống dưới cùng, tích chọn <strong>I acknowledge that AWS CloudFormation might create IAM resources with custome names</strong>. Sau đó ấn <strong>Next</strong>.</li>
+<li>
+<p>Cấu hình tùy chọn Stack</p>
+<p><strong>⚠️ Warning</strong>: Đảm bảo bạn đã tích vào ô xác nhận IAM resources để CloudFormation có thể tạo các tài nguyên IAM cần thiết.</p>
+<ul>
+<li>Không cần thay đổi cấu hình mặc định trên trang này</li>
+<li>Cuộn xuống dưới cùng</li>
+<li>Tích chọn <strong>I acknowledge that AWS CloudFormation might create IAM resources with custom names</strong></li>
+<li>Ấn <strong>Next</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.5.png" alt="2.5"></p>
+<p><img alt="2.5" src="/images/2-preparatory-steops/2.5.png"></p>
 <ol start="6">
-<li>Sau đó thì xác minh lại một lần nữa, cuộn xuống dưới cùng và ấn <strong>Submit</strong> để tạo Stack.</li>
+<li>
+<p>Xem lại và tạo Stack</p>
+<ul>
+<li>Kiểm tra lại tất cả thông tin cấu hình</li>
+<li>Cuộn xuống dưới cùng và ấn <strong>Submit</strong> để bắt đầu tạo Stack</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.6.png" alt="2.6"></p>
+<p><img alt="2.6" src="/images/2-preparatory-steops/2.6.png"></p>
 <ol start="7">
-<li>Sau đó thì một stack mới sẽ được tạo, các bạn chờ khoảng 5 phút để hoàn tất việc cài đặt.</li>
+<li>
+<p>Theo dõi quá trình triển khai</p>
+<p><strong>ℹ️ Information</strong>: Quá trình triển khai Stack có thể mất khoảng 5 phút để hoàn tất. Trong thời gian này, CloudFormation sẽ tự động tạo tất cả tài nguyên cần thiết cho workshop.</p>
+</li>
 </ol>
-<p><img src="/images/2-preparatory-steops/2.7.png" alt="2.7"></p>
-<p>Khi cài đặt xong thì chúng ta có được kết quả như sau.</p>
-<p><img src="/images/2-preparatory-steops/2.8.png" alt="2.8"></p>
-<p>Ok như vậy là bước chuẩn bị đã hoàn tất. Trong các bước sau thì chúng ta sẽ tiến hành thực hành trên CloudWatch.</p>
+<p><img alt="2.7" src="/images/2-preparatory-steops/2.7.png"></p>
+<h4 id="xác-nhận-triển-khai-thành-công">Xác nhận triển khai thành công</h4>
+<p><strong>🔒 Security Note</strong>: Sau khi triển khai thành công, hãy kiểm tra tab <strong>Outputs</strong> của Stack để lấy thông tin về các tài nguyên đã được tạo, bao gồm các URL và thông tin truy cập cần thiết cho các bước tiếp theo.</p>
+<p><img alt="2.8" src="/images/2-preparatory-steops/2.8.png"></p>
+<p><strong>💡 Pro Tip</strong>: Khi Stack hiển thị trạng thái <strong>CREATE_COMPLETE</strong> với màu xanh lá, điều này xác nhận rằng tất cả tài nguyên đã được triển khai thành công và bạn đã sẵn sàng để tiếp tục với các bài thực hành <strong>Amazon CloudWatch</strong>.</p>
 
 
 
@@ -847,7 +872,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/1-introduction/" title="Giới thiệu"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/1-introduction/" title="Giới thiệu"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/3-cloud-watch-metric/" title="CloudWatch Metric" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -860,19 +885,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

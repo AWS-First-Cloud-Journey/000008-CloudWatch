@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Alarms :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -508,79 +510,120 @@
 
 
 
-	<h4 id="cloudwatch-alarms">CloudWatch Alarms</h4>
-<p>In this section, we will set up an Alarm for the Error Log Metric that we created in the previous section.</p>
+	<h4 id="amazon-cloudwatch-alarms">Amazon CloudWatch Alarms</h4>
+<p><strong>ℹ️ Information</strong>: CloudWatch Alarms monitor your metrics and trigger actions when thresholds are breached. They&rsquo;re essential for proactive monitoring and automated responses to changing conditions in your AWS environment.</p>
+<p>Follow these steps to create an alarm for the error log metric we configured in the previous section:</p>
 <ol>
 <li>
-<p>Return to the main screen of CloudWatch.</p>
+<p>Navigate to the CloudWatch console:</p>
 <ul>
-<li>Select <strong>Alarms</strong> from the left menu.</li>
-<li>Choose <strong>All alarms</strong>.</li>
-<li>Click <strong>Create alarm</strong>.</li>
+<li>Select <strong>Alarms</strong> from the left navigation pane</li>
+<li>Choose <strong>All alarms</strong></li>
+<li>Click <strong>Create alarm</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.1.png" alt="5.1"></p>
+<p><img alt="5.1" src="/images/5-cloud-watch-alarm/5.1.png"></p>
 <ol start="2">
-<li>Select <strong>Select metric</strong>.</li>
+<li>
+<p>Begin the metric selection process:</p>
+<ul>
+<li>Click <strong>Select metric</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.2.png" alt="5.2"></p>
-<p>The metrics window appears, under <strong>Custom namespaces</strong>, select <strong>ec2-logs</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.3.png" alt="5.3"></p>
-<p>Next, select <strong>Metrics with no dimensions</strong>, choose <strong>/var/log/messages</strong>, and click <strong>Select metric</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.4.png" alt="5.4"></p>
+<p><img alt="5.2" src="/images/5-cloud-watch-alarm/5.2.png"></p>
+<ul>
+<li>Under <strong>Custom namespaces</strong>, select <strong>ec2-logs</strong></li>
+</ul>
+<p><img alt="5.3" src="/images/5-cloud-watch-alarm/5.3.png"></p>
+<ul>
+<li>Select <strong>Metrics with no dimensions</strong></li>
+<li>Choose <strong>/var/log/messages - ERROR</strong> metric</li>
+<li>Click <strong>Select metric</strong></li>
+</ul>
+<p><img alt="5.4" src="/images/5-cloud-watch-alarm/5.4.png"></p>
 <ol start="3">
-<li>In the <strong>Specify metric and conditions</strong> section, set <strong>Period</strong> to <strong>1 minute</strong>.</li>
+<li>
+<p>Configure the metric parameters:</p>
+<ul>
+<li>Set <strong>Period</strong> to <strong>1 minute</strong> for timely detection of error spikes</li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.5.png" alt="5.5"></p>
+<p><img alt="5.5" src="/images/5-cloud-watch-alarm/5.5.png"></p>
 <ol start="4">
 <li>
-<p>In the <strong>Conditions</strong> section:</p>
+<p>Define the alarm conditions:</p>
 <ul>
-<li>Threshold type: <strong>Static</strong>.</li>
-<li>Condition: <strong>Greater</strong> than <strong>10</strong>.</li>
+<li>Threshold type: <strong>Static</strong></li>
+<li>Condition: <strong>Greater than 10</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.6.png" alt="5.6"></p>
-<p>You will see a dashed line indicating that this is the threshold where the <strong>Alarm</strong> will be triggered =&gt; when there are too many errors, something unusual has happened in the application and needs to be checked immediately.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.7.png" alt="5.7"></p>
-<p>Then click <strong>Next</strong> to continue.</p>
+<p><img alt="5.6" src="/images/5-cloud-watch-alarm/5.6.png"></p>
+<p><strong>💡 Pro Tip</strong>: The dashed line represents your threshold boundary. When the metric crosses this line, the alarm will transition to the ALARM state, indicating unusual application behavior that requires immediate investigation.</p>
+<p><img alt="5.7" src="/images/5-cloud-watch-alarm/5.7.png"></p>
+<ul>
+<li>Click <strong>Next</strong> to continue</li>
+</ul>
 <ol start="5">
 <li>
-<p>Now, configure the notification as follows:</p>
+<p>Configure notification settings:</p>
 <ul>
-<li>Alarm state trigger: <strong>In alarm</strong>.</li>
-<li>Choose <strong>Create new topic</strong>.</li>
-<li>Topic name: <code>Error_logs_reach_10</code>.</li>
-<li>Email to notify: enter your email, here I will enter mine.</li>
-<li>Click <strong>Create topic</strong>.</li>
+<li>Alarm state trigger: <strong>In alarm</strong></li>
+<li>Select <strong>Create new topic</strong></li>
+<li>Topic name: <code>Error_logs_reach_10</code></li>
+<li>Email to notify: enter your email address</li>
+<li>Click <strong>Create topic</strong></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.8.png" alt="5.8"></p>
-<p><img src="/images/5-cloud-watch-alarm/5.9.png" alt="5.9"></p>
-<p>Click <strong>Next</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.10.png" alt="5.10"></p>
+<p><img alt="5.8" src="/images/5-cloud-watch-alarm/5.8.png"></p>
+<p><img alt="5.9" src="/images/5-cloud-watch-alarm/5.9.png"></p>
+<ul>
+<li>Click <strong>Next</strong></li>
+</ul>
+<p><img alt="5.10" src="/images/5-cloud-watch-alarm/5.10.png"></p>
 <ol start="6">
-<li>In the final step, enter the alarm name as <code>PythonApplicationErrorAlarm</code> and click <strong>Next</strong>.</li>
+<li>
+<p>Name your alarm:</p>
+<ul>
+<li>Enter alarm name: <code>PythonApplicationErrorAlarm</code></li>
+<li>Click <strong>Next</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.11.png" alt="5.11"></p>
+<p><img alt="5.11" src="/images/5-cloud-watch-alarm/5.11.png"></p>
 <ol start="7">
-<li>Review the results and click <strong>Create alarm</strong>.</li>
+<li>
+<p>Review and create:</p>
+<ul>
+<li>Verify all configurations</li>
+<li>Click <strong>Create alarm</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.12.png" alt="5.12"></p>
-<p><img src="/images/5-cloud-watch-alarm/5.13.png" alt="5.13"></p>
-<p>Result:</p>
-<p><img src="/images/5-cloud-watch-alarm/5.14.png" alt="5.14"></p>
+<p><img alt="5.12" src="/images/5-cloud-watch-alarm/5.12.png"></p>
+<p><img alt="5.13" src="/images/5-cloud-watch-alarm/5.13.png"></p>
+<p><strong>⚠️ Warning</strong>: Your alarm will remain in the INSUFFICIENT_DATA state until Amazon SNS confirms your subscription and the metric receives data points.</p>
+<p><img alt="5.14" src="/images/5-cloud-watch-alarm/5.14.png"></p>
 <ol start="8">
-<li>Log in to Gmail or any email service you use. You will receive an email from <strong>AWS Notification</strong>.</li>
+<li>
+<p>Confirm your SNS subscription:</p>
+<ul>
+<li>Check your email for a message from <strong>AWS Notifications</strong></li>
+</ul>
+</li>
 </ol>
-<p><img src="/images/5-cloud-watch-alarm/5.15.png" alt="5.15"></p>
-<p>Click <strong>Confirm subscription</strong>.</p>
-<p><img src="/images/5-cloud-watch-alarm/5.16.png" alt="5.16"></p>
-<p><img src="/images/5-cloud-watch-alarm/5.17.png" alt="5.17"></p>
-<p>Okay, now we have completed the alarm setup.</p>
+<p><img alt="5.15" src="/images/5-cloud-watch-alarm/5.15.png"></p>
+<ul>
+<li>Click <strong>Confirm subscription</strong></li>
+</ul>
+<p><img alt="5.16" src="/images/5-cloud-watch-alarm/5.16.png"></p>
+<p><img alt="5.17" src="/images/5-cloud-watch-alarm/5.17.png"></p>
+<p><strong>🔒 Security Note</strong>: Always confirm SNS subscriptions promptly to ensure you receive critical alerts. Consider using Amazon SNS with AWS Lambda for automated remediation of issues detected by CloudWatch Alarms.</p>
+<p>Your CloudWatch Alarm is now fully configured and will monitor your application for error spikes, notifying you when the threshold is exceeded.</p>
 
 
 
@@ -873,19 +916,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

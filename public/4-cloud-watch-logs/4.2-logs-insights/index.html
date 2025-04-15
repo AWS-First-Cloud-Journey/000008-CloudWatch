@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Logs Insights :: AWS Account Setup</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        
+            var baseurl = "\/";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -105,7 +107,7 @@
            
 <li
   data-nav-id="/3-cloud-watch-metric/"
-  title="CloudWatch Metric"
+  title="CloudWatch Metrics"
   class="dd-item 
         
         
@@ -113,7 +115,7 @@
         "
 >
   <a href="/3-cloud-watch-metric/">
-     <b> 3. </b> CloudWatch Metric 
+     <b> 3. </b> CloudWatch Metrics 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -528,7 +530,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.1.png" alt="4.2.1"></p>
+<p><img alt="4.2.1" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.1.png"></p>
 <ol start="2">
 <li>
 <p>Trong <strong>EC2 Console</strong>, truy cập vào trang <strong>Instances</strong>:</p>
@@ -538,7 +540,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.2.png" alt="4.2.2"></p>
+<p><img alt="4.2.2" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.2.png"></p>
 <ol start="3">
 <li>
 <p>Trong trang <strong>Connect to instance</strong>:</p>
@@ -548,7 +550,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.3.png" alt="4.2.3"></p>
+<p><img alt="4.2.3" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.3.png"></p>
 <ol start="4">
 <li>
 <p>Đợi một lúc, một <strong>Terminal</strong> sẽ hiện lên:</p>
@@ -560,32 +562,32 @@
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /tmp
 </span></span><span style="display:flex;"><span>sudo aws s3 cp s3://workshop-template-bucket/logger.py .
-</span></span></code></pre></div><p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.4.png" alt="4.2.4"></p>
+</span></span></code></pre></div><p><img alt="4.2.4" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.4.png"></p>
 <ol start="5">
 <li>Cấp quyền thực thi và chạy script:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo chmod +x logger.py
 </span></span><span style="display:flex;"><span>python3 logger.py &amp;
-</span></span></code></pre></div><p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.5.png" alt="4.2.5"></p>
+</span></span></code></pre></div><p><img alt="4.2.5" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.5.png"></p>
 <ol start="6">
 <li>Kiểm tra các logger đang chạy dưới dạng process:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ps -aux | grep logger
 </span></span></code></pre></div><p>Hiện tại có 2 process đang chạy, chúng sẽ chạy cho đến khi kết thúc bài thực hành.</p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.6.png" alt="4.2.6"></p>
+<p><img alt="4.2.6" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.6.png"></p>
 <ol start="7">
 <li>In ra các dòng log từ file <code>/var/log/messages</code>, nó sẽ chạy liên tục cho đến khi bị hủy:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo tail -f /var/log/messages
-</span></span></code></pre></div><p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.7.png" alt="4.2.7"></p>
+</span></span></code></pre></div><p><img alt="4.2.7" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.7.png"></p>
 <ol start="8">
 <li>Trở lại <strong>CloudWatch Console</strong>, vào <strong>Logs Insights</strong> từ menu bên trái để truy vấn log.</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.8.png" alt="4.2.8"></p>
+<p><img alt="4.2.8" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.8.png"></p>
 <ol start="9">
 <li>Trong <strong>Selection criteria</strong>, tìm <code>/ec2</code> và chọn <strong>/ec2/linux/var/log/messages</strong>.</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.9.png" alt="4.2.9"></p>
+<p><img alt="4.2.9" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.9.png"></p>
 <ol start="10">
 <li>Nhập câu truy vấn sau và nhấn <strong>Run query</strong>:</li>
 </ol>
@@ -593,9 +595,9 @@
 | sort @timestamp desc
 | limit 20
 </code></pre><p>Kết quả hiển thị như sau:</p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.10.png" alt="4.2.10"></p>
+<p><img alt="4.2.10" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.10.png"></p>
 <p>Đây chính là các log chúng ta vừa tạo.</p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.11.png" alt="4.2.11"></p>
+<p><img alt="4.2.11" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.11.png"></p>
 <ol start="11">
 <li>Truy vấn log có chứa <strong>ERROR</strong>:</li>
 </ol>
@@ -603,9 +605,9 @@
 | filter @message like /ERROR/
 | sort @timestamp desc
 | limit 20
-</code></pre><p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.12.png" alt="4.2.12"></p>
+</code></pre><p><img alt="4.2.12" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.12.png"></p>
 <p>Đây là các log lỗi mà chúng ta đã tạo.</p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.13.png" alt="4.2.13"></p>
+<p><img alt="4.2.13" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.13.png"></p>
 <ol start="12">
 <li>Truy vấn log có chứa <strong>WARN</strong>:</li>
 </ol>
@@ -613,11 +615,11 @@
 | filter @message like /WARN/
 | sort @timestamp desc
 | limit 20
-</code></pre><p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.14.png" alt="4.2.14"></p>
+</code></pre><p><img alt="4.2.14" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.14.png"></p>
 <ol start="13">
 <li>Truy vấn lại log lỗi để xem log mới tạo:</li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.15.png" alt="4.2.15"></p>
+<p><img alt="4.2.15" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.15.png"></p>
 <ol start="14">
 <li>Truy vấn theo từ khóa khác (<code>eth0</code>):</li>
 </ol>
@@ -625,11 +627,11 @@
 | filter @message like /eth0/
 | sort @timestamp desc
 | stats count (*) by bin()
-</code></pre><p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.16.png" alt="4.2.16"></p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.17.png" alt="4.2.17"></p>
+</code></pre><p><img alt="4.2.16" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.16.png"></p>
+<p><img alt="4.2.17" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.17.png"></p>
 <h3 id="trực-quan-hóa-truy-vấn-log">Trực quan hóa truy vấn log</h3>
 <p>Chúng ta có thể xem biểu đồ của các truy vấn bằng cách chuyển sang tab <strong>Visualization</strong>.</p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.18.png" alt="4.2.18"></p>
+<p><img alt="4.2.18" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.18.png"></p>
 <h3 id="lưu-lệnh-truy-vấn">Lưu lệnh truy vấn</h3>
 <p>Logs Insights hỗ trợ lưu truy vấn để sử dụng lại sau này.</p>
 <ol>
@@ -642,7 +644,7 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.19.png" alt="4.2.19"></p>
+<p><img alt="4.2.19" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.19.png"></p>
 <ol start="2">
 <li>
 <p>Trong <strong>Save a new query</strong>, điền thông tin:</p>
@@ -654,12 +656,12 @@
 </ul>
 </li>
 </ol>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.20.png" alt="4.2.20"></p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.21.png" alt="4.2.21"></p>
+<p><img alt="4.2.20" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.20.png"></p>
+<p><img alt="4.2.21" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.21.png"></p>
 <h3 id="lịch-sử-truy-vấn">Lịch sử truy vấn</h3>
 <p>Logs Insights cho phép xem lại lịch sử truy vấn. Trong giao diện, chọn <strong>History</strong> (dưới Query editor).</p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.22.png" alt="4.2.22"></p>
-<p><img src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.23.png" alt="4.2.23"></p>
+<p><img alt="4.2.22" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.22.png"></p>
+<p><img alt="4.2.23" src="/images/4-cloud-watch-logs/4.2-logs-insights/4.2.23.png"></p>
 <p>Trong phần tiếp theo, chúng ta sẽ tạo <strong>Metrics Filter</strong>, chuyển log thành <strong>Metric</strong>, và thiết lập <strong>Alarm</strong>.</p>
 
 
@@ -957,19 +959,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

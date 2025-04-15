@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.140.2">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>CloudWatch Metric :: Thiết lập AWS Account</title>
 
     
-    <link href="/css/nucleus.css?1737709886" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1737709886" rel="stylesheet">
-    <link href="/css/hybrid.css?1737709886" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1737709886" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1737709886" rel="stylesheet">
-    <link href="/css/auto-complete.css?1737709886" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1737709886" rel="stylesheet">
-    <link href="/css/theme.css?1737709886" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1737709886" rel="stylesheet">
+    <link href="/css/nucleus.css?1744707395" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1744707395" rel="stylesheet">
+    <link href="/css/hybrid.css?1744707395" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1744707395" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1744707395" rel="stylesheet">
+    <link href="/css/auto-complete.css?1744707395" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1744707395" rel="stylesheet">
+    <link href="/css/theme.css?1744707395" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1744707395" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1737709886" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1744707395" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1737709886"></script>
+    <script src="/js/jquery-3.3.1.min.js?1744707395"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,16 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1737709886"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1737709886"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1744707395"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1744707395"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        
+            var baseurl = "\/\/vi";
+        
     
 </script>
-<script type="text/javascript" src="/js/search.js?1737709886"></script>
+<script type="text/javascript" src="/js/search.js?1744707395"></script>
  
   </div>
 
@@ -71,7 +73,7 @@
                
 <li
   data-nav-id="/vi/1-introduction/"
-  title="Giới thiệu"
+  title="Giới thiệu"
   class="dd-item 
         
         
@@ -79,7 +81,7 @@
         "
 >
   <a href="/vi/1-introduction/">
-     <b> 1. </b> Giới thiệu 
+     <b> 1. </b> Giới thiệu 
     <i class="fas fa-check read-icon"></i>
     
   </a>
@@ -410,7 +412,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>24-01-2025</font></i>
+        <i><font color=orange>15-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -509,14 +511,16 @@
 
 
 	<h4 id="cloudwatch-metric">CloudWatch Metric</h4>
-<p>Khi thao tác với CloudWatch, thì chúng ta sẽ chủ yêu là &ldquo;nhìn&rdquo;, nên CloudWatch đã cung cấp cho chúng ta các biểu đồ, data table trực quan để quan sát Metric. Việc này rất quan trọng vì nó nói lên được tình trạng của ứng dụng / hệ thống mà chúng ta đang vận hành, từ đó giúp đưa ra được các quyết định trong việc tối ưu, nâng cấp.</p>
-<p>Trong phần này thì chúng ta sẽ cùng đi thao tác:</p>
+<p><strong>ℹ️ Information</strong>: Khi làm việc với <strong>Amazon CloudWatch</strong>, chúng ta chủ yếu tập trung vào việc &ldquo;quan sát&rdquo;. <strong>CloudWatch</strong> cung cấp các biểu đồ trực quan và bảng dữ liệu chi tiết để theo dõi các Metric. Việc này đóng vai trò quan trọng trong việc đánh giá tình trạng của ứng dụng và hệ thống, từ đó giúp đưa ra quyết định chính xác về việc tối ưu hóa và nâng cấp.</p>
+<p><strong>💡 Pro Tip</strong>: Metrics trong <strong>CloudWatch</strong> là nền tảng cho việc xây dựng hệ thống giám sát toàn diện, giúp bạn phát hiện sớm các vấn đề tiềm ẩn trước khi chúng ảnh hưởng đến người dùng cuối.</p>
+<p>Trong phần này, chúng ta sẽ thực hành các kỹ thuật sau:</p>
 <ul>
-<li>Lựa ra các metric mà chúng ta muốn xem (đến từ những ứng dụng mà chúng ta đã setup từ phần trước).</li>
-<li>Thực hiện các phép tìm kiếm Metric nâng cao để hiển thị lên biểu đồ.</li>
-<li>Thực hiện các phép tính toán Metric nâng cao để hiển thị nhiều thông tin hơn như là tổng, trung bình, rank của các Metric.</li>
-<li>Thực hiện tạo các Dynamic Label để phần chú thích biểu đồ trực quan hơn.</li>
+<li>Lựa chọn và hiển thị các Metrics từ các ứng dụng đã triển khai ở phần trước</li>
+<li>Sử dụng các biểu thức tìm kiếm nâng cao (Search Expressions) để lọc và hiển thị Metrics trên biểu đồ</li>
+<li>Áp dụng các phép tính toán Metric nâng cao (Math Expressions) để trích xuất thông tin giá trị như tổng, trung bình, xếp hạng của các Metrics</li>
+<li>Tạo và tùy chỉnh Dynamic Labels để nâng cao tính trực quan cho các chú thích biểu đồ</li>
 </ul>
+<p><strong>🔒 Security Note</strong>: Việc theo dõi Metrics một cách hiệu quả không chỉ giúp tối ưu hiệu suất mà còn là một phần quan trọng trong chiến lược bảo mật, giúp phát hiện các hoạt động bất thường trong hệ thống.</p>
 <p>Nội dung của phần này bao gồm:</p>
 <ol>
 <li><a href="/vi/3-cloud-watch-metric/3.1-view-metrics/">Xem các Metrics</a></li>
@@ -816,19 +820,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.min.js?1737709886"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1737709886"></script>
-    <script src="/js/jquery.sticky.js?1737709886"></script>
-    <script src="/js/featherlight.min.js?1737709886"></script>
-    <script src="/js/highlight.pack.js?1737709886"></script>
+    <script src="/js/clipboard.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.min.js?1744707395"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1744707395"></script>
+    <script src="/js/jquery.sticky.js?1744707395"></script>
+    <script src="/js/featherlight.min.js?1744707395"></script>
+    <script src="/js/highlight.pack.js?1744707395"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1737709886"></script>
-    <script src="/js/learn.js?1737709886"></script>
-    <script src="/js/hugo-learn.js?1737709886"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1744707395"></script>
+    <script src="/js/learn.js?1744707395"></script>
+    <script src="/js/hugo-learn.js?1744707395"></script>
 
-    <link href="/mermaid/mermaid.css?1737709886" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1737709886"></script>
+    <link href="/mermaid/mermaid.css?1744707395" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1744707395"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
