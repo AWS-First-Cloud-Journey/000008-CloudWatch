@@ -30,7 +30,7 @@ pre: " <b> 3.2. </b> "
 4. Nhập một biểu thức mới với nội dung như bên dưới. Biểu thức này chúng ta đang thực hiện tìm kiếm ở một Namespace khác ngoài EC2.
 
 ```
-
+SEARCH('{CWAgent,InstanceId,InstanceIdType,path} path="/" MetricName="disk_used_percent"','Average',300)
 ```
 
 Sau đó là ấn **Apply** để áp dụng.

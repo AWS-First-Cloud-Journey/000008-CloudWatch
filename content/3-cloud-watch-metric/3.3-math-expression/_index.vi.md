@@ -31,7 +31,7 @@ Tiếp tục, trong phần này chúng ta sẽ thực hiện các thao tác bi�
 4. Giờ thì chúng ta sẽ tiến hành sắp xếp lại biểu đồ dựa trên biểu thức tìm kiếm đầu tiên, với biểu thức như bên dưới.
 
 ```
-SORT(e1, SUM, DEC, 3)
+SORT(e1, SUM, DESC, 3)
 ```
 
 ![3.3.5](/images/3-cloud-watch-metric/3.3-math-expression/3.3.5.png)

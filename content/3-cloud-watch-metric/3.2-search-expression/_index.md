@@ -28,6 +28,9 @@ In the previous section, we manually viewed metrics, but this method has limitat
 ![3.2.4](/images/3-cloud-watch-metric/3.2-search-expression/3.2.4.png)
 
 4. Enter a new expression as shown below. This expression searches in a different Namespace outside EC2.
+```
+SEARCH('{CWAgent,InstanceId,InstanceIdType,path} path="/" MetricName="disk_used_percent"','Average',300)
+```
 
 Then, click **Apply** to apply the changes.
 

@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Viewing Metrics on AWS Account Setup</title>
-    <link>/3-cloud-watch-metric/3.1-view-metrics/</link>
+    <link>//localhost:1313/3-cloud-watch-metric/3.1-view-metrics/</link>
     <description>Recent content in Viewing Metrics on AWS Account Setup</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="/3-cloud-watch-metric/3.1-view-metrics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/3-cloud-watch-metric/3.1-view-metrics/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

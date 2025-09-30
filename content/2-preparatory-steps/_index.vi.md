@@ -79,25 +79,27 @@ pre: " <b> 2. </b> "
 **💡 Pro Tip**: Khi Stack hiển thị trạng thái **CREATE_COMPLETE** với màu xanh lá, điều này xác nhận rằng tất cả tài nguyên đã được triển khai thành công và bạn đã sẵn sàng để tiếp tục với các bài thực hành **Amazon CloudWatch**.
 
 #### Tạo bucket và tải file logger.py
-1. Tìm kiếm S3 trên search bar
-![2.9](/images/2-preparatory-steops/2.9.png)
-2. Nhấn create bucket
+1. Tìm kiếm S3 trên search bar.
 
-3. Tên bucket phải là duy nhất trên không gian toàn cầu, không được trùng.
+![2.9](/images/2-preparatory-steops/2.9.png)
+
+2. Nhấn create bucket.
+
+3. Tên bucket phải là ***duy nhất*** trên không gian toàn cầu, không được trùng.
 
 ![2.10](/images/2-preparatory-steops/2.10.png)
 
-4. Mọi cài đặt để nguyên mặc định
+4. Mọi cài đặt để nguyên mặc định.
 
-5. Nhấn crete bucket ở cuối trang
+5. Nhấn crete bucket ở cuối trang.
 
 ![2.11](/images/2-preparatory-steops/2.11.png)
 
-6. Chọn bucket vừa được tạo ra
+6. Chọn bucket vừa được tạo ra.
 
 7. Nhấn upload và tải file logger.py lên bucket
 
-8. Kiểm tra file tải đã hoàn tất
+8. Kiểm tra file tải đã hoàn tất.
 
 ![2.12](/images/2-preparatory-steops/2.12.png)
 

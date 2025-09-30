@@ -2,208 +2,208 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/vi/</loc>
+    <loc>//localhost:1313/vi/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/"
+                href="//localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/"
+                href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>/vi/4-cloud-watch-logs/4.1-logs/</loc>
+    <loc>//localhost:1313/vi/4-cloud-watch-logs/4.1-logs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloud-watch-logs/4.1-logs/"
+                href="//localhost:1313/4-cloud-watch-logs/4.1-logs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloud-watch-logs/4.1-logs/"
+                href="//localhost:1313/vi/4-cloud-watch-logs/4.1-logs/"
                 />
   </url><url>
-    <loc>/vi/1-introduction/</loc>
+    <loc>//localhost:1313/vi/1-introduction/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/1-introduction/"
+                href="//localhost:1313/1-introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/1-introduction/"
+                href="//localhost:1313/vi/1-introduction/"
                 />
   </url><url>
-    <loc>/vi/3-cloud-watch-metric/3.1-view-metrics/</loc>
+    <loc>//localhost:1313/vi/3-cloud-watch-metric/3.1-view-metrics/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloud-watch-metric/3.1-view-metrics/"
+                href="//localhost:1313/3-cloud-watch-metric/3.1-view-metrics/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloud-watch-metric/3.1-view-metrics/"
+                href="//localhost:1313/vi/3-cloud-watch-metric/3.1-view-metrics/"
                 />
   </url><url>
-    <loc>/vi/2-preparatory-steps/</loc>
+    <loc>//localhost:1313/vi/2-preparatory-steps/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-preparatory-steps/"
+                href="//localhost:1313/2-preparatory-steps/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-preparatory-steps/"
+                href="//localhost:1313/vi/2-preparatory-steps/"
                 />
   </url><url>
-    <loc>/vi/4-cloud-watch-logs/4.2-logs-insights/</loc>
+    <loc>//localhost:1313/vi/4-cloud-watch-logs/4.2-logs-insights/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloud-watch-logs/4.2-logs-insights/"
+                href="//localhost:1313/4-cloud-watch-logs/4.2-logs-insights/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloud-watch-logs/4.2-logs-insights/"
+                href="//localhost:1313/vi/4-cloud-watch-logs/4.2-logs-insights/"
                 />
   </url><url>
-    <loc>/vi/3-cloud-watch-metric/3.2-search-expression/</loc>
+    <loc>//localhost:1313/vi/3-cloud-watch-metric/3.2-search-expression/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloud-watch-metric/3.2-search-expression/"
+                href="//localhost:1313/3-cloud-watch-metric/3.2-search-expression/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloud-watch-metric/3.2-search-expression/"
+                href="//localhost:1313/vi/3-cloud-watch-metric/3.2-search-expression/"
                 />
   </url><url>
-    <loc>/vi/3-cloud-watch-metric/</loc>
+    <loc>//localhost:1313/vi/3-cloud-watch-metric/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloud-watch-metric/"
+                href="//localhost:1313/3-cloud-watch-metric/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloud-watch-metric/"
+                href="//localhost:1313/vi/3-cloud-watch-metric/"
                 />
   </url><url>
-    <loc>/vi/4-cloud-watch-logs/4.3-metric-filter/</loc>
+    <loc>//localhost:1313/vi/4-cloud-watch-logs/4.3-metric-filter/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloud-watch-logs/4.3-metric-filter/"
+                href="//localhost:1313/4-cloud-watch-logs/4.3-metric-filter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloud-watch-logs/4.3-metric-filter/"
+                href="//localhost:1313/vi/4-cloud-watch-logs/4.3-metric-filter/"
                 />
   </url><url>
-    <loc>/vi/3-cloud-watch-metric/3.3-math-expression/</loc>
+    <loc>//localhost:1313/vi/3-cloud-watch-metric/3.3-math-expression/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloud-watch-metric/3.3-math-expression/"
+                href="//localhost:1313/3-cloud-watch-metric/3.3-math-expression/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloud-watch-metric/3.3-math-expression/"
+                href="//localhost:1313/vi/3-cloud-watch-metric/3.3-math-expression/"
                 />
   </url><url>
-    <loc>/vi/4-cloud-watch-logs/</loc>
+    <loc>//localhost:1313/vi/4-cloud-watch-logs/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-cloud-watch-logs/"
+                href="//localhost:1313/4-cloud-watch-logs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-cloud-watch-logs/"
+                href="//localhost:1313/vi/4-cloud-watch-logs/"
                 />
   </url><url>
-    <loc>/vi/3-cloud-watch-metric/3.4-dynamic-label/</loc>
+    <loc>//localhost:1313/vi/3-cloud-watch-metric/3.4-dynamic-label/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/3-cloud-watch-metric/3.4-dynamic-label/"
+                href="//localhost:1313/3-cloud-watch-metric/3.4-dynamic-label/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/3-cloud-watch-metric/3.4-dynamic-label/"
+                href="//localhost:1313/vi/3-cloud-watch-metric/3.4-dynamic-label/"
                 />
   </url><url>
-    <loc>/vi/5-cloud-watch-alarm/</loc>
+    <loc>//localhost:1313/vi/5-cloud-watch-alarm/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/5-cloud-watch-alarm/"
+                href="//localhost:1313/5-cloud-watch-alarm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/5-cloud-watch-alarm/"
+                href="//localhost:1313/vi/5-cloud-watch-alarm/"
                 />
   </url><url>
-    <loc>/vi/6-cloud-watch-dashboard/</loc>
+    <loc>//localhost:1313/vi/6-cloud-watch-dashboard/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/6-cloud-watch-dashboard/"
+                href="//localhost:1313/6-cloud-watch-dashboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/6-cloud-watch-dashboard/"
+                href="//localhost:1313/vi/6-cloud-watch-dashboard/"
                 />
   </url><url>
-    <loc>/vi/7-clean-up-resources/</loc>
+    <loc>//localhost:1313/vi/7-clean-up-resources/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/7-clean-up-resources/"
+                href="//localhost:1313/7-clean-up-resources/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/7-clean-up-resources/"
+                href="//localhost:1313/vi/7-clean-up-resources/"
                 />
   </url><url>
-    <loc>/vi/categories/</loc>
+    <loc>//localhost:1313/vi/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/categories/"
+                href="//localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/categories/"
+                href="//localhost:1313/vi/categories/"
                 />
   </url><url>
-    <loc>/vi/tags/</loc>
+    <loc>//localhost:1313/vi/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/tags/"
+                href="//localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/tags/"
+                href="//localhost:1313/vi/tags/"
                 />
   </url>
 </urlset>

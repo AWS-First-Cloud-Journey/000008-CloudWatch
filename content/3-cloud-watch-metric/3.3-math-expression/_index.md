@@ -31,7 +31,7 @@ Continuing, in this section, we will perform basic mathematical expressions.
 4. Now, we will reorder the graph based on the first search expression using the expression below.
 
 ```
-SORT(e1, SUM, DEC, 3)
+SORT(e1, SUM, DESC, 3)
 ```
 
 ![3.3.5](/images/3-cloud-watch-metric/3.3-math-expression/3.3.5.png)
