@@ -75,4 +75,31 @@ When the deployment completes successfully, you'll see the stack status change t
 
 **ℹ️ Information**: The CloudFormation stack has deployed EC2 instances running sample applications that will generate metrics and logs for our CloudWatch exercises. These resources are pre-configured to demonstrate various CloudWatch capabilities throughout this workshop.
 
+#### Create an S3 Bucket and Upload the `logger.py` File
+
+1. Search for **S3** in the AWS search bar.
+
+   ![2.9](/images/2-preparatory-steops/2.9.png)
+
+2. Click **Create bucket**.
+
+3. The bucket name must be ***unique globally***. It cannot be duplicated.
+
+   ![2.10](/images/2-preparatory-steops/2.10.png)
+
+4. Leave all settings as their default values.
+
+5. Scroll to the bottom of the page and click **Create bucket**.
+
+   ![2.11](/images/2-preparatory-steops/2.11.png)
+
+6. Select the bucket you just created.
+
+7. Click **Upload** and upload the `logger.py` file to the bucket.
+
+8. Verify that the file has been successfully uploaded.
+
+   ![2.12](/images/2-preparatory-steops/2.12.png)
+
+
 The preparation step is now complete. In the following sections, we'll explore CloudWatch's monitoring and observability features using the resources we've just deployed.
