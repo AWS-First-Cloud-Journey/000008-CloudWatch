@@ -169,4 +169,12 @@ This workshop is provided under the MIT License. See LICENSE file for details.
 
 ---
 
+## Cập nhật workshop
+
+- Phần 2: Thêm các bước tạo S3 và upload file logger.py để phục vụ cho p3
+- Thêm phần biểu thức còn thiếu trong ***mục 4 phần 3.2***
+- Sửa lỗi biểu thức trong ***mục 4 phần 3,3***
+- Ở **4.2** đã thêm note "sửa tên bucket" và thêm bản **Tiếng Anh**
+
+
 **Note**: This workshop is designed for educational purposes. Always follow AWS best practices and your organization's security policies when implementing monitoring solutions in production environments.
