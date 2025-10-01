@@ -12,21 +12,21 @@
     <title>Preparatory steps :: AWS Account Setup</title>
 
     
-    <link href="//localhost:1313/css/nucleus.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/fontawesome-all.min.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/hybrid.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/featherlight.min.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/perfect-scrollbar.min.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/auto-complete.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/atom-one-dark-reasonable.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/theme.css?1759253798" rel="stylesheet">
-    <link href="//localhost:1313/css/hugo-theme.css?1759253798" rel="stylesheet">
+    <link href="//localhost:1313/css/nucleus.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/fontawesome-all.min.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/hybrid.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/featherlight.min.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/perfect-scrollbar.min.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/auto-complete.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/atom-one-dark-reasonable.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/theme.css?1759254202" rel="stylesheet">
+    <link href="//localhost:1313/css/hugo-theme.css?1759254202" rel="stylesheet">
     
-    <link href="//localhost:1313/css/theme-workshop.css?1759253798" rel="stylesheet">
+    <link href="//localhost:1313/css/theme-workshop.css?1759254202" rel="stylesheet">
     
     
 
-    <script src="//localhost:1313/js/jquery-3.3.1.min.js?1759253798"></script>
+    <script src="//localhost:1313/js/jquery-3.3.1.min.js?1759254202"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,8 +55,8 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="//localhost:1313/js/lunr.min.js?1759253798"></script>
-<script type="text/javascript" src="//localhost:1313/js/auto-complete.js?1759253798"></script>
+<script type="text/javascript" src="//localhost:1313/js/lunr.min.js?1759254202"></script>
+<script type="text/javascript" src="//localhost:1313/js/auto-complete.js?1759254202"></script>
 <script type="text/javascript">
     
         
@@ -64,7 +64,7 @@
         
     
 </script>
-<script type="text/javascript" src="//localhost:1313/js/search.js?1759253798"></script>
+<script type="text/javascript" src="//localhost:1313/js/search.js?1759254202"></script>
  
   </div>
 
@@ -594,6 +594,37 @@
 <p>When the deployment completes successfully, you&rsquo;ll see the stack status change to <strong>CREATE_COMPLETE</strong>:</p>
 <p><img src="//localhost:1313/images/2-preparatory-steops/2.8.png" alt="2.8"></p>
 <p><strong>ℹ️ Information</strong>: The CloudFormation stack has deployed EC2 instances running sample applications that will generate metrics and logs for our CloudWatch exercises. These resources are pre-configured to demonstrate various CloudWatch capabilities throughout this workshop.</p>
+<h4 id="create-an-s3-bucket-and-upload-the-loggerpy-file">Create an S3 Bucket and Upload the <code>logger.py</code> File</h4>
+<ol>
+<li>
+<p>Search for <strong>S3</strong> in the AWS search bar.</p>
+<p><img src="//localhost:1313/images/2-preparatory-steops/2.9.png" alt="2.9"></p>
+</li>
+<li>
+<p>Click <strong>Create bucket</strong>.</p>
+</li>
+<li>
+<p>The bucket name must be <em><strong>unique globally</strong></em>. It cannot be duplicated.</p>
+<p><img src="//localhost:1313/images/2-preparatory-steops/2.10.png" alt="2.10"></p>
+</li>
+<li>
+<p>Leave all settings as their default values.</p>
+</li>
+<li>
+<p>Scroll to the bottom of the page and click <strong>Create bucket</strong>.</p>
+<p><img src="//localhost:1313/images/2-preparatory-steops/2.11.png" alt="2.11"></p>
+</li>
+<li>
+<p>Select the bucket you just created.</p>
+</li>
+<li>
+<p>Click <strong>Upload</strong> and upload the <code>logger.py</code> file to the bucket.</p>
+</li>
+<li>
+<p>Verify that the file has been successfully uploaded.</p>
+<p><img src="//localhost:1313/images/2-preparatory-steops/2.12.png" alt="2.12"></p>
+</li>
+</ol>
 <p>The preparation step is now complete. In the following sections, we&rsquo;ll explore CloudWatch&rsquo;s monitoring and observability features using the resources we&rsquo;ve just deployed.</p>
 
 
@@ -887,19 +918,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="//localhost:1313/js/clipboard.min.js?1759253798"></script>
-    <script src="//localhost:1313/js/perfect-scrollbar.min.js?1759253798"></script>
-    <script src="//localhost:1313/js/perfect-scrollbar.jquery.min.js?1759253798"></script>
-    <script src="//localhost:1313/js/jquery.sticky.js?1759253798"></script>
-    <script src="//localhost:1313/js/featherlight.min.js?1759253798"></script>
-    <script src="//localhost:1313/js/highlight.pack.js?1759253798"></script>
+    <script src="//localhost:1313/js/clipboard.min.js?1759254203"></script>
+    <script src="//localhost:1313/js/perfect-scrollbar.min.js?1759254203"></script>
+    <script src="//localhost:1313/js/perfect-scrollbar.jquery.min.js?1759254203"></script>
+    <script src="//localhost:1313/js/jquery.sticky.js?1759254203"></script>
+    <script src="//localhost:1313/js/featherlight.min.js?1759254203"></script>
+    <script src="//localhost:1313/js/highlight.pack.js?1759254203"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="//localhost:1313/js/modernizr.custom-3.6.0.js?1759253798"></script>
-    <script src="//localhost:1313/js/learn.js?1759253798"></script>
-    <script src="//localhost:1313/js/hugo-learn.js?1759253798"></script>
+    <script src="//localhost:1313/js/modernizr.custom-3.6.0.js?1759254203"></script>
+    <script src="//localhost:1313/js/learn.js?1759254203"></script>
+    <script src="//localhost:1313/js/hugo-learn.js?1759254203"></script>
 
-    <link href="//localhost:1313/mermaid/mermaid.css?1759253798" rel="stylesheet" />
-    <script src="//localhost:1313/mermaid/mermaid.js?1759253798"></script>
+    <link href="//localhost:1313/mermaid/mermaid.css?1759254203" rel="stylesheet" />
+    <script src="//localhost:1313/mermaid/mermaid.js?1759254203"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -7,42 +7,45 @@ pre: " <b> 4.2 </b> "
 
 ### CloudWatch Logs Insights
 
-Trong phần này, chúng ta sẽ tạo log từ một ứng dụng và sau đó truy vấn các log này trong **CloudWatch Logs Insights**. Mình sẽ chọn một **EC2 instance** làm mẫu.
+In this section, we will create logs from an application and then query these logs using **CloudWatch Logs Insights**. We’ll use an **EC2 instance** as an example.
 
-1. Trên thanh tìm kiếm dịch vụ:
+1. In the service search bar:
 
-   - Nhập `EC2`.
-   - Chọn **EC2**.
+   - Type ``EC2``.
+   - Select **EC2**.
 
 ![4.2.1](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.1.png)
 
-2. Trong **EC2 Console**, truy cập vào trang **Instances**:
+2. In the **EC2 Console**, go to the **Instances** page:
 
-   - Chọn một instance bất kỳ (ở đây mình chọn `Instance-A`).
-   - Ấn chọn **Connect**.
+   - Select any instance (here we select `Instance-A`).
+   - Click **Connect**.
 
 ![4.2.2](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.2.png)
 
-3. Trong trang **Connect to instance**:
+3. On the **Connect to instance** page:
 
-   - Chuyển sang tab **Session Manager**.
-   - Nhấn **Connect**.
+   - Switch to the **Session Manager** tab.
+   - Click **Connect**.
 
 ![4.2.3](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.3.png)
 
-4. Đợi một lúc, một **Terminal** sẽ hiện lên:
+4. Wait a few seconds, and a **Terminal** will appear:
 
-   - Di chuyển vào thư mục `/tmp`.
-   - Tải xuống script Python từ S3 bucket.
+   - Navigate to the `/tmp` directory.
+   - Download the Python script from your S3 bucket:
 
 ```bash
 cd /tmp
-sudo aws s3 cp s3://workshop-template-bucket/logger.py .
+sudo aws s3 cp s3://<workshop-template-bucket>/logger.py .
+
 ```
+   - Replace <workshop-template-bucket> with the name of the bucket you created in Section 2.
+
 
 ![4.2.4](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.4.png)
 
-5. Cấp quyền thực thi và chạy script:
+5. Grant execution permission and run the script:
 
 ```bash
 sudo chmod +x logger.py
@@ -51,17 +54,17 @@ python3 logger.py &
 
 ![4.2.5](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.5.png)
 
-6. Kiểm tra các logger đang chạy dưới dạng process:
+6. Check the running logger processes:
 
 ```bash
 ps -aux | grep logger
 ```
 
-Hiện tại có 2 process đang chạy, chúng sẽ chạy cho đến khi kết thúc bài thực hành.
+There are currently two processes running. They will keep running until the end of this lab.
 
 ![4.2.6](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.6.png)
 
-7. In ra các dòng log từ file `/var/log/messages`, nó sẽ chạy liên tục cho đến khi bị hủy:
+7. Print log lines from `/var/log/messages`. This command will keep running until you stop it:
 
 ```bash
 sudo tail -f /var/log/messages
@@ -69,15 +72,15 @@ sudo tail -f /var/log/messages
 
 ![4.2.7](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.7.png)
 
-8. Trở lại **CloudWatch Console**, vào **Logs Insights** từ menu bên trái để truy vấn log.
+8. Go back to the CloudWatch Console and open Logs Insights from the left menu.
 
 ![4.2.8](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.8.png)
 
-9. Trong **Selection criteria**, tìm `/ec2` và chọn **/ec2/linux/var/log/messages**.
+9. In the **Selection criteria**, search for `/ec2` and select **/ec2/linux/var/log/messages**
 
 ![4.2.9](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.9.png)
 
-10. Nhập câu truy vấn sau và nhấn **Run query**:
+10. Enter the following query and click Run query:
 
 ```
 fields @timestamp, @message
@@ -85,15 +88,15 @@ fields @timestamp, @message
 | limit 20
 ```
 
-Kết quả hiển thị như sau:
+   - You should see a result similar to this:
 
 ![4.2.10](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.10.png)
 
-Đây chính là các log chúng ta vừa tạo.
+   - These are the logs that were just generated.
 
 ![4.2.11](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.11.png)
 
-11. Truy vấn log có chứa **ERROR**:
+11. Query logs containing ERROR:
 
 ```
 fields @timestamp, @message
@@ -104,11 +107,11 @@ fields @timestamp, @message
 
 ![4.2.12](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.12.png)
 
-Đây là các log lỗi mà chúng ta đã tạo.
+   - These are the error logs we generated earlier.
 
 ![4.2.13](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.13.png)
 
-12. Truy vấn log có chứa **WARN**:
+12. Query logs containing WARN:
 
 ```
 fields @timestamp, @message
@@ -119,11 +122,11 @@ fields @timestamp, @message
 
 ![4.2.14](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.14.png)
 
-13. Truy vấn lại log lỗi để xem log mới tạo:
+13. Re-run the error log query to see newly generated logs:
 
 ![4.2.15](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.15.png)
 
-14. Truy vấn theo từ khóa khác (`eth0`):
+14. Query by another keyword (`eth0`):
 
 ```
 fields @timestamp, @message
@@ -136,41 +139,46 @@ fields @timestamp, @message
 
 ![4.2.17](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.17.png)
 
-### Trực quan hóa truy vấn log
+### Visualizing Log Queries
 
-Chúng ta có thể xem biểu đồ của các truy vấn bằng cách chuyển sang tab **Visualization**.
+You can view query results as charts by switching to the **Visualization** tab.
 
 ![4.2.18](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.18.png)
 
-### Lưu lệnh truy vấn
+### Saving Queries
 
-Logs Insights hỗ trợ lưu truy vấn để sử dụng lại sau này.
+Logs Insights allows you to save queries for later use.
 
-1. Ví dụ, lưu truy vấn **ERROR logs**:
+1. For example, to save the **ERROR** logs query:
 
-   - Quay lại Logs Insights.
-   - Nhập lại truy vấn **ERROR logs**.
-   - Nhấn **Save**.
+- Go back to **Logs Insights**.
+
+- Re-enter the **ERROR** logs query.
+
+- Click **Save**.
 
 ![4.2.19](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.19.png)
 
-2. Trong **Save a new query**, điền thông tin:
+2. In the **Save a new query** dialog, fill in the information:
 
-   - **Query name**: `Errors`
-   - **Folder**: `cloudwatch-workshop` (chọn **Create new**)
-   - Kiểm tra lại thông tin trong **Query definition details**.
-   - Nhấn **Save**.
+- Query name: `Errors`.
+
+- **Folder**: `cloudwatch-workshop` (create a new one if needed).
+
+- Check the **Query definition details**.
+
+- Click **Save**.
 
 ![4.2.20](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.20.png)
 
 ![4.2.21](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.21.png)
 
-### Lịch sử truy vấn
+### Query History
 
-Logs Insights cho phép xem lại lịch sử truy vấn. Trong giao diện, chọn **History** (dưới Query editor).
+Logs Insights provides a query history feature. You can view it by selecting **History** below the Query editor.
 
 ![4.2.22](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.22.png)
 
 ![4.2.23](/images/4-cloud-watch-logs/4.2-logs-insights/4.2.23.png)
 
-Trong phần tiếp theo, chúng ta sẽ tạo **Metrics Filter**, chuyển log thành **Metric**, và thiết lập **Alarm**.
+n the next section, we will create a **Metrics Filter**, convert logs into **Metrics**, and set up an **Alarm**.
